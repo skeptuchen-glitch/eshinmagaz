@@ -106,6 +106,10 @@ details p{margin:0;padding:0 20px 20px;font:400 16px/24px var(--font);opacity:.8
 .info p{margin:2px 0 0;font:400 16px/24px var(--font)}
 .buy{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;height:64px;margin-top:24px;border-radius:32px;background:var(--md-sys-color-primary);color:var(--md-sys-color-on-primary);font:700 18px/24px var(--font);transition:border-radius .5s var(--spring),transform .5s var(--spring)}
 .buy:active{border-radius:18px;transform:scale(.97)}
+.buy.off{background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface-variant);opacity:.8;cursor:default;pointer-events:none}
+.card.out .price{opacity:.55}
+.card.out .name{text-decoration:line-through;text-decoration-thickness:2px}
+.card.out .cat{opacity:.9;font-weight:700}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
 
 /* ---------- редактирование ---------- */
@@ -473,8 +477,8 @@ function renderCatalogInner() {
   const list = DATA.products.map((p, i) => ({ p, i })).filter(({ p }) =>
     (cat === ALL || p.category === cat) && (p.name || '').toLowerCase().includes(query));
   const gridHtml = list.length
-    ? list.map(({ p, i }, n) => `<div class="card" role="button" tabindex="0" data-i="${i}" ${look(i)} style="--i:${Math.min(n, 8)}"><md-ripple></md-ripple>
-        <div class="txt"><span class="name">${esc(p.name)}</span><span class="cat">${esc(p.category)}</span></div><span class="price">${esc(p.price)}</span>${edBtn('data-e', i)}</div>`).join('')
+    ? list.map(({ p, i }, n) => `<div class="card${p.soldout ? ' out' : ''}" role="button" tabindex="0" data-i="${i}" ${look(i)} style="--i:${Math.min(n, 8)}"><md-ripple></md-ripple>
+        <div class="txt"><span class="name">${esc(p.name)}</span><span class="cat">${p.soldout ? esc(p.soldoutText || 'нет в наличии') : esc(p.category)}</span></div><span class="price">${esc(p.price)}</span>${edBtn('data-e', i)}</div>`).join('')
     : `<div class="empty">${DATA.products.length ? 'ничего не найдено. попробуйте другой запрос.' : 'каталог пуст. нажмите «добавить».'}</div>`;
   return `
     <label class="search${query ? ' has' : ''}" id="searchBox">
@@ -544,8 +548,8 @@ function updateCatalogOnly() {
     const list = DATA.products.map((p, i) => ({ p, i })).filter(({ p }) =>
       (cat === ALL || p.category === cat) && (p.name || '').toLowerCase().includes(query));
     g.innerHTML = list.length
-      ? list.map(({ p, i }, n) => `<div class="card" role="button" tabindex="0" data-i="${i}" ${look(i)} style="--i:${Math.min(n, 8)}"><md-ripple></md-ripple>
-          <div class="txt"><span class="name">${esc(p.name)}</span><span class="cat">${esc(p.category)}</span></div><span class="price">${esc(p.price)}</span>${edBtn('data-e', i)}</div>`).join('')
+      ? list.map(({ p, i }, n) => `<div class="card${p.soldout ? ' out' : ''}" role="button" tabindex="0" data-i="${i}" ${look(i)} style="--i:${Math.min(n, 8)}"><md-ripple></md-ripple>
+          <div class="txt"><span class="name">${esc(p.name)}</span><span class="cat">${p.soldout ? esc(p.soldoutText || 'нет в наличии') : esc(p.category)}</span></div><span class="price">${esc(p.price)}</span>${edBtn('data-e', i)}</div>`).join('')
       : `<div class="empty">${DATA.products.length ? 'ничего не найдено. попробуйте другой запрос.' : 'каталог пуст. нажмите «добавить».'}</div>`;
   }
 }
@@ -603,8 +607,10 @@ function openSheet(i) {
   sheet.innerHTML = `<div class="handle"></div>${p.category ? `<span class="tag st" style="--i:0">${esc(p.category)}</span>` : ''}
     <h2 class="st" style="--i:1">${esc(p.name)}</h2>${p.price ? `<span class="pill st" style="--i:1.5">${esc(p.price)}</span>` : ''}
     ${rows ? `<div class="info st" style="--i:2.5">${rows}</div>` : ''}
-    ${url ? `<button class="buy st" style="--i:4" id="buy"><md-ripple></md-ripple>перейти к товару<md-icon>arrow_outward</md-icon></button>` : ''}`;
-  if (url) $('buy').addEventListener('click', () => { hap('impact'); openLink(url); });
+    ${p.soldout
+      ? `<button class="buy off st" style="--i:4" disabled>${esc(p.soldoutText || 'нет в наличии')}<md-icon>block</md-icon></button>`
+      : url ? `<button class="buy st" style="--i:4" id="buy"><md-ripple></md-ripple>${esc(p.btn || 'перейти к товару')}<md-icon>arrow_outward</md-icon></button>` : ''}`;
+  if (url && !p.soldout) $('buy').addEventListener('click', () => { hap('impact'); openLink(url); });
   present();
 }
 function closeSheet() {
@@ -731,16 +737,19 @@ function editTab(i) {
 
 function editProduct(i) {
   let idx = i; const isNew = i < 0;
-  const p = isNew ? { name: '', category: '', price: '', desc: '', composition: '', usage: '', link: '' } : DATA.products[i];
+  const p = isNew ? { name: '', category: '', price: '', desc: '', composition: '', usage: '', link: '', btn: '', soldout: false, soldoutText: '' } : DATA.products[i];
   showForm({
     title: isNew ? 'новый товар' : 'изменить товар',
     body: fld('name', 'название', p.name) + fld('category', 'категория', p.category, 'text', 'list="catlist"') +
       `<datalist id="catlist">${cats().slice(1).map(c => `<option value="${esc(c)}">`).join('')}</datalist>` +
       fld('price', 'цена', p.price) + fld('desc', 'описание', p.desc, 'area') + fld('composition', 'состав', p.composition, 'area') +
-      fld('usage', 'приём', p.usage, 'area') + fld('link', 'ссылка для кнопки (https://…)', p.link, 'url'),
+      fld('usage', 'приём', p.usage, 'area') + fld('link', 'ссылка для кнопки (https://…)', p.link, 'url') +
+      fld('btn', 'текст кнопки (пусто = «перейти к товару»)', p.btn) +
+      sel('soldout', 'наличие', [['0', 'в наличии'], ['1', 'нет в наличии']], p.soldout ? '1' : '0') +
+      fld('soldoutText', 'текст, когда нет в наличии (пусто = «нет в наличии»)', p.soldoutText),
     onSave: v => {
       if (!v.name.trim()) { snack('введите название'); return false; }
-      const o = { name: v.name.trim(), category: v.category.trim().toLowerCase(), price: v.price.trim(), desc: v.desc.trim(), composition: v.composition.trim(), usage: v.usage.trim(), link: v.link.trim() };
+      const o = { name: v.name.trim(), category: v.category.trim().toLowerCase(), price: v.price.trim(), desc: v.desc.trim(), composition: v.composition.trim(), usage: v.usage.trim(), link: v.link.trim(), btn: v.btn.trim(), soldout: v.soldout === '1', soldoutText: v.soldoutText.trim() };
       if (idx < 0) DATA.products.push(o); else DATA.products[idx] = o; changed();
     },
     onDelete: isNew ? null : () => { DATA.products.splice(idx, 1); changed(); },

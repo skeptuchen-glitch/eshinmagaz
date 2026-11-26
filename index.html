@@ -224,6 +224,132 @@ body.admin .fabs{display:flex}
 .g-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .g-sec-lbl{margin:16px 0 0;font:700 12px/16px var(--font);letter-spacing:.4px;color:var(--md-sys-color-primary)}
 .g-wrap .faq p{white-space:pre-line}
+
+.g-mod-pill{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:12px;background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container);font:700 11px/15px var(--font)}
+.g-bag-row{display:flex;gap:8px;overflow-x:auto;padding:0 16px;scrollbar-width:none}
+.g-bag-row::-webkit-scrollbar{display:none}
+.g-bag-btn{position:relative;flex:none;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border-radius:18px;background:var(--md-sys-color-surface-container-high);color:var(--md-sys-color-on-surface);font:700 12px/16px var(--font);cursor:pointer;overflow:hidden}
+.g-bag-btn.on{background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container)}
+.g-bag-btn md-icon{--md-icon-size:16px}
+
+.g-blitz-track{height:8px;margin:10px 0 0;border-radius:4px;background:color-mix(in srgb,var(--md-sys-color-on-primary-container) 18%,transparent);overflow:hidden}
+.g-blitz-fill{height:100%;width:100%;border-radius:4px;background:var(--md-sys-color-on-primary-container);transition:width .1s linear}
+.g-blitz-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 16px}
+.g-b-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;min-height:66px;padding:12px 14px;border-radius:22px;background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface);text-align:left;cursor:pointer;overflow:hidden;transition:transform .2s var(--spring),background-color .15s}
+.g-b-btn:active{transform:scale(.95)}
+.g-b-btn b{font:800 14px/18px var(--font)}
+.g-b-btn small{font:500 11px/14px var(--font);opacity:.75}
+.g-b-btn.ban{background:var(--md-sys-color-error-container);color:var(--md-sys-color-on-error-container)}
+.g-b-btn.ok{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+
+.g-grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 16px}
+.g-cell{position:relative;min-height:92px;padding:10px 8px;border-radius:24px;background:var(--md-sys-color-surface-container-high);color:var(--md-sys-color-on-surface-variant);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;cursor:pointer;overflow:hidden;transition:transform .16s var(--spring),background-color .15s var(--e-std),border-radius .25s var(--spring)}
+.g-cell:active{transform:scale(.93)}
+.g-cell md-icon{--md-icon-size:24px}
+.g-cell b{font:800 12px/15px var(--font)}
+.g-cell small{font:600 10px/13px var(--font);opacity:.8}
+.g-cell.empty{opacity:.42;cursor:default}
+.g-cell.bad{background:var(--md-sys-color-error-container);color:var(--md-sys-color-on-error-container)}
+.g-cell.gold{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container);box-shadow:inset 0 0 0 2px var(--md-sys-color-primary)}
+.g-cell.safe{background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container)}
+
+.g-alch-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 16px}
+.g-alch-slot{min-height:66px;padding:10px 8px;border-radius:20px;background:var(--md-sys-color-surface-container-highest);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-align:center;font:700 12px/15px var(--font);color:var(--md-sys-color-on-surface-variant)}
+.g-alch-slot.on{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+.g-alch-slot.bad{background:var(--md-sys-color-error-container);color:var(--md-sys-color-on-error-container)}
+.g-ing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 16px}
+.g-ing{position:relative;padding:12px 14px;border-radius:20px;background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface);text-align:left;cursor:pointer;overflow:hidden;transition:background-color .18s var(--e-std),border-radius .3s var(--spring)}
+.g-ing.on{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container);box-shadow:inset 0 0 0 2px var(--md-sys-color-primary);border-radius:14px}
+.g-ing.trap.on{background:var(--md-sys-color-error-container);color:var(--md-sys-color-on-error-container);box-shadow:inset 0 0 0 2px var(--md-sys-color-error)}
+.g-ing b{display:block;font:800 13px/17px var(--font)}
+.g-ing small{display:block;margin-top:3px;font:600 11px/14px var(--font);opacity:.78}
+
+.g-risk-log{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px}
+.g-risk-tag{padding:6px 12px;border-radius:14px;background:var(--md-sys-color-surface-container-highest);font:700 12px/16px var(--font)}
+.g-risk-tag.bad{background:var(--md-sys-color-error-container);color:var(--md-sys-color-on-error-container)}
+.g-risk-tag.good{background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container)}
+.g-risk-tag.shield{background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container)}
+
+.g-hub-list{display:grid;gap:10px;padding:0 16px}
+.g-hub-card{position:relative;display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:26px;background:var(--tc,var(--md-sys-color-surface-container-high));color:var(--on,var(--md-sys-color-on-surface));text-align:left;cursor:pointer;overflow:hidden;transition:transform .3s var(--spring),border-radius .35s var(--spring)}
+.g-hub-card:active{transform:scale(.97);border-radius:18px}
+.g-hub-ico{flex:none;width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:color-mix(in srgb,currentColor 13%,transparent)}
+.g-hub-ico md-icon{--md-icon-size:22px}
+.g-hub-txt{flex:1;min-width:0}
+.g-hub-txt b{display:block;font:800 16px/21px var(--font)}
+.g-hub-txt small{display:block;margin-top:2px;font:500 12px/16px var(--font);opacity:.78}
+.g-hub-badge{flex:none;padding:5px 11px;border-radius:12px;background:color-mix(in srgb,currentColor 14%,transparent);font:800 11px/15px var(--font)}
+
+.g-grid16{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 16px}
+.g-box{position:relative;min-height:70px;padding:6px 4px;border-radius:18px;background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;cursor:pointer;overflow:hidden;font:700 12px/15px var(--font);transition:transform .16s var(--spring),background-color .15s}
+.g-box:active{transform:scale(.93)}
+.g-box.safe{background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container);cursor:default}
+.g-box.bad{background:var(--md-sys-color-error-container);color:var(--md-sys-color-on-error-container);cursor:default}
+.g-box.warn{background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container)}
+
+.g-mgrid{touch-action:none;user-select:none}
+.g-mtile{min-height:72px;padding:6px 4px;border-radius:18px;background:var(--md-sys-color-surface-container-high);color:var(--md-sys-color-on-surface-variant);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transition:background-color .14s}
+.g-mtile b{font:800 12px/15px var(--font)}
+.g-mtile small{font:700 10px/13px var(--font);opacity:.75;margin-top:2px}
+.g-mtile.lv1{background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface)}
+.g-mtile.lv2,.g-mtile.lv3{background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container)}
+.g-mtile.lv4,.g-mtile.lv5{background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container)}
+.g-mtile.lv6,.g-mtile.lv7{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+.g-mtile.lv8,.g-mtile.lv9,.g-mtile.lv10{background:var(--md-sys-color-primary);color:var(--md-sys-color-on-primary)}
+.g-mctrl{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 16px}
+.g-mctrl button{position:relative;height:48px;border-radius:18px;background:var(--md-sys-color-surface-container-highest);display:grid;place-items:center;overflow:hidden}
+.g-mctrl button:active{transform:scale(.93)}
+
+.g-gauge-box{padding:0 16px}
+.g-gauge-track{position:relative;height:32px;border-radius:16px;background:var(--md-sys-color-surface-container-highest);overflow:hidden}
+.g-gauge-zone{position:absolute;top:0;bottom:0;background:var(--md-sys-color-secondary-container);border-radius:8px}
+.g-gauge-core{position:absolute;top:0;bottom:0;background:var(--md-sys-color-primary);opacity:.55}
+.g-gauge-pin{position:absolute;top:2px;bottom:2px;width:6px;margin-left:-3px;border-radius:3px;background:var(--md-sys-color-error);box-shadow:0 0 0 2px var(--md-sys-color-surface)}
+
+.g-code-hist{display:grid;gap:6px;padding:0 16px}
+.g-code-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;border-radius:18px;background:var(--md-sys-color-surface-container-highest)}
+.g-code-pegs{display:flex;gap:6px}
+.g-code-peg{width:34px;height:34px;border-radius:12px;background:var(--md-sys-color-surface-container);display:grid;place-items:center;font:800 12px/14px var(--font)}
+.g-code-peg.on{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+.g-code-res{display:flex;gap:6px;font:800 11px/14px var(--font)}
+.g-code-res span{padding:4px 8px;border-radius:10px;background:var(--md-sys-color-surface-container-high)}
+.g-code-res b.ok{color:var(--md-sys-color-primary)}
+.g-code-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 16px}
+.g-code-slot{position:relative;height:58px;border-radius:18px;background:var(--md-sys-color-surface-container-highest);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font:700 11px/14px var(--font);cursor:pointer;overflow:hidden}
+.g-code-slot.on{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+.g-code-slot.locked{box-shadow:inset 0 0 0 2px var(--md-sys-color-tertiary)}
+
+.g-mem-card{position:relative;min-height:76px;padding:6px 4px;border-radius:18px;background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface-variant);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font:700 11px/14px var(--font);cursor:pointer;overflow:hidden;transition:transform .16s var(--spring),background-color .16s}
+.g-mem-card:active{transform:scale(.94)}
+.g-mem-card.open{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+.g-mem-card.done{background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container);opacity:.78;cursor:default}
+
+.g-ty-grid{display:grid;gap:10px;padding:0 16px}
+.g-ty-card{padding:16px 18px;border-radius:24px;background:var(--md-sys-color-surface-container-high);display:grid;gap:8px}
+.g-ty-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.g-ty-head b{font:800 16px/20px var(--font)}
+.g-ty-sub{font:600 12px/17px var(--font);color:var(--md-sys-color-on-surface-variant)}
+.g-ty-btns{display:flex;gap:8px;margin-top:2px}
+.g-ty-btns .chip{flex:1;justify-content:center}
+
+.g-ward-beds{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 16px}
+.g-bed{position:relative;padding:12px;border-radius:22px;background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface);text-align:left;display:grid;gap:6px;cursor:pointer;overflow:hidden;transition:transform .15s var(--spring),box-shadow .18s}
+.g-bed:active{transform:scale(.96)}
+.g-bed.sel{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container);box-shadow:inset 0 0 0 2px var(--md-sys-color-primary)}
+.g-bed.urg{box-shadow:inset 0 0 0 2px var(--md-sys-color-error)}
+.g-bed.empty{opacity:.48;cursor:default;min-height:112px;place-content:center;text-align:center}
+.g-bed-top{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.g-bed-top b{font:800 14px/18px var(--font)}
+.g-bed-tag{padding:3px 8px;border-radius:10px;font:800 10px/13px var(--font);background:color-mix(in srgb,currentColor 14%,transparent)}
+.g-bed-need{font:700 12px/16px var(--font);min-height:32px}
+.g-mini-track{height:6px;border-radius:3px;background:color-mix(in srgb,currentColor 16%,transparent);overflow:hidden}
+.g-mini-fill{height:100%;border-radius:3px;background:currentColor;transition:width .1s linear}
+.g-ward-acts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 16px}
+.g-wact{position:relative;min-height:58px;padding:10px 12px;border-radius:20px;background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container);display:flex;align-items:center;gap:10px;text-align:left;cursor:pointer;overflow:hidden}
+.g-wact:active{transform:scale(.95)}
+.g-wact md-icon{--md-icon-size:22px;flex:none}
+.g-wact b{display:block;font:800 13px/16px var(--font)}
+.g-wact small{display:block;font:600 10px/13px var(--font);opacity:.78}
 </style>
 </head>
 <body>
@@ -657,6 +783,61 @@ $('pages').addEventListener('click', e => {
   const gFact = e.target.closest('[data-gfact]'); if (gFact) { hap(); gFlagFact(+gFact.dataset.gfact); return; }
   const gVerd = e.target.closest('#g-verdict'); if (gVerd) { hap('impact'); gOpenVerdict(); return; }
   const gUpg = e.target.closest('[data-gupg]'); if (gUpg) { hap('impact'); gBuyUpgrade(gUpg.dataset.gupg); return; }
+  const gCSec = e.target.closest('[data-gcsec]'); if (gCSec) { hap(); gSetClinicSec(gCSec.dataset.gcsec); return; }
+  const gLic = e.target.closest('[data-glic]'); if (gLic) { hap('impact'); gBuyLicense(gLic.dataset.glic); return; }
+  const gBagB = e.target.closest('[data-gbagbuy]'); if (gBagB) { hap('impact'); gBuyConsumable(gBagB.dataset.gbagbuy); return; }
+  const gUse = e.target.closest('[data-guse]'); if (gUse) { hap('impact'); gUseConsumable(gUse.dataset.guse); return; }
+  const gVip = e.target.closest('[data-gvip]'); if (gVip) { hap('impact'); gHandleVipArchive(+gVip.dataset.gvip); return; }
+  const gBlStart = e.target.closest('[data-gblitzstart]'); if (gBlStart) { hap('impact'); gStartBlitz(); return; }
+  const gBlAns = e.target.closest('[data-gblitzans]'); if (gBlAns) { hap(); gAnswerBlitz(gBlAns.dataset.gblitzans); return; }
+  const gArc = e.target.closest('[data-garc]'); if (gArc) { hap(); gSetArc(gArc.dataset.garc); return; }
+  const gWhSt = e.target.closest('[data-gwhstake]'); if (gWhSt) { hap(); gSetWhackStake(+gWhSt.dataset.gwhstake); return; }
+  const gWhGo = e.target.closest('[data-gwhstart]'); if (gWhGo) { hap('impact'); gStartWhack(); return; }
+  const gWhC = e.target.closest('[data-gwhcell]'); if (gWhC) { gTapWhack(+gWhC.dataset.gwhcell); return; }
+  const gAlIng = e.target.closest('[data-galch]'); if (gAlIng) { hap(); gToggleAlchIng(gAlIng.dataset.galch); return; }
+  const gAlCat = e.target.closest('[data-galchcat]'); if (gAlCat) { hap(); gToggleAlchCat(); return; }
+  const gAlCr = e.target.closest('[data-galchcraft]'); if (gAlCr) { hap('impact'); gCraftAlchemy(); return; }
+  const gAlNw = e.target.closest('[data-galchnew]'); if (gAlNw) { hap(); gNewAlchOrder(); return; }
+  const gRkSt = e.target.closest('[data-griskstake]'); if (gRkSt) { hap(); gSetRiskStake(+gRkSt.dataset.griskstake); return; }
+  const gRkSh = e.target.closest('[data-grisksh]'); if (gRkSh) { hap(); gToggleRiskShield(); return; }
+  const gRkGo = e.target.closest('[data-griskstart]'); if (gRkGo) { hap('impact'); gStartRisk(); return; }
+  const gRkAc = e.target.closest('[data-griskact]'); if (gRkAc) { hap(); gActRisk(gRkAc.dataset.griskact); return; }
+  const gHub = e.target.closest('[data-ghubgo]'); if (gHub) { hap(); gOpenHubItem(gHub.dataset.ghubgo); return; }
+  const gMiC = e.target.closest('[data-gminecnt]'); if (gMiC) { hap(); gSetMineCnt(+gMiC.dataset.gminecnt); return; }
+  const gMiSt = e.target.closest('[data-gminestake]'); if (gMiSt) { hap(); gSetMineStake(+gMiSt.dataset.gminestake); return; }
+  const gMiSc = e.target.closest('[data-gminescan]'); if (gMiSc) { hap(); gToggleMineScan(); return; }
+  const gMiGo = e.target.closest('[data-gminestart]'); if (gMiGo) { hap('impact'); gStartMine(); return; }
+  const gMiCell = e.target.closest('[data-gminecell]'); if (gMiCell) { gTapMine(+gMiCell.dataset.gminecell); return; }
+  const gMiCash = e.target.closest('[data-gminecash]'); if (gMiCash) { hap('impact'); gCashMine(); return; }
+  const gMgDir = e.target.closest('[data-gmergedir]'); if (gMgDir) { gMoveMerge(gMgDir.dataset.gmergedir); return; }
+  const gMgCl = e.target.closest('[data-gmergeclean]'); if (gMgCl) { hap('impact'); gCleanMerge(); return; }
+  const gMgNw = e.target.closest('[data-gmergenew]'); if (gMgNw) { hap('impact'); gCashAndResetMerge(); return; }
+  const gGaSt = e.target.closest('[data-ggastake]'); if (gGaSt) { hap(); gSetGaugeStake(+gGaSt.dataset.ggastake); return; }
+  const gGaGo = e.target.closest('[data-ggastart]'); if (gGaGo) { hap('impact'); gStartGauge(); return; }
+  const gGaHit = e.target.closest('[data-ggahit]'); if (gGaHit) { gHitGauge(); return; }
+  const gGaCash = e.target.closest('[data-ggacash]'); if (gGaCash) { hap('impact'); gCashGauge(); return; }
+  const gCdSt = e.target.closest('[data-gcodestake]'); if (gCdSt) { hap(); gSetCodeStake(+gCdSt.dataset.gcodestake); return; }
+  const gCdGo = e.target.closest('[data-gcodestart]'); if (gCdGo) { hap('impact'); gStartCode(); return; }
+  const gCdPk = e.target.closest('[data-gcodepick]'); if (gCdPk) { hap(); gPickCodeEl(gCdPk.dataset.gcodepick); return; }
+  const gCdSl = e.target.closest('[data-gcodeslot]'); if (gCdSl) { hap(); gClearCodeSlot(+gCdSl.dataset.gcodeslot); return; }
+  const gCdHn = e.target.closest('[data-gcodehint]'); if (gCdHn) { hap('impact'); gHintCode(); return; }
+  const gCdCh = e.target.closest('[data-gcodecheck]'); if (gCdCh) { hap('impact'); gCheckCode(); return; }
+  const gMmSt = e.target.closest('[data-gmemstake]'); if (gMmSt) { hap(); gSetMemStake(+gMmSt.dataset.gmemstake); return; }
+  const gMmGo = e.target.closest('[data-gmemstart]'); if (gMmGo) { hap('impact'); gStartMem(); return; }
+  const gMmCd = e.target.closest('[data-gmemcard]'); if (gMmCd) { gTapMem(+gMmCd.dataset.gmemcard); return; }
+  const gTyS = e.target.closest('[data-gtysec]'); if (gTyS) { hap(); gSetTySec(gTyS.dataset.gtysec); return; }
+  const gTyB = e.target.closest('[data-gtybuy]'); if (gTyB) { hap('impact'); const [pi, q] = gTyB.dataset.gtybuy.split(':').map(Number); gTyBuyStock(pi, q); return; }
+  const gTyA = e.target.closest('[data-gtyad]'); if (gTyA) { hap(); gTySetAd(gTyA.dataset.gtyad); return; }
+  const gTyBr = e.target.closest('[data-gtybranch]'); if (gTyBr) { hap('impact'); gTyBuyBranch(gTyBr.dataset.gtybranch); return; }
+  const gTySt = e.target.closest('[data-gtystaff]'); if (gTySt) { hap('impact'); gTyBuyStaff(gTySt.dataset.gtystaff); return; }
+  const gTyUp = e.target.closest('[data-gtyupg]'); if (gTyUp) { hap('impact'); gTyBuyCap(); return; }
+  const gTyDy = e.target.closest('[data-gtyday]'); if (gTyDy) { hap('impact'); gTyRunDay(); return; }
+  const gWdSh = e.target.closest('[data-gwardshift]'); if (gWdSh) { hap(); gSetWardShift(gWdSh.dataset.gwardshift); return; }
+  const gWdUp = e.target.closest('[data-gwardupg]'); if (gWdUp) { hap('impact'); gBuyWardUpg(gWdUp.dataset.gwardupg); return; }
+  const gWdGo = e.target.closest('[data-gwardstart]'); if (gWdGo) { hap('impact'); gStartWard(); return; }
+  const gWdBd = e.target.closest('[data-gwardbed]'); if (gWdBd) { hap(); gSelWardBed(+gWdBd.dataset.gwardbed); return; }
+  const gWdAc = e.target.closest('[data-gwardact]'); if (gWdAc) { gDoWardAct(gWdAc.dataset.gwardact); return; }
+  const gWdSp = e.target.closest('[data-gwardstop]'); if (gWdSp) { hap(); gFinishWard(true); return; }
   const edP = e.target.closest('[data-e]'); if (edP) { e.stopPropagation(); hap(); editProduct(+edP.dataset.e); return; }
   const edF = e.target.closest('[data-f]'); if (edF) { e.preventDefault(); hap(); const [ti, i] = edF.dataset.f.split(':').map(Number); editFaq(ti, i); return; }
   const edB = e.target.closest('[data-b]'); if (edB) { e.stopPropagation(); hap(); const [ti, i] = edB.dataset.b.split(':').map(Number); editBlock(ti, i); return; }
@@ -723,6 +904,7 @@ $('nav').addEventListener('click', async e => {
   const t = e.target.closest('.tab'); if (!t) return;
   const next = +t.dataset.p; if (next === page || busy) return;
   busy = true; hap(); closeSheet();
+  if (typeof gStopAllTimers === 'function') gStopAllTimers(true);
   const from = document.querySelector(`section[data-page="${page}"]`);
   const to = document.querySelector(`section[data-page="${next}"]`);
   page = next;
@@ -1282,29 +1464,272 @@ function gGenCase(seed) {
   };
 }
 
+const G_ARCHIVE_CASES = [
+  {
+    vipId: 0, cost: 600, title: 'артур · скуф-стример', rewardMult: 2,
+    name: 'артур', age: 35, height: '176 см', bmi: '42.6', weight: '132 кг', targetWeight: '105 кг', goal: 'сбросить 27 кг (плато)', exp: 'ночной стрим-жор', job: 'игровой стример',
+    quote: '«я на кресле 14 часов в день! донатеры смеются, пора удивить чат и сдуться!»',
+    winStory: 'рекорд стрима! артур убрал ящик колы и цитрамон, перешёл на molecule plus 30 и за месяц скинул 14 кг прямо на глазах у 5 000 зрителей!',
+    loseStory: 'артур упал со стула в прямом эфире: 4 литра колы + цитрамон + капсула вызвали дикое сердцебиение!',
+    decision: 'approve', bestProduct: 3, fixes: ['no_caffeine', 'fix_meds'],
+    facts: [
+      { sec: 'profile', lbl: 'анкета и параметры', val: '35 лет • рост 176 см • 132 кг → цель 105 кг (-27 кг)\nсильнейший аппетит и давнее плато', status: 'safe', hint: 'при таком весе и чистых органах нужен максимальный molecule plus 30 (металл)!' },
+      { sec: 'profile', lbl: 'режим стримов', val: 'спит с 06:00 до 14:00, шаги: 800 в день\nдонат-челленджи на острую еду ночью', status: 'safe', hint: 'крайне низкая активность и поздние срывы.' },
+      { sec: 'meds', lbl: 'чекап организма', val: 'давление 125/80, экг чистое\nузи печени, желудка и почек в пределах нормы', status: 'safe', hint: 'противопоказаний со стороны органов нет.' },
+      { sec: 'meds', lbl: 'на столе возле микрофона', val: 'держит пачку цитрамона от головной боли после 12 часов наушников', status: 'bad', fix: 'fix_meds', hint: 'нарушение: цитрамон содержит кофеин — заменить на обычный парацетамол!' },
+      { sec: 'chat', lbl: 'мини-холодильник в комнате', val: '• кола без сахара 4 литра\n• энергетики со вкусом манго — 6 банок', status: 'bad', fix: 'no_caffeine', hint: 'нарушение: в коле и энергетиках куча кофеина! полностью убрать, даже если «без сахара»!' },
+      { sec: 'chat', lbl: 'алкоголь и дозировка', val: 'не пьёт алкоголь вообще, готов строго соблюдать по 2 капсулы в день', status: 'safe', hint: 'по алкоголю и дозе нарушений нет.' }
+    ]
+  },
+  {
+    vipId: 1, cost: 1200, title: 'виолетта · инста-коуч', rewardMult: 2.2,
+    name: 'виолетта', age: 24, height: '171 см', bmi: '19.8', weight: '58 кг', targetWeight: '53 кг', goal: 'сбросить 5 кг', exp: 'перфекционизм', job: 'блогер про «пп»',
+    quote: '«в сторис я ем листик салата, но к съёмке в купальнике надо срочно скинуть 5 кг за 5 дней!»',
+    winStory: 'виолетта наконец успокоилась: мягкий turbo ozempic убрал 4 кг без срывов, матча заменена на ромашку, а капсул строго не больше 2!',
+    loseStory: 'скандал в сторис: виолетта выпила 4 капсулы сразу с двойной матчей и тёмным шоколадом — вызвала скорую от передозировки!',
+    decision: 'approve', bestProduct: 0, fixes: ['no_caffeine', 'fix_dose'],
+    facts: [
+      { sec: 'profile', lbl: 'анкета и цель', val: '24 года • рост 171 см • 58 кг → цель 53 кг (-5 кг)', status: 'safe', hint: 'вес и так стройный (-5 кг) — подходит самый мягкий turbo ozempic!' },
+      { sec: 'profile', lbl: 'режим съёмок', val: 'ходит в зал 4 раза в неделю, вес минимальный', status: 'safe', hint: 'тяжёлые комплексы здесь не нужны.' },
+      { sec: 'meds', lbl: 'анализы и аптечка', val: 'давление 110/70, органы здоровы\nв сумке панадол (обычный) и омега-3', status: 'safe', hint: 'здоровье и аптечка в полном порядке.' },
+      { sec: 'chat', lbl: 'реальные чеки (за кадром)', val: '• 6 стаканов матча-латте за два дня\n• 3 дольки тёмного шоколада ежедневно', status: 'bad', fix: 'no_caffeine', hint: 'нарушение: матча под запретом, а тёмного шоколада можно максимум 1 дольку в день!' },
+      { sec: 'chat', lbl: 'голосовое ассистенту', val: '«положи мне в таблетницу по 4 капсулы в день — до съёмки всего неделя!»', status: 'bad', fix: 'fix_dose', hint: 'нарушение: больше 2 капсул в день гарантированно дадут передозировку!' }
+    ]
+  },
+  {
+    vipId: 2, cost: 2500, title: 'степан · фитнес-тренер', rewardMult: 2.5,
+    name: 'степан', age: 30, height: '184 см', bmi: '31.3', weight: '106 кг', targetWeight: '94 кг', goal: 'сбросить 12 кг на сушке', exp: 'тяжёлый спорт', job: 'тренер в фитнес-клубе',
+    quote: '«я сам всем пишу диеты, но после отпуска залило на 12 кг! помоги грамотно подсушиться.»',
+    winStory: 'степан в шоке: выкинул предтрен, цинк/b-витамины и нурофен натощак — с molecule premium 40+6 просушился до 93 кг и похвалил вашу клинику!',
+    loseStory: 'тренер получил язву и аритмию: предтрен с кофеином + конские дозы цинка и нурофен на голодный желудок добили жкт!',
+    decision: 'approve', bestProduct: 2, fixes: ['no_caffeine', 'no_bad_vit', 'fix_meds'],
+    facts: [
+      { sec: 'profile', lbl: 'анкета и задача', val: '30 лет • рост 184 см • 106 кг → цель 94 кг (-12 кг)\nсильный аппетит после тяжёлых тренировок', status: 'safe', hint: 'цель -12 кг и высокий аппетит — оптимален molecule premium (40+6).' },
+      { sec: 'meds', lbl: 'сердце и органы', val: 'давление 124/78, узи печени и желудка чистое', status: 'safe', hint: 'базовых противопоказаний нет.' },
+      { sec: 'meds', lbl: 'спортпит и витамины в шкафчике', val: 'принимает цинк, витамин c 2000 мг и комплекс витаминов группы b', status: 'bad', fix: 'no_bad_vit', hint: 'нарушение: железо, цинк, витамин c и группу b при курсе нельзя!' },
+      { sec: 'meds', lbl: 'после дня ног', val: 'глотает ибупрофен (нурофен) утром натощак от боли в коленях', status: 'caution', fix: 'fix_meds', hint: 'осторожно: ибупрофен/нурофен раздражают желудок — строго ПОСЛЕ еды!' },
+      { sec: 'chat', lbl: 'перед тренировкой', val: 'пьёт 2 порции энергетика и предтрен с кофеином и гуараной', status: 'bad', fix: 'no_caffeine', hint: 'нарушение: энергетики и кофеин строго запрещены!' }
+    ]
+  },
+  {
+    vipId: 3, cost: 5000, title: 'бабушка зина · марафонщица', rewardMult: 3,
+    name: 'зинаида', age: 68, height: '160 см', bmi: '32.0', weight: '82 кг', targetWeight: '74 кг', goal: 'сбросить 8 кг', exp: 'активный пенсионер', job: 'скандинавская ходьба',
+    quote: '«внучок, я 10 тысяч шагов до завтрака прохожу! мне бы только таблеточку для разгона!»',
+    winStory: 'зинаида поблагодарила за честность: оставила ходьбу, подлечила давление у кардиолога и прислала вам банку домашнего морса!',
+    loseStory: 'тревога! у бабушки зины скрытая аритмия и приём таблеток от давления — курс ей категорически противопоказан!',
+    decision: 'reject', rejectReasons: ['heart', 'bad_rx'], fixes: [],
+    facts: [
+      { sec: 'profile', lbl: 'анкета и активность', val: '68 лет • рост 160 см • 82 кг → цель 74 кг (-8 кг)\nежедневно ходит с палками по парку', status: 'safe', hint: 'возраст >18, но в 68 лет критически важно проверить сердце и лекарства.' },
+      { sec: 'meds', lbl: 'выписка терапевта', val: 'в анамнезе: мерцательная аритмия и гипертония 2 степени', status: 'ban', reason: 'heart', hint: 'противопоказано: заболевания сердечно-сосудистой системы!' },
+      { sec: 'meds', lbl: 'утренняя таблетница', val: 'каждое утро пьёт препарат для снижения артериального давления', status: 'ban', reason: 'bad_rx', hint: 'противопоказано: препараты от давления несовместимы с курсом!' },
+      { sec: 'chat', lbl: 'питание дома', val: 'варит курогрудку, пьёт цикорий и морс, сладкого не ест', status: 'safe', hint: 'рацион идеальный, но здоровье сердца важнее — строгий отказ.' }
+    ]
+  }
+];
+
+const G_SHIFTS = [
+  { id: 'normal', name: 'обычная смена', mult: 1.0, desc: 'стандартный приём без сюрпризов' },
+  { id: 'night', name: 'ночная дежурка', mult: 1.25, desc: 'поток ночных срывов · гонорар +25%' },
+  { id: 'audit', name: 'ревизия минздрава', mult: 1.5, desc: 'строгий контроль · гонорар ×1.5' },
+  { id: 'vacation', name: 'сезон отпусков', mult: 1.35, desc: 'клиенты торопятся к морю · гонорар +35%' }
+];
+
+const G_DILEMMAS = [
+  {
+    tag: 'событие после смены', title: 'просьба «по знакомству»',
+    text: 'знакомый просит одобрить ему курс molecule plus 30 без проверки медкарты — обещает щедрую благодарность в 450 монет.',
+    aLabel: 'одобрить без справки (+450 🪙, риск)', bLabel: 'отказать по правилам (+140 🪙, +2 опыта)',
+    runA: () => {
+      if (Math.random() < 0.5) { G_SAVE.coins += 450; return 'обошлось! знакомый доволен, а вы получили +450 🪙.'; }
+      G_SAVE.coins = Math.max(0, G_SAVE.coins - 200);
+      return 'проверка заметила нарушение! вместо бонуса выписан штраф -200 🪙.';
+    },
+    runB: () => { G_SAVE.coins += 140; G_SAVE.rankXp += 2; return 'честная работа окупилась: премия +140 🪙 и +2 к рангу!'; }
+  },
+  {
+    tag: 'инвестиция в кабинет', title: 'ромашковый бар в холле',
+    text: 'пациенты в очереди волнуются перед приёмом. поставщик предлагает поставить бесплатный кулер с тёплым ромашковым чаем за 180 🪙.',
+    aLabel: 'поставить бар (-180 🪙 → +1 щит и +2 опыта)', bLabel: 'оставить только воду (+60 🪙 экономии)',
+    runA: () => {
+      if (G_SAVE.coins < 180) return 'не хватило монет — поставили обычный кулер с водой.';
+      G_SAVE.coins -= 180; G_SAVE.bag.shield = (G_SAVE.bag.shield || 0) + 1; G_SAVE.rankXp += 2;
+      return 'пациенты в восторге! вы получили +1 страховой щит в запас и +2 к рангу!';
+    },
+    runB: () => { G_SAVE.coins += 60; return 'сэкономили бюджет и получили +60 🪙.'; }
+  },
+  {
+    tag: 'ночной вызов', title: 'разобрать архив чеков',
+    text: 'в базе зависли спорные чеки доставки за прошлую неделю. сверхурочный разбор стоит 150 🪙, но может принести солидную премию.',
+    aLabel: 'проверить архив (-150 🪙 → шанс на +480 🪙)', bLabel: 'пойти отдыхать (+80 🪙)',
+    runA: () => {
+      if (G_SAVE.coins < 150) return 'недостаточно монет для запуска аудита — смена закрыта спокойно.';
+      G_SAVE.coins -= 150;
+      const win = Math.random() < 0.72;
+      if (win) { G_SAVE.coins += 480; G_SAVE.rankXp += 2; return 'нашли 3 скрытых нарушения с кофеином! премия +480 🪙 и +2 опыта!'; }
+      return 'нарушений почти не было — вернули +100 🪙 за потраченное время.';
+    },
+    runB: () => { G_SAVE.coins += 80; return 'вы отдохнули перед следующей сменой (+80 🪙).'; }
+  }
+];
+
+const G_BLITZ_POOL = [
+  { q: '25 лет · цель -4 кг · утром всегда пьёт чай улун', ans: 'diet', hint: 'улун содержит кофеин — нужна правка рациона' },
+  { q: '30 лет · беременность 10 недель · хочет самый слабый курс', ans: 'ban', hint: 'при беременности строгий запрет' },
+  { q: '28 лет · принимает сертралин (сиозс) и обычный парацетамол', ans: 'ok', hint: 'сиозс и обычный парацетамол разрешены!' },
+  { q: '33 года · пьёт цитрамон каждый день от головной боли', ans: 'meds', hint: 'цитрамон содержит кофеин — заменить лекарство' },
+  { q: '17 лет · до совершеннолетия 10 дней · анализы идеальные', ans: 'ban', hint: 'до 18 лет курс категорически запрещён' },
+  { q: '29 лет · пьёт омегу-3, цикорий и при спазмах но-шпу', ans: 'ok', hint: 'цикорий, омега-3 и но-шпа разрешены!' },
+  { q: '36 лет · на 2-й день курса появилась лёгкая потливость и жажда', ans: 'meds', hint: 'лёгкая адаптация — советуем ромашковый чай и воду' },
+  { q: '40 лет · в пятницу «только 2 бокала светлого сидра»', ans: 'diet', hint: 'алкоголь запрещён даже в малых дозах' },
+  { q: '31 год · принимает железо + цинк + витамины группы b', ans: 'meds', hint: 'железо, цинк, витамин c и группу b нужно убрать' },
+  { q: '44 года · хроническая гипертония, пьёт таблетки от давления', ans: 'ban', hint: 'болезни сердца и таблетки от давления — строгий отказ' },
+  { q: '27 лет · планирует пить по 3 капсулы в день для ускорения', ans: 'diet', hint: 'максимум 2 капсулы в день' },
+  { q: '34 года · пьёт ибупрофен (нурофен) утром натощак', ans: 'meds', hint: 'нурофен раздражает желудок — пить строго после еды' },
+  { q: '38 лет · обострение гастрита и проблемы с печенью', ans: 'ban', hint: 'болезни жкт и печени — строгое противопоказание' },
+  { q: '26 лет · ест пастилу, зефир, запивает морсом и водой', ans: 'ok', hint: 'всё перечисленное разрешено!' },
+  { q: '32 года · каждый вечер пьёт горячий какао и ест тирамису', ans: 'diet', hint: 'какао и тирамису содержат кофеин' },
+  { q: '35 лет · пьёт трициклический антидепрессант (НЕ сиозс)', ans: 'ban', hint: 'допустимы только антидепрессанты группы сиозс' },
+  { q: '23 года · пьёт шипучий эффералган и пенталгин «экстра»', ans: 'meds', hint: 'шипучие формы и «экстра» запрещены' },
+  { q: '39 лет · кормит ребёнка грудью (лактация)', ans: 'ban', hint: 'при грудном вскармливании курс запрещён' },
+  { q: '29 лет · в обед выпила бутылку холодного чая + баночку матчи', ans: 'diet', hint: 'холодный чай и матча содержат кофеин' },
+  { q: '42 года · принимает эсциталопрам (сиозс), витамин d3 и магний', ans: 'ok', hint: 'сиозс, d3 и магний разрешены!' }
+];
+
+const G_LICENSES = [
+  { id: 'expert', name: 'лицензия «эксперт»', desc: '+25% к гонорару во всех режимах', cost: 500, mult: 0.25 },
+  { id: 'consilium', name: 'лицензия «консилиум»', desc: '+50% к гонорару и +50% к награде за блиц', cost: 1500, mult: 0.5 },
+  { id: 'chief', name: 'кабинет главврача', desc: '+100% к гонорару и скидка 20% на все расходники', cost: 4000, mult: 1.0 },
+  { id: 'legend', name: 'золотой диплом «ешка»', desc: '+150% к гонорару и особый золотой статус', cost: 10000, mult: 1.5 }
+];
+
+const G_CONSUMABLES = [
+  { id: 'audit', icon: 'manage_search', name: 'мгновенный аудит', desc: 'вскрывает сразу все нарушения в досье текущего клиента', cost: 120 },
+  { id: 'shield', icon: 'shield', name: 'страховой щит', desc: 'защищает от потери жизни при следующей ошибке в смене', cost: 250 },
+  { id: 'double', icon: 'bolt', name: 'двойной гонорар ×2', desc: 'удваивает все монеты до конца текущей смены', cost: 350 },
+  { id: 'cocktail', icon: 'local_drink', name: 'турбо-микс для блица', desc: '+15 секунд и стартовое комбо ×3 в следующем блице', cost: 300 }
+];
+
+const G_ACHS = [
+  { id: 'a1', name: 'первые шаги', desc: 'закрыть 5 дел на высокий балл', bonus: 100, check: () => G_SAVE.rankXp >= 5 },
+  { id: 'a2', name: 'минус 50 кг клиентам', desc: 'помочь клиентам сбросить суммарно 50 кг', bonus: 250, check: () => G_SAVE.totalKg >= 50 },
+  { id: 'a3', name: 'снайпер блица', desc: 'набрать 12+ верных ответов за один блиц', bonus: 350, check: () => G_SAVE.blitzBest >= 12 },
+  { id: 'a4', name: 'архивариус', desc: 'разобрать 2 секретных vip-дела из архива', bonus: 500, check: () => Object.values(G_SAVE.vipSolved || {}).filter(Boolean).length >= 2 },
+  { id: 'a5', name: 'главврач', desc: 'выкупить любую лицензию кабинета', bonus: 300, check: () => Object.values(G_SAVE.lic || {}).some(Boolean) },
+  { id: 'a6', name: 'легенда контроля', desc: 'помочь сбросить суммарно 200 кг клиентам', bonus: 1000, check: () => G_SAVE.totalKg >= 200 },
+  { id: 'a7', name: 'детокс-снайпер', desc: 'убрать 20+ срывов за раунд в «охотнике»', bonus: 300, check: () => (G_SAVE.whackBest || 0) >= 20 },
+  { id: 'a8', name: 'главный алхимик', desc: 'открыть 4 именные формулы в лаборатории', bonus: 500, check: () => Object.values(G_SAVE.recipes || {}).filter(Boolean).length >= 4 },
+  { id: 'a9', name: 'стальные нервы', desc: 'забрать выигрыш ×3.0+ в «без передоза»', bonus: 600, check: () => (G_SAVE.riskBestMult || 0) >= 3 },
+  { id: 'a10', name: 'чистая посылка', desc: 'дойти до ×2.5+ в «детекторе доставки»', bonus: 400, check: () => (G_SAVE.mineBestMult || 0) >= 2.5 },
+  { id: 'a11', name: 'магистр слияния', desc: 'набрать 1500+ очков в «эволюции курса»', bonus: 500, check: () => (G_SAVE.mergeBest || 0) >= 1500 },
+  { id: 'a12', name: 'феноменальная память', desc: 'пройти «пары совместимости» за ≤28 сек', bonus: 450, check: () => (G_SAVE.memBestSec || 999) <= 28 },
+  { id: 'a13', name: 'магнат сети', desc: 'открыть 3 филиала в «империи клиники»', bonus: 1200, check: () => Object.values(G_SAVE.tycoon?.branches || {}).filter(Boolean).length >= 3 },
+  { id: 'a14', name: 'ангел дежурства', desc: 'помочь 12+ пациентам за одну смену в отделении', bonus: 800, check: () => (G_SAVE.ward?.bestScore || 0) >= 12 }
+];
+
 const G_SAVE = (() => {
-  const def = { coins: 0, rankXp: 0, totalKg: 0, streak: 0, lastDaily: '', caseIdx: 0, seenIntro: false, upg: { scanner: 0, bonus: 0, lives: 0 } };
-  try { const r = ls.get('eshka_game_v1'); if (r) return { ...def, ...JSON.parse(r) }; } catch (e) {}
+  const def = {
+    coins: 0, rankXp: 0, totalKg: 0, streak: 0, lastDaily: '', caseIdx: 0, seenIntro: false,
+    blitzBest: 0, whackBest: 0, riskBestMult: 0, mineBestMult: 0, mergeBest: 0, gaugeBest: 0, codeWins: 0, memBestSec: 0,
+    upg: { scanner: 0, bonus: 0, lives: 0, blitzTime: 0 },
+    lic: { expert: false, consilium: false, chief: false, legend: false },
+    bag: { audit: 1, shield: 0, double: 0, cocktail: 0 },
+    vipUnlocked: {}, vipSolved: {}, ach: {}, recipes: {},
+    tycoon: {
+      day: 1, rep: 72, stockCap: 36,
+      stock: [6, 4, 2, 1], prices: [70, 95, 115, 130], trends: [0, 0, 0, 0],
+      branches: { b0: true, b1: false, b2: false, b3: false, b4: false },
+      staff: { s0: 0, s1: 0, s2: 0, s3: 0 },
+      ad: 'none', lastLog: '', totalEarned: 0
+    },
+    ward: {
+      bestScore: 0, bestFri: 0, totalHealed: 0,
+      upg: { station: 0, nurse: 0, bed4: 0 }
+    }
+  };
+  try {
+    const r = ls.get('eshka_game_v1');
+    if (r) {
+      const p = JSON.parse(r);
+      return {
+        ...def, ...p,
+        upg: { ...def.upg, ...(p.upg || {}) },
+        lic: { ...def.lic, ...(p.lic || {}) },
+        bag: { ...def.bag, ...(p.bag || {}) },
+        vipUnlocked: p.vipUnlocked || {},
+        vipSolved: p.vipSolved || {},
+        ach: p.ach || {},
+        recipes: p.recipes || {},
+        tycoon: {
+          ...def.tycoon, ...(p.tycoon || {}),
+          stock: (p.tycoon && Array.isArray(p.tycoon.stock)) ? p.tycoon.stock : [...def.tycoon.stock],
+          prices: (p.tycoon && Array.isArray(p.tycoon.prices)) ? p.tycoon.prices : [...def.tycoon.prices],
+          trends: (p.tycoon && Array.isArray(p.tycoon.trends)) ? p.tycoon.trends : [...def.tycoon.trends],
+          branches: { ...def.tycoon.branches, ...(p.tycoon?.branches || {}) },
+          staff: { ...def.tycoon.staff, ...(p.tycoon?.staff || {}) }
+        },
+        ward: {
+          ...def.ward, ...(p.ward || {}),
+          upg: { ...def.ward.upg, ...(p.ward?.upg || {}) }
+        }
+      };
+    }
+  } catch (e) {}
   return def;
 })();
 const gPersist = () => ls.set('eshka_game_v1', JSON.stringify(G_SAVE));
 
 const G_STATE = {
-  sub: G_SAVE.seenIntro ? 'desk' : 'intro',
-  mode: 'career',
+  sub: G_SAVE.seenIntro ? 'hub' : 'intro',
+  arcSub: 'whack', // whack | alchemy | risk | mine | merge | gauge | code | memory
+  tycoonSec: 'day', // day | stock | staff
+  clinicSec: 'office', // office | bag | archive
+  mode: 'career', // career | daily | vip
+  shiftMod: G_SHIFTS[0],
   num: 1, total: 3, lives: 3, maxLives: 3,
+  buffs: { shield: false, double: false },
   curCase: null, sec: 'profile', flags: {},
   vMode: 'approve', selProd: null, selFixes: {}, selRej: {}, dailySeed: 0
 };
+
+const G_BLITZ = {
+  active: false, timeLeft: 60, maxTime: 60, score: 0, combo: 0, maxCombo: 0, right: 0,
+  cur: null, timerId: null
+};
+
+function gLicMult() {
+  let m = 1;
+  G_LICENSES.forEach(l => { if (G_SAVE.lic[l.id]) m += l.mult; });
+  return m;
+}
+function gCheckAchs() {
+  let gained = 0, names = [];
+  G_ACHS.forEach(a => {
+    if (!G_SAVE.ach[a.id] && a.check()) {
+      G_SAVE.ach[a.id] = true;
+      G_SAVE.coins += a.bonus;
+      gained += a.bonus;
+      names.push(a.name);
+    }
+  });
+  if (gained > 0) {
+    gPersist();
+    snack(`достижение: ${names[0]} (+${gained} 🪙)`);
+  }
+}
 
 function gLoadCase(initShift = false) {
   if (initShift) {
     G_STATE.num = 1;
     G_STATE.maxLives = 3 + (G_SAVE.upg.lives || 0);
     G_STATE.lives = G_STATE.maxLives;
+    G_STATE.buffs = { shield: false, double: false };
+    G_STATE.shiftMod = G_STATE.mode === 'career'
+      ? G_SHIFTS[Math.floor(Math.random() * G_SHIFTS.length)]
+      : G_SHIFTS[0];
   }
   let c;
   if (G_STATE.mode === 'daily') c = gGenCase(G_STATE.dailySeed + G_STATE.num * 777);
+  else if (G_STATE.mode === 'vip' && G_STATE.vipTarget != null) c = JSON.parse(JSON.stringify(G_ARCHIVE_CASES[G_STATE.vipTarget]));
   else if (G_SAVE.caseIdx < G_VIPS.length) c = JSON.parse(JSON.stringify(G_VIPS[G_SAVE.caseIdx]));
   else c = gGenCase((G_SAVE.caseIdx + 1) * 997 + Math.floor(Math.random() * 9999));
 
@@ -1318,9 +1743,48 @@ function gLoadCase(initShift = false) {
 }
 gLoadCase(true);
 
-function gSetSub(sub) { G_STATE.sub = sub; refreshGameDom(true); }
-function gOpenIntro() { G_STATE.sub = G_STATE.sub === 'intro' ? 'desk' : 'intro'; refreshGameDom(true); }
-function gStartPlay() { G_SAVE.seenIntro = true; gPersist(); G_STATE.sub = 'desk'; refreshGameDom(true); }
+function gStopBlitz(silent = false) {
+  if (G_BLITZ.timerId) { clearInterval(G_BLITZ.timerId); G_BLITZ.timerId = null; }
+  G_BLITZ.active = false;
+  if (!silent && G_STATE.sub === 'blitz') refreshGameDom(false);
+}
+function gStopAllTimers(silent = false) {
+  gStopBlitz(silent);
+  if (typeof gStopWhack === 'function') gStopWhack(silent);
+  if (typeof gStopGauge === 'function') gStopGauge(silent);
+  if (typeof gStopMem === 'function') gStopMem(silent);
+  if (typeof gStopWard === 'function') gStopWard(silent);
+}
+
+function gSetSub(sub) {
+  gStopAllTimers(true);
+  G_STATE.sub = sub;
+  refreshGameDom(true);
+}
+function gSetArc(arc) {
+  if (G_STATE.arcSub === arc) return;
+  gStopAllTimers(true);
+  G_STATE.arcSub = arc;
+  refreshGameDom(false);
+}
+function gOpenHubItem(target) {
+  gStopAllTimers(true);
+  if (target.startsWith('arcade:')) {
+    G_STATE.sub = 'arcade';
+    G_STATE.arcSub = target.split(':')[1];
+  } else {
+    G_STATE.sub = target;
+  }
+  scrollTo(0, 0);
+  refreshGameDom(true);
+}
+function gSetClinicSec(sec) {
+  if (G_STATE.clinicSec === sec) return;
+  G_STATE.clinicSec = sec;
+  refreshGameDom(false);
+}
+function gOpenIntro() { gStopAllTimers(true); G_STATE.sub = G_STATE.sub === 'intro' ? 'hub' : 'intro'; refreshGameDom(true); }
+function gStartPlay() { G_SAVE.seenIntro = true; gPersist(); G_STATE.sub = 'hub'; refreshGameDom(true); }
 function gSetSec(sec) {
   if (G_STATE.sec === sec) return;
   G_STATE.sec = sec;
@@ -1339,6 +1803,7 @@ function gSetSec(sec) {
 function gStartDaily() {
   const today = new Date().toISOString().slice(0, 10);
   if (G_SAVE.lastDaily === today) { snack('дейли-консилиум сегодня уже пройден'); return; }
+  gStopAllTimers(true);
   let h = 0; for (let i = 0; i < today.length; i++) h = (h * 31 + today.charCodeAt(i)) % 999999;
   G_STATE.mode = 'daily';
   G_STATE.dailySeed = h;
@@ -1370,17 +1835,1435 @@ function gFlagFact(idx) {
     refreshGameDom(false);
   }
 }
+
 function gBuyUpgrade(key) {
-  const meta = { scanner: { base: 70, max: 1 }, bonus: { base: 60, max: 4 }, lives: { base: 90, max: 2 } }[key];
-  const lv = G_SAVE.upg[key] || 0;
-  if (!meta || lv >= meta.max) return;
-  const cost = meta.base + lv * 65;
+  const specs = {
+    scanner:   { costs: [80, 220], max: 2 },
+    bonus:     { costs: [60, 130, 240, 400, 650, 1000, 1500, 2200], max: 8 },
+    lives:     { costs: [150, 450, 1100], max: 3 },
+    blitzTime: { costs: [90, 220, 480, 900], max: 4 }
+  };
+  const sp = specs[key], lv = G_SAVE.upg[key] || 0;
+  if (!sp || lv >= sp.max) return;
+  const cost = sp.costs[lv];
   if (G_SAVE.coins < cost) { snack('недостаточно монет'); return; }
   G_SAVE.coins -= cost;
   G_SAVE.upg[key] = lv + 1;
   gPersist();
-  refreshGameDom();
-  snack('улучшение активировано');
+  refreshGameDom(false);
+  snack('оборудование улучшено');
+}
+
+function gBuyLicense(id) {
+  const l = G_LICENSES.find(x => x.id === id);
+  if (!l || G_SAVE.lic[id]) return;
+  if (G_SAVE.coins < l.cost) { snack('недостаточно монет'); return; }
+  G_SAVE.coins -= l.cost;
+  G_SAVE.lic[id] = true;
+  gPersist();
+  gCheckAchs();
+  refreshGameDom(false);
+  snack(`получена ${l.name}!`);
+}
+
+function gBuyConsumable(id) {
+  const item = G_CONSUMABLES.find(x => x.id === id);
+  if (!item) return;
+  const price = G_SAVE.lic.chief ? Math.round(item.cost * 0.8) : item.cost;
+  if (G_SAVE.coins < price) { snack('недостаточно монет'); return; }
+  G_SAVE.coins -= price;
+  G_SAVE.bag[id] = (G_SAVE.bag[id] || 0) + 1;
+  gPersist();
+  refreshGameDom(false);
+  snack(`куплено: ${item.name} (в запасе: ${G_SAVE.bag[id]})`);
+}
+
+function gUseConsumable(id) {
+  if ((G_SAVE.bag[id] || 0) <= 0) { snack('нет в запасе — купите в клинике'); return; }
+  if (id === 'audit') {
+    const c = G_STATE.curCase;
+    let found = 0;
+    ['profile','meds','chat'].forEach(sec => {
+      c.facts.filter(f => f.sec === sec).forEach((f, idx) => {
+        if (f.status !== 'safe') {
+          G_STATE.flags[`${sec}_${idx}`] = true;
+          if (f.fix) G_STATE.selFixes[f.fix] = true;
+          if (f.reason) G_STATE.selRej[f.reason] = true;
+          found++;
+        }
+      });
+    });
+    G_SAVE.bag.audit--;
+    gPersist();
+    refreshGameDom(false);
+    snack(`аудит вскрыл угроз: ${found}`);
+    return;
+  }
+  if (id === 'shield') {
+    if (G_STATE.buffs.shield) { snack('страховой щит уже активен'); return; }
+    G_SAVE.bag.shield--;
+    G_STATE.buffs.shield = true;
+    gPersist();
+    refreshGameDom(false);
+    snack('страховой щит активирован на эту смену');
+    return;
+  }
+  if (id === 'double') {
+    if (G_STATE.buffs.double) { snack('удвоитель ×2 уже активен'); return; }
+    G_SAVE.bag.double--;
+    G_STATE.buffs.double = true;
+    gPersist();
+    refreshGameDom(false);
+    snack('двойной гонорар ×2 активен до конца смены!');
+  }
+}
+
+function gHandleVipArchive(vipIdx) {
+  const v = G_ARCHIVE_CASES[vipIdx];
+  if (!v) return;
+  if (!G_SAVE.vipUnlocked[vipIdx]) {
+    if (G_SAVE.coins < v.cost) { snack('недостаточно монет для открытия дела'); return; }
+    G_SAVE.coins -= v.cost;
+    G_SAVE.vipUnlocked[vipIdx] = true;
+    gPersist();
+    refreshGameDom(false);
+    snack(`дело «${v.title}» открыто!`);
+    return;
+  }
+  G_STATE.mode = 'vip';
+  G_STATE.vipTarget = vipIdx;
+  G_STATE.sub = 'desk';
+  gLoadCase(true);
+  refreshGameDom(true);
+  snack(`начато особое дело: ${v.title}`);
+}
+
+/* ---------- БЛИЦ-КОНСИЛИУМ ---------- */
+function gStartBlitz() {
+  gStopBlitz(true);
+  let startSec = 60 + (G_SAVE.upg.blitzTime || 0) * 5;
+  let startCombo = 0;
+  if ((G_SAVE.bag.cocktail || 0) > 0) {
+    G_SAVE.bag.cocktail--;
+    startSec += 15;
+    startCombo = 3;
+    gPersist();
+    snack('турбо-микс: +15 сек и старт комбо ×3!');
+  }
+  G_BLITZ.active = true;
+  G_BLITZ.timeLeft = startSec;
+  G_BLITZ.maxTime = startSec;
+  G_BLITZ.score = 0;
+  G_BLITZ.combo = startCombo;
+  G_BLITZ.maxCombo = startCombo;
+  G_BLITZ.right = 0;
+  G_BLITZ.cur = G_BLITZ_POOL[Math.floor(Math.random() * G_BLITZ_POOL.length)];
+  refreshGameDom(false);
+
+  G_BLITZ.timerId = setInterval(() => {
+    if (!G_BLITZ.active) return;
+    G_BLITZ.timeLeft = Math.max(0, +(G_BLITZ.timeLeft - 0.1).toFixed(1));
+    const tEl = $('g-bl-time'), bEl = $('g-bl-bar');
+    if (tEl) tEl.textContent = G_BLITZ.timeLeft.toFixed(1) + ' с';
+    if (bEl) bEl.style.width = Math.min(100, (G_BLITZ.timeLeft / G_BLITZ.maxTime) * 100) + '%';
+    if (G_BLITZ.timeLeft <= 0) gFinishBlitz();
+  }, 100);
+}
+
+function gAnswerBlitz(ans) {
+  if (!G_BLITZ.active || !G_BLITZ.cur) return;
+  const cur = G_BLITZ.cur;
+  if (ans === cur.ans) {
+    G_BLITZ.combo++;
+    G_BLITZ.right++;
+    G_BLITZ.maxCombo = Math.max(G_BLITZ.maxCombo, G_BLITZ.combo);
+    const mult = Math.min(5, 1 + Math.floor(G_BLITZ.combo / 3));
+    G_BLITZ.score += 10 * mult;
+    G_BLITZ.timeLeft = Math.min(G_BLITZ.maxTime + 15, +(G_BLITZ.timeLeft + 1.8).toFixed(1));
+    hap();
+  } else {
+    G_BLITZ.combo = 0;
+    G_BLITZ.timeLeft = Math.max(0, +(G_BLITZ.timeLeft - 4.0).toFixed(1));
+    hap('impact');
+    snack('ошибка: ' + cur.hint);
+  }
+  if (G_BLITZ.timeLeft <= 0) { gFinishBlitz(); return; }
+  // Pick next distinct question
+  let next;
+  do { next = G_BLITZ_POOL[Math.floor(Math.random() * G_BLITZ_POOL.length)]; } while (next === cur && G_BLITZ_POOL.length > 1);
+  G_BLITZ.cur = next;
+
+  const qEl = $('g-bl-q'), sEl = $('g-bl-score'), cEl = $('g-bl-combo');
+  if (qEl) qEl.textContent = next.q;
+  if (sEl) sEl.textContent = G_BLITZ.score;
+  if (cEl) cEl.textContent = `комбо ×${Math.min(5, 1 + Math.floor(G_BLITZ.combo / 3))} (${G_BLITZ.right})`;
+}
+
+function gFinishBlitz() {
+  gStopBlitz(true);
+  const isRec = G_BLITZ.right > (G_SAVE.blitzBest || 0);
+  if (isRec) G_SAVE.blitzBest = G_BLITZ.right;
+  const licB = G_SAVE.lic.consilium ? 1.5 : 1;
+  const earn = Math.round((G_BLITZ.score * 0.6 + G_BLITZ.right * 4) * gLicMult() * licB);
+  G_SAVE.coins += earn;
+  if (G_BLITZ.right >= 5) G_SAVE.rankXp++;
+  gPersist();
+  gCheckAchs();
+  refreshGameDom(false);
+
+  sheet.innerHTML = `<div class="handle"></div>
+    <span class="tag st" style="--i:0">${isRec ? 'новый рекорд' : 'блиц завершён'}</span>
+    <h2 class="st" style="--i:1">${G_BLITZ.right} верных решений</h2>
+    <div class="info st" style="--i:2">
+      <div><small>результат</small><p>очки: ${G_BLITZ.score} · макс. серия: ${G_BLITZ.maxCombo} · рекорд: ${G_SAVE.blitzBest}</p></div>
+      <div><small>гонорар</small><p>+${earn} монет на счёт клиники</p></div>
+    </div>
+    <button type="button" class="buy st" style="--i:3" id="g-bl-again"><md-ripple></md-ripple>сыграть ещё блиц<md-icon>bolt</md-icon></button>`;
+  $('g-bl-again').addEventListener('click', () => { hap('impact'); closeSheet(); gStartBlitz(); });
+  present();
+}
+
+/* ---------- МИНИ-ИГРА 1: ОХОТНИК ЗА СРЫВАМИ ---------- */
+const G_WHACK_ITEMS = [
+  { id: 'cola', name: 'кола 0.5', tag: 'кофеин', pts: 15, bad: true, ic: 'local_drink' },
+  { id: 'coffee', name: 'эспрессо', tag: 'кофеин', pts: 15, bad: true, ic: 'coffee' },
+  { id: 'energy', name: 'энергетик', tag: 'перегруз', pts: 25, bad: true, ic: 'bolt' },
+  { id: 'citra', name: 'цитрамон', tag: 'запрет', pts: 20, bad: true, ic: 'medication' },
+  { id: 'alco', name: 'бокал вина', tag: 'алкоголь', pts: 20, bad: true, ic: 'wine_bar' },
+  { id: 'tiramisu', name: 'тирамису', tag: 'джекпот!', pts: 45, bad: true, gold: true, ic: 'cake' },
+  { id: 'water', name: 'вода 0.5', tag: 'оставьте', pts: -20, bad: false, ic: 'water_drop' },
+  { id: 'chamo', name: 'ромашка', tag: 'можно', pts: -20, bad: false, ic: 'spa' },
+  { id: 'mors', name: 'морс', tag: 'можно', pts: -20, bad: false, ic: 'local_bar' },
+  { id: 'panadol', name: 'панадол', tag: 'разрешён', pts: -20, bad: false, ic: 'vaccines' }
+];
+const G_WHACK = {
+  active: false, stake: 0, timeLeft: 30, maxTime: 30,
+  score: 0, combo: 0, hits: 0, seq: 0, spawnMs: 0, timerId: null,
+  slots: Array(9).fill(null)
+};
+
+function gSetWhackStake(st) {
+  if (G_WHACK.active) return;
+  G_WHACK.stake = st;
+  refreshGameDom(false);
+}
+function gStopWhack(silent = false) {
+  if (G_WHACK.timerId) { clearInterval(G_WHACK.timerId); G_WHACK.timerId = null; }
+  G_WHACK.active = false;
+  if (!silent && G_STATE.sub === 'arcade' && G_STATE.arcSub === 'whack') refreshGameDom(false);
+}
+function gSpawnWhackOne() {
+  const emptyIdxs = [];
+  for (let i = 0; i < 9; i++) if (!G_WHACK.slots[i]) emptyIdxs.push(i);
+  if (!emptyIdxs.length) return;
+  const idx = emptyIdxs[Math.floor(Math.random() * emptyIdxs.length)];
+  const r = Math.random();
+  let tpl;
+  if (r < 0.72) {
+    const bads = G_WHACK_ITEMS.filter(x => x.bad);
+    tpl = (Math.random() < 0.14) ? bads.find(x => x.gold) : bads.filter(x => !x.gold)[Math.floor(Math.random() * (bads.length - 1))];
+  } else {
+    const safes = G_WHACK_ITEMS.filter(x => !x.bad);
+    tpl = safes[Math.floor(Math.random() * safes.length)];
+  }
+  const ttl = tpl.gold ? 1350 : (tpl.bad ? 1650 : 1850);
+  G_WHACK.slots[idx] = { ...tpl, ttl, tok: 'w' + (++G_WHACK.seq) };
+}
+function gBuildWhackCellContent(s) {
+  if (!s) return '<small>пусто</small>';
+  return `<md-ripple></md-ripple><md-icon>${s.ic}</md-icon><b>${esc(s.name)}</b><small>${esc(s.tag)}</small>`;
+}
+function gPatchWhackDom() {
+  const tEl = $('g-wh-time'), bEl = $('g-wh-bar'), sEl = $('g-wh-score'), cEl = $('g-wh-combo');
+  if (tEl) tEl.textContent = G_WHACK.timeLeft.toFixed(1) + ' с';
+  if (bEl) bEl.style.width = Math.min(100, (G_WHACK.timeLeft / G_WHACK.maxTime) * 100) + '%';
+  if (sEl) sEl.textContent = G_WHACK.score;
+  const m = Math.min(4, 1 + Math.floor(G_WHACK.combo / 4));
+  if (cEl) cEl.textContent = `убрано: ${G_WHACK.hits} · комбо ×${m}`;
+  const grid = $('g-wh-grid');
+  if (!grid) return;
+  for (let i = 0; i < 9; i++) {
+    const cell = grid.children[i];
+    if (!cell) continue;
+    const s = G_WHACK.slots[i];
+    const tok = s ? s.tok : 'e';
+    if (cell.dataset.tok !== tok) {
+      cell.dataset.tok = tok;
+      cell.className = 'g-cell ' + (s ? (s.gold ? 'gold' : (s.bad ? 'bad' : 'safe')) : 'empty');
+      cell.innerHTML = gBuildWhackCellContent(s);
+    }
+  }
+}
+function gStartWhack() {
+  if (G_WHACK.stake > 0 && G_SAVE.coins < G_WHACK.stake) {
+    snack('недостаточно монет для выбранного входа');
+    return;
+  }
+  if (G_WHACK.stake > 0) {
+    G_SAVE.coins -= G_WHACK.stake;
+    gPersist();
+  }
+  gStopAllTimers(true);
+  G_WHACK.active = true;
+  G_WHACK.timeLeft = 30;
+  G_WHACK.maxTime = 30;
+  G_WHACK.score = 0;
+  G_WHACK.combo = 0;
+  G_WHACK.hits = 0;
+  G_WHACK.spawnMs = 0;
+  G_WHACK.slots = Array(9).fill(null);
+  gSpawnWhackOne();
+  gSpawnWhackOne();
+  refreshGameDom(false);
+
+  G_WHACK.timerId = setInterval(() => {
+    if (!G_WHACK.active) return;
+    G_WHACK.timeLeft = Math.max(0, +(G_WHACK.timeLeft - 0.1).toFixed(1));
+    for (let i = 0; i < 9; i++) {
+      if (G_WHACK.slots[i]) {
+        G_WHACK.slots[i].ttl -= 100;
+        if (G_WHACK.slots[i].ttl <= 0) G_WHACK.slots[i] = null;
+      }
+    }
+    G_WHACK.spawnMs += 100;
+    const cadence = G_WHACK.timeLeft < 10 ? 400 : (G_WHACK.timeLeft < 20 ? 500 : 600);
+    if (G_WHACK.spawnMs >= cadence) {
+      G_WHACK.spawnMs = 0;
+      gSpawnWhackOne();
+      if (G_WHACK.slots.filter(Boolean).length < 2) gSpawnWhackOne();
+    }
+    gPatchWhackDom();
+    if (G_WHACK.timeLeft <= 0) gFinishWhack();
+  }, 100);
+}
+function gTapWhack(idx) {
+  if (!G_WHACK.active) return;
+  const s = G_WHACK.slots[idx];
+  if (!s) return;
+  G_WHACK.slots[idx] = null;
+  if (s.bad) {
+    G_WHACK.hits++;
+    G_WHACK.combo++;
+    const mult = Math.min(4, 1 + Math.floor(G_WHACK.combo / 4));
+    G_WHACK.score += s.pts * mult;
+    hap();
+  } else {
+    G_WHACK.combo = 0;
+    G_WHACK.score = Math.max(0, G_WHACK.score - 20);
+    hap('impact');
+    snack(`это можно! не выбрасывай: ${s.name}`);
+  }
+  gPatchWhackDom();
+}
+function gFinishWhack() {
+  gStopWhack(true);
+  const stMult = G_WHACK.stake === 350 ? 3.5 : (G_WHACK.stake === 100 ? 2.2 : 1);
+  const earn = Math.max(0, Math.round((G_WHACK.score * 0.32 + G_WHACK.hits * 4) * stMult * gLicMult()));
+  const isRec = G_WHACK.hits > (G_SAVE.whackBest || 0);
+  if (isRec) G_SAVE.whackBest = G_WHACK.hits;
+  G_SAVE.coins += earn;
+  if (G_WHACK.hits >= 15) G_SAVE.rankXp++;
+  gPersist();
+  gCheckAchs();
+  refreshGameDom(false);
+
+  sheet.innerHTML = `<div class="handle"></div>
+    <span class="tag st" style="--i:0">${isRec ? 'новый рекорд' : 'детокс завершён'}</span>
+    <h2 class="st" style="--i:1">убрано срывов: ${G_WHACK.hits}</h2>
+    <div class="info st" style="--i:2">
+      <div><small>результат</small><p>очки: ${G_WHACK.score} · рекорд: ${G_SAVE.whackBest} · вход: ${G_WHACK.stake ? G_WHACK.stake + ' 🪙 (×' + stMult + ')' : 'бесплатно'}</p></div>
+      <div><small>гонорар</small><p>+${earn} монет на счёт клиники</p></div>
+    </div>
+    <button type="button" class="buy st" style="--i:3" id="g-wh-again"><md-ripple></md-ripple>сыграть ещё раз<md-icon>replay</md-icon></button>`;
+  $('g-wh-again').addEventListener('click', () => { hap('impact'); closeSheet(); gStartWhack(); });
+  present();
+}
+
+/* ---------- МИНИ-ИГРА 2: ЛАБОРАТОРИЯ ФОРМУЛ ---------- */
+const G_ALCH_INGS = [
+  { id: 'garcinia', name: 'гарциния', burn: 3, app: 4, caf: 0, calm: 1, note: 'сжиг 3 · сыт 4 · жкт +1' },
+  { id: 'carnitine', name: 'l-карнитин', burn: 4, app: 1, caf: 0, calm: 1, note: 'сжиг 4 · сыт 1 · кофе 0' },
+  { id: 'cactus', name: 'плоды кактуса', burn: 2, app: 4, caf: 0, calm: 2, note: 'сжиг 2 · сыт 4 · жкт +2' },
+  { id: 'cumin', name: 'тмин и одуванчик', burn: 3, app: 2, caf: 0, calm: 3, note: 'сжиг 3 · сыт 2 · жкт +3' },
+  { id: 'greencoffee', name: 'зелёный кофе', burn: 4, app: 2, caf: 2, calm: 0, note: 'сжиг 4 · сыт 2 · кофе +2' },
+  { id: 'guarana', name: 'гуарана', burn: 5, app: 3, caf: 3, calm: -1, note: 'сжиг 5 · сыт 3 · кофе +3!' },
+  { id: 'greentea', name: 'зелёный чай', burn: 3, app: 2, caf: 2, calm: 0, note: 'сжиг 3 · сыт 2 · кофе +2' },
+  { id: 'fennel', name: 'семена фенхеля', burn: 1, app: 3, caf: 0, calm: 4, note: 'сжиг 1 · сыт 3 · жкт +4' },
+  { id: 'chamomile', name: 'ромашка и цикорий', burn: 0, app: 2, caf: -1, calm: 5, note: 'кофе -1 · жкт +5 · антистресс' },
+  { id: 'trapvit', name: 'железо + цинк + c/b', burn: 1, app: 0, caf: 0, calm: -5, trap: true, note: 'ловушка совместимости!' }
+];
+const G_ALCH_ORDERS = [
+  { title: 'мягкий старт', desc: 'нужна бережная формула без лишней нагрузки на сосуды', reqBurn: 6, reqApp: 6, reqCalm: 4, maxCaf: 2, reward: 120 },
+  { title: 'удар по плато', desc: 'максимальный разгон обмена без передоза кофеином', reqBurn: 9, reqApp: 5, reqCalm: 2, maxCaf: 3, reward: 160 },
+  { title: 'стоп ночному жору', desc: 'клиента тянет к сладкому после полуночи — давим аппетит', reqBurn: 5, reqApp: 9, reqCalm: 4, maxCaf: 2, reward: 140 },
+  { title: 'щадящий жкт', desc: 'чувствительный желудок: жкт минимум +7 и почти без кофеина', reqBurn: 6, reqApp: 5, reqCalm: 7, maxCaf: 1, reward: 170 },
+  { title: 'супер-метаболизм', desc: 'тяжёлый люкс-состав для опытного клиента (сжиг 11+)', reqBurn: 11, reqApp: 6, reqCalm: 0, maxCaf: 4, reward: 190 },
+  { title: 'утренний тонус', desc: 'ровный баланс жиросжигания, сытости и защиты слизистой', reqBurn: 8, reqApp: 7, reqCalm: 3, maxCaf: 2, reward: 150 }
+];
+const G_ALCH_RECIPES = {
+  'carnitine+chamomile+garcinia': 'turbo старт мягкий',
+  'cactus+cumin+garcinia': 'молекула 40 баланс',
+  'carnitine+chamomile+guarana': 'металл-бустер 30',
+  'cactus+chamomile+fennel': 'тихий детокс жкт',
+  'fennel+garcinia+greencoffee': 'премиум анти-срыв',
+  'carnitine+fennel+greentea': 'утренний термогенез',
+  'cactus+carnitine+cumin': 'чистый слим без кофеина',
+  'chamomile+garcinia+guarana': 'сладкий стоп ×2'
+};
+const G_ALCH = { orderIdx: 0, picked: [], catalyst: false, lastMsg: '' };
+
+function gNewAlchOrder() {
+  G_ALCH.orderIdx = (G_ALCH.orderIdx + 1) % G_ALCH_ORDERS.length;
+  G_ALCH.picked = [];
+  G_ALCH.lastMsg = '';
+  refreshGameDom(false);
+}
+function gToggleAlchIng(id) {
+  const i = G_ALCH.picked.indexOf(id);
+  if (i >= 0) G_ALCH.picked.splice(i, 1);
+  else if (G_ALCH.picked.length < 3) G_ALCH.picked.push(id);
+  else snack('в капсуле максимум 3 компонента');
+  refreshGameDom(false);
+}
+function gToggleAlchCat() {
+  G_ALCH.catalyst = !G_ALCH.catalyst;
+  refreshGameDom(false);
+}
+function gCalcAlch() {
+  let burn = 0, app = 0, caf = 0, calm = 0, hasTrap = false;
+  G_ALCH.picked.forEach(id => {
+    const x = G_ALCH_INGS.find(k => k.id === id);
+    if (!x) return;
+    burn += x.burn; app += x.app; caf += x.caf; calm += x.calm;
+    if (x.trap) hasTrap = true;
+  });
+  return { burn, app, caf: Math.max(0, caf), calm, hasTrap };
+}
+function gCraftAlchemy() {
+  if (G_ALCH.picked.length < 3) { snack('выберите ровно 3 компонента'); return; }
+  if (G_ALCH.catalyst && G_SAVE.coins < 80) { snack('не хватает 80 🪙 на катализатор'); G_ALCH.catalyst = false; refreshGameDom(false); return; }
+  if (G_ALCH.catalyst) { G_SAVE.coins -= 80; }
+
+  const ord = G_ALCH_ORDERS[G_ALCH.orderIdx];
+  const st = gCalcAlch();
+  const maxCaf = ord.maxCaf + (G_ALCH.catalyst ? 1 : 0);
+
+  if (st.hasTrap) {
+    G_ALCH.lastMsg = 'сбой! железо, цинк, вит. c и b несовместимы с курсом похудения.';
+    G_ALCH.catalyst = false; gPersist(); refreshGameDom(false); snack('конфликт витаминов!'); return;
+  }
+  if (st.caf > maxCaf) {
+    G_ALCH.lastMsg = `перегрев! кофеин ${st.caf}/${maxCaf} — добавьте ромашку или уберите стимулятор.`;
+    G_ALCH.catalyst = false; gPersist(); refreshGameDom(false); snack('превышен лимит кофеина!'); return;
+  }
+  if (st.burn < ord.reqBurn || st.app < ord.reqApp || st.calm < ord.reqCalm) {
+    G_ALCH.lastMsg = `заказ не выполнен: сжиг ${st.burn}/${ord.reqBurn}, сытость ${st.app}/${ord.reqApp}, жкт ${st.calm}/${ord.reqCalm}.`;
+    G_ALCH.catalyst = false; gPersist(); refreshGameDom(false); snack('параметры ниже нормы заказа'); return;
+  }
+
+  const rKey = G_ALCH.picked.slice().sort().join('+');
+  const rName = G_ALCH_RECIPES[rKey];
+  let recBonus = 0, newRec = false;
+  if (rName) {
+    if (!G_SAVE.recipes[rKey]) { G_SAVE.recipes[rKey] = true; recBonus = 150; newRec = true; }
+    else recBonus = 35;
+  }
+  const baseEarn = Math.round(ord.reward * (G_ALCH.catalyst ? 1.6 : 1) * gLicMult());
+  const total = baseEarn + recBonus;
+  G_SAVE.coins += total;
+  G_SAVE.rankXp++;
+  G_ALCH.orderIdx = (G_ALCH.orderIdx + 1) % G_ALCH_ORDERS.length;
+  G_ALCH.picked = [];
+  G_ALCH.catalyst = false;
+  G_ALCH.lastMsg = newRec
+    ? `открыта секретная формула «${rName}»! получено +${total} 🪙`
+    : (rName ? `формула «${rName}» идеальна! +${total} 🪙` : `заказ «${ord.title}» выполнен! +${total} 🪙`);
+  gPersist();
+  gCheckAchs();
+  refreshGameDom(false);
+  snack(G_ALCH.lastMsg);
+}
+
+/* ---------- МИНИ-ИГРА 3: БЕЗ ПЕРЕДОЗА (РИСК-ИСПЫТАНИЕ) ---------- */
+const G_RISK_DECK = [
+  { name: 'чистая вода 2 л', stress: -15, mult: 0.25, bad: false },
+  { name: 'чистая вода с лимоном', stress: -15, mult: 0.25, bad: false },
+  { name: 'гречка и курогрудка', stress: 0, mult: 0.35, bad: false },
+  { name: 'рыба и овощи на пару', stress: 0, mult: 0.35, bad: false },
+  { name: 'цикорий и 2 зефирки', stress: 10, mult: 0.40, bad: false },
+  { name: 'тёплая ромашка', stress: -20, mult: 0.25, bad: false, chamo: true },
+  { name: 'курс molecule plus 30', stress: 25, mult: 0.85, bad: false },
+  { name: 'скрытый кофеин (латте)', stress: 42, mult: 0.20, bad: true },
+  { name: 'холодный чай в бутылке', stress: 42, mult: 0.20, bad: true },
+  { name: 'лишняя 3-я капсула', stress: 48, mult: 0.60, bad: true },
+  { name: 'цитрамон в дороге', stress: 52, mult: 0.15, bad: true },
+  { name: 'бокал на вечеринке', stress: 60, mult: 0.00, bad: true }
+];
+const G_RISK = {
+  active: false, ended: false, busted: false, lastWin: 0,
+  stake: 50, buyShield: false, mult: 1.0, stress: 0, chamo: false, day: 0, deck: [], log: []
+};
+
+function gSetRiskStake(st) { if (!G_RISK.active) { G_RISK.stake = st; refreshGameDom(false); } }
+function gToggleRiskShield() { if (!G_RISK.active) { G_RISK.buyShield = !G_RISK.buyShield; refreshGameDom(false); } }
+function gDrawRiskCard() {
+  if (!G_RISK.deck.length) return;
+  const card = G_RISK.deck.pop();
+  G_RISK.day++;
+  if (card.bad) {
+    if (G_RISK.chamo) {
+      G_RISK.chamo = false;
+      G_RISK.mult = +(G_RISK.mult + 0.25).toFixed(2);
+      G_RISK.log.unshift({ cls: 'shield', txt: `день ${G_RISK.day}: ромашка спасла от «${card.name}» (+0.25×)` });
+    } else {
+      G_RISK.stress += card.stress;
+      G_RISK.mult = +(G_RISK.mult + card.mult).toFixed(2);
+      G_RISK.log.unshift({ cls: 'bad', txt: `день ${G_RISK.day}: ${card.name} (+${card.stress}% риска)` });
+    }
+  } else {
+    if (card.chamo) G_RISK.chamo = true;
+    G_RISK.stress = Math.max(0, G_RISK.stress + card.stress);
+    G_RISK.mult = +(G_RISK.mult + card.mult).toFixed(2);
+    G_RISK.log.unshift({ cls: card.chamo ? 'shield' : 'good', txt: `день ${G_RISK.day}: ${card.name} (+${card.mult.toFixed(2)}×)` });
+  }
+}
+function gStartRisk() {
+  const shCost = G_RISK.stake > 0 ? Math.round(G_RISK.stake * 0.35) : 30;
+  const totalCost = G_RISK.stake + (G_RISK.buyShield ? shCost : 0);
+  if (G_SAVE.coins < totalCost) { snack(`недостаточно монет (нужно ${totalCost} 🪙)`); return; }
+  if (totalCost > 0) { G_SAVE.coins -= totalCost; gPersist(); }
+
+  const d = G_RISK_DECK.map(x => ({ ...x }));
+  for (let i = d.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [d[i], d[j]] = [d[j], d[i]];
+  }
+  G_RISK.active = true;
+  G_RISK.ended = false;
+  G_RISK.busted = false;
+  G_RISK.lastWin = 0;
+  G_RISK.mult = 1.0;
+  G_RISK.stress = 0;
+  G_RISK.chamo = G_RISK.buyShield;
+  G_RISK.day = 0;
+  G_RISK.deck = d;
+  G_RISK.log = [];
+  gDrawRiskCard();
+  refreshGameDom(false);
+}
+function gActRisk(act) {
+  if (!G_RISK.active) return;
+  if (act === 'draw') {
+    gDrawRiskCard();
+    if (G_RISK.stress >= 100) {
+      G_RISK.active = false;
+      G_RISK.ended = true;
+      G_RISK.busted = true;
+      hap('impact');
+      snack('передозировка 100%! ставка сгорела');
+      refreshGameDom(false);
+      return;
+    }
+    if (!G_RISK.deck.length) {
+      G_RISK.mult = +(G_RISK.mult + 1.0).toFixed(2);
+      snack('все 12 дней пройдены! бонус +1.00×');
+      gActRisk('cash');
+      return;
+    }
+    refreshGameDom(false);
+    return;
+  }
+  if (act === 'cash') {
+    const win = G_RISK.stake > 0
+      ? Math.round(G_RISK.stake * G_RISK.mult)
+      : Math.round(G_RISK.mult * 30 * gLicMult());
+    G_RISK.active = false;
+    G_RISK.ended = true;
+    G_RISK.busted = false;
+    G_RISK.lastWin = win;
+    G_SAVE.coins += win;
+    if (G_RISK.mult > (G_SAVE.riskBestMult || 0)) G_SAVE.riskBestMult = G_RISK.mult;
+    gPersist();
+    gCheckAchs();
+    hap('impact');
+    snack(`успех! забрали +${win} 🪙 (×${G_RISK.mult.toFixed(2)})`);
+    refreshGameDom(false);
+  }
+}
+
+/* ---------- МИНИ-ИГРА 4: ДЕТЕКТОР ДОСТАВКИ (САПЁР 4×4) ---------- */
+const G_MINE_TRAPS = ['эспрессо', 'цитрамон', 'энергетик', 'кофе 3в1', 'алко-коктейль', 'аскофен'];
+const G_MINE = {
+  active: false, ended: false, busted: false, lastWin: 0, hitName: '',
+  minesCnt: 4, stake: 50, useScan: false, usedScan: false,
+  mult: 1.0, safeOpened: 0, board: []
+};
+function gSetMineCnt(n) { if (!G_MINE.active) { G_MINE.minesCnt = n; refreshGameDom(false); } }
+function gSetMineStake(s) { if (!G_MINE.active) { G_MINE.stake = s; refreshGameDom(false); } }
+function gToggleMineScan() { if (!G_MINE.active) { G_MINE.useScan = !G_MINE.useScan; refreshGameDom(false); } }
+function gStartMine() {
+  const scCost = G_MINE.stake > 0 ? Math.max(40, Math.round(G_MINE.stake * 0.4)) : 40;
+  const cost = G_MINE.stake + (G_MINE.useScan ? scCost : 0);
+  if (G_SAVE.coins < cost) { snack(`недостаточно монет (нужно ${cost} 🪙)`); return; }
+  if (cost > 0) { G_SAVE.coins -= cost; gPersist(); }
+
+  const b = Array.from({ length: 16 }, () => ({ isMine: false, open: false, flagged: false, adj: 0, badName: '' }));
+  const idxs = Array.from({ length: 16 }, (_, i) => i);
+  for (let i = idxs.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [idxs[i], idxs[j]] = [idxs[j], idxs[i]]; }
+  const mineIdxs = idxs.slice(0, G_MINE.minesCnt);
+  mineIdxs.forEach(idx => {
+    b[idx].isMine = true;
+    b[idx].badName = G_MINE_TRAPS[Math.floor(Math.random() * G_MINE_TRAPS.length)];
+  });
+  for (let i = 0; i < 16; i++) {
+    if (b[i].isMine) continue;
+    const r = Math.floor(i / 4), c = i % 4;
+    let cnt = 0;
+    for (let dr = -1; dr <= 1; dr++) for (let dc = -1; dc <= 1; dc++) {
+      if (!dr && !dc) continue;
+      const nr = r + dr, nc = c + dc;
+      if (nr >= 0 && nr < 4 && nc >= 0 && nc < 4 && b[nr * 4 + nc].isMine) cnt++;
+    }
+    b[i].adj = cnt;
+  }
+  if (G_MINE.useScan && mineIdxs.length) b[mineIdxs[0]].flagged = true;
+  G_MINE.active = true; G_MINE.ended = false; G_MINE.busted = false; G_MINE.lastWin = 0; G_MINE.hitName = '';
+  G_MINE.usedScan = G_MINE.useScan; G_MINE.mult = 1.0; G_MINE.safeOpened = 0; G_MINE.board = b;
+  refreshGameDom(false);
+}
+function gTapMine(i) {
+  if (!G_MINE.active) return;
+  const cell = G_MINE.board[i];
+  if (!cell || cell.open || cell.flagged) return;
+  if (cell.isMine) {
+    G_MINE.board.forEach(x => { x.open = true; });
+    G_MINE.active = false; G_MINE.ended = true; G_MINE.busted = true; G_MINE.hitName = cell.badName;
+    hap('impact');
+    snack('найдена запрещёнка: ' + cell.badName + '!');
+    refreshGameDom(false);
+    return;
+  }
+  const remSafe = 16 - G_MINE.minesCnt - G_MINE.safeOpened;
+  const remAll = 16 - G_MINE.safeOpened - (G_MINE.usedScan ? 1 : 0);
+  G_MINE.mult = +(G_MINE.mult * (remAll / Math.max(1, remSafe)) * 0.96).toFixed(2);
+  cell.open = true;
+  G_MINE.safeOpened++;
+  hap();
+  if (G_MINE.safeOpened >= 16 - G_MINE.minesCnt) {
+    gCashMine();
+    return;
+  }
+  refreshGameDom(false);
+}
+function gCashMine() {
+  if (!G_MINE.active || G_MINE.safeOpened === 0) return;
+  const win = G_MINE.stake > 0 ? Math.round(G_MINE.stake * G_MINE.mult) : Math.round(G_MINE.mult * 35 * gLicMult());
+  G_MINE.board.forEach(x => { x.open = true; });
+  G_MINE.active = false; G_MINE.ended = true; G_MINE.busted = false; G_MINE.lastWin = win;
+  G_SAVE.coins += win;
+  if (G_MINE.mult > (G_SAVE.mineBestMult || 0)) G_SAVE.mineBestMult = G_MINE.mult;
+  gPersist();
+  gCheckAchs();
+  snack(`доставка проверена! +${win} 🪙 (×${G_MINE.mult.toFixed(2)})`);
+  refreshGameDom(false);
+}
+
+/* ---------- МИНИ-ИГРА 5: ЭВОЛЮЦИЯ КУРСА (2048) ---------- */
+const G_MERGE_NAMES = ['', 'вода', 'ромашка', 'цикорий', 'гречка', 'turbo', 'plus 40', 'premium', 'plus 30', 'баланс', 'идеал!'];
+const G_MERGE = { board: Array(16).fill(0), score: 0, over: false };
+function gSpawnMergeTile() {
+  const emp = [];
+  for (let i = 0; i < 16; i++) if (!G_MERGE.board[i]) emp.push(i);
+  if (!emp.length) return;
+  G_MERGE.board[emp[Math.floor(Math.random() * emp.length)]] = Math.random() < 0.85 ? 1 : 2;
+}
+function gCanMoveMerge() {
+  for (let i = 0; i < 16; i++) {
+    if (!G_MERGE.board[i]) return true;
+    const r = Math.floor(i / 4), c = i % 4;
+    if (c < 3 && G_MERGE.board[i] === G_MERGE.board[i + 1]) return true;
+    if (r < 3 && G_MERGE.board[i] === G_MERGE.board[i + 4]) return true;
+  }
+  return false;
+}
+function gInitMerge() {
+  G_MERGE.board = Array(16).fill(0); G_MERGE.score = 0; G_MERGE.over = false;
+  gSpawnMergeTile(); gSpawnMergeTile();
+}
+gInitMerge();
+function gMoveMerge(dir) {
+  if (G_MERGE.over) return;
+  const b = G_MERGE.board.slice();
+  let moved = false;
+  const lineIdx = line => {
+    const out = [];
+    for (let k = 0; k < 4; k++) {
+      if (dir === 'left') out.push(line * 4 + k);
+      else if (dir === 'right') out.push(line * 4 + (3 - k));
+      else if (dir === 'up') out.push(k * 4 + line);
+      else out.push((3 - k) * 4 + line);
+    }
+    return out;
+  };
+  for (let l = 0; l < 4; l++) {
+    const idxs = lineIdx(l);
+    const vals = idxs.map(i => b[i]).filter(Boolean);
+    const merged = [];
+    for (let j = 0; j < vals.length; j++) {
+      if (j + 1 < vals.length && vals[j] === vals[j + 1]) {
+        const nxt = Math.min(10, vals[j] + 1);
+        merged.push(nxt);
+        G_MERGE.score += Math.pow(2, nxt);
+        j++;
+      } else merged.push(vals[j]);
+    }
+    while (merged.length < 4) merged.push(0);
+    idxs.forEach((pos, k) => {
+      if (b[pos] !== merged[k]) moved = true;
+      b[pos] = merged[k];
+    });
+  }
+  if (!moved) return;
+  G_MERGE.board = b;
+  gSpawnMergeTile();
+  if (G_MERGE.score > (G_SAVE.mergeBest || 0)) { G_SAVE.mergeBest = G_MERGE.score; gPersist(); }
+  if (!gCanMoveMerge()) { G_MERGE.over = true; hap('impact'); snack('ходов больше нет! заберите награду за очки'); }
+  else hap();
+  gCheckAchs();
+  refreshGameDom(false);
+}
+function gCleanMerge() {
+  if (G_SAVE.coins < 80) { snack('нужно 80 🪙 для очистки плитки'); return; }
+  const nonZero = [];
+  for (let i = 0; i < 16; i++) if (G_MERGE.board[i] > 0) nonZero.push({ i, v: G_MERGE.board[i] });
+  if (nonZero.length < 3) { snack('на поле и так много места'); return; }
+  nonZero.sort((a, b) => a.v - b.v);
+  G_SAVE.coins -= 80;
+  G_MERGE.board[nonZero[0].i] = 0;
+  G_MERGE.over = !gCanMoveMerge();
+  gPersist();
+  refreshGameDom(false);
+  snack('убрана мелкая плитка (-80 🪙)');
+}
+function gCashAndResetMerge() {
+  const earn = G_MERGE.score >= 40 ? Math.round((G_MERGE.score / 18) * gLicMult()) : 0;
+  if (earn > 0) {
+    G_SAVE.coins += earn;
+    gPersist();
+    gCheckAchs();
+    snack(`партия закрыта: +${earn} 🪙 за ${G_MERGE.score} очков`);
+  }
+  gInitMerge();
+  refreshGameDom(false);
+}
+
+/* ---------- МИНИ-ИГРА 6: ТОЧНЫЙ ДОЗАТОР (ТАЙМИНГ) ---------- */
+const G_GAUGE = {
+  active: false, ended: false, won: false, lastWin: 0, stake: 50,
+  round: 1, lives: 2, mult: 1.0, pos: 50, dir: 1, tStart: 36, tWidth: 28, speed: 65,
+  rafId: null, lastTs: 0, note: ''
+};
+function gSetGaugeStake(s) { if (!G_GAUGE.active) { G_GAUGE.stake = s; refreshGameDom(false); } }
+function gStopGauge(silent = false) {
+  if (G_GAUGE.rafId) { cancelAnimationFrame(G_GAUGE.rafId); G_GAUGE.rafId = null; }
+  G_GAUGE.active = false;
+  if (!silent && G_STATE.sub === 'arcade' && G_STATE.arcSub === 'gauge') refreshGameDom(false);
+}
+function gSetupGaugeRound(r) {
+  const widths = [28, 22, 18, 14, 11];
+  G_GAUGE.round = r;
+  G_GAUGE.tWidth = widths[Math.min(4, r - 1)];
+  G_GAUGE.tStart = Math.round(12 + Math.random() * (76 - G_GAUGE.tWidth));
+  G_GAUGE.speed = 64 + (r - 1) * 20;
+  G_GAUGE.pos = Math.random() < 0.5 ? 5 : 95;
+  G_GAUGE.dir = G_GAUGE.pos < 50 ? 1 : -1;
+}
+function gLoopGauge(ts) {
+  if (!G_GAUGE.active) return;
+  if (!G_GAUGE.lastTs) G_GAUGE.lastTs = ts;
+  const dt = Math.min(0.05, (ts - G_GAUGE.lastTs) / 1000);
+  G_GAUGE.lastTs = ts;
+  G_GAUGE.pos += G_GAUGE.dir * G_GAUGE.speed * dt;
+  if (G_GAUGE.pos >= 100) { G_GAUGE.pos = 100; G_GAUGE.dir = -1; }
+  if (G_GAUGE.pos <= 0) { G_GAUGE.pos = 0; G_GAUGE.dir = 1; }
+  const pin = $('g-ga-pin');
+  if (pin) pin.style.left = G_GAUGE.pos.toFixed(2) + '%';
+  G_GAUGE.rafId = requestAnimationFrame(gLoopGauge);
+}
+function gStartGauge() {
+  if (G_SAVE.coins < G_GAUGE.stake) { snack('недостаточно монет'); return; }
+  if (G_GAUGE.stake > 0) { G_SAVE.coins -= G_GAUGE.stake; gPersist(); }
+  gStopAllTimers(true);
+  G_GAUGE.active = true; G_GAUGE.ended = false; G_GAUGE.won = false;
+  G_GAUGE.lastWin = 0; G_GAUGE.lives = 2; G_GAUGE.mult = 1.0; G_GAUGE.note = '';
+  gSetupGaugeRound(1);
+  G_GAUGE.lastTs = 0;
+  refreshGameDom(false);
+  G_GAUGE.rafId = requestAnimationFrame(gLoopGauge);
+}
+function gHitGauge() {
+  if (!G_GAUGE.active) return;
+  const p = G_GAUGE.pos, s = G_GAUGE.tStart, e = s + G_GAUGE.tWidth, c = (s + e) / 2, cw = G_GAUGE.tWidth * 0.22;
+  if (Math.abs(p - c) <= cw) {
+    G_GAUGE.mult = +(G_GAUGE.mult + 0.55).toFixed(2);
+    G_GAUGE.note = 'идеально в центр! (+0.55×)';
+    hap();
+  } else if (p >= s && p <= e) {
+    G_GAUGE.mult = +(G_GAUGE.mult + 0.30).toFixed(2);
+    G_GAUGE.note = 'точно в норму (+0.30×)';
+    hap();
+  } else {
+    G_GAUGE.lives--;
+    G_GAUGE.note = 'мимо дозы! (-1 жизнь)';
+    hap('impact');
+  }
+  if (G_GAUGE.lives <= 0) {
+    gStopGauge(true);
+    G_GAUGE.ended = true; G_GAUGE.won = false;
+    snack('передоз при дозировке! ставка сгорела');
+    refreshGameDom(false);
+    return;
+  }
+  if (G_GAUGE.round >= 5) {
+    G_GAUGE.mult = +(G_GAUGE.mult + 0.50).toFixed(2);
+    snack('вся серия пройдена! бонус +0.50×');
+    gCashGauge();
+    return;
+  }
+  gSetupGaugeRound(G_GAUGE.round + 1);
+  G_GAUGE.lastTs = 0;
+  refreshGameDom(false);
+  if (G_GAUGE.rafId) cancelAnimationFrame(G_GAUGE.rafId);
+  G_GAUGE.rafId = requestAnimationFrame(gLoopGauge);
+}
+function gCashGauge() {
+  if (!G_GAUGE.active) return;
+  gStopGauge(true);
+  const win = G_GAUGE.stake > 0 ? Math.round(G_GAUGE.stake * G_GAUGE.mult) : Math.round(G_GAUGE.mult * 45 * gLicMult());
+  G_GAUGE.ended = true; G_GAUGE.won = true; G_GAUGE.lastWin = win;
+  G_SAVE.coins += win;
+  if (G_GAUGE.mult > (G_SAVE.gaugeBest || 0)) G_SAVE.gaugeBest = G_GAUGE.mult;
+  gPersist();
+  gCheckAchs();
+  snack(`дозировка принята: +${win} 🪙!`);
+  refreshGameDom(false);
+}
+
+/* ---------- МИНИ-ИГРА 7: ТАЙНЫЙ КОД КУРСА (MASTERMIND) ---------- */
+const G_CODE_ELS = [
+  { id: 'w', name: 'вода', ic: 'water_drop' },
+  { id: 'c', name: 'капсула', ic: 'medication' },
+  { id: 't', name: 'цикорий', ic: 'local_cafe' },
+  { id: 'r', name: 'ромашка', ic: 'spa' },
+  { id: 'g', name: 'гречка', ic: 'restaurant' },
+  { id: 'p', name: 'панадол', ic: 'vaccines' }
+];
+const G_CODE = {
+  active: false, ended: false, won: false, lastWin: 0, stake: 50,
+  secret: [], guess: [null, null, null, null], locked: {}, history: []
+};
+function gSetCodeStake(s) { if (!G_CODE.active) { G_CODE.stake = s; refreshGameDom(false); } }
+function gStartCode() {
+  if (G_SAVE.coins < G_CODE.stake) { snack('недостаточно монет'); return; }
+  if (G_CODE.stake > 0) { G_SAVE.coins -= G_CODE.stake; gPersist(); }
+  const pool = G_CODE_ELS.map(x => x.id);
+  for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+  G_CODE.secret = pool.slice(0, 4);
+  G_CODE.guess = [null, null, null, null];
+  G_CODE.locked = {};
+  G_CODE.history = [];
+  G_CODE.active = true; G_CODE.ended = false; G_CODE.won = false; G_CODE.lastWin = 0;
+  refreshGameDom(false);
+}
+function gPickCodeEl(id) {
+  if (!G_CODE.active) return;
+  if (G_CODE.guess.includes(id)) { snack('элемент уже стоит в попытке'); return; }
+  const idx = G_CODE.guess.indexOf(null);
+  if (idx < 0) { snack('все 4 слота заполнены'); return; }
+  G_CODE.guess[idx] = id;
+  refreshGameDom(false);
+}
+function gClearCodeSlot(i) {
+  if (!G_CODE.active || G_CODE.locked[i]) return;
+  G_CODE.guess[i] = null;
+  refreshGameDom(false);
+}
+function gHintCode() {
+  if (!G_CODE.active) return;
+  if (G_SAVE.coins < 120) { snack('нужно 120 🪙 для подсказки'); return; }
+  const openIdx = [0, 1, 2, 3].find(i => !G_CODE.locked[i]);
+  if (openIdx == null) { snack('все слоты уже открыты'); return; }
+  G_SAVE.coins -= 120;
+  const ans = G_CODE.secret[openIdx];
+  for (let i = 0; i < 4; i++) if (G_CODE.guess[i] === ans && !G_CODE.locked[i]) G_CODE.guess[i] = null;
+  G_CODE.locked[openIdx] = ans;
+  G_CODE.guess[openIdx] = ans;
+  gPersist();
+  refreshGameDom(false);
+  snack('подсказка: слот ' + (openIdx + 1) + ' открыт (-120 🪙)');
+}
+function gCheckCode() {
+  if (!G_CODE.active) return;
+  if (G_CODE.guess.includes(null)) { snack('заполните все 4 слота'); return; }
+  let exact = 0, near = 0;
+  for (let i = 0; i < 4; i++) {
+    if (G_CODE.guess[i] === G_CODE.secret[i]) exact++;
+    else if (G_CODE.secret.includes(G_CODE.guess[i])) near++;
+  }
+  G_CODE.history.push({ guess: G_CODE.guess.slice(), exact, near });
+  if (exact === 4) {
+    const tr = G_CODE.history.length;
+    const mult = tr === 1 ? 4 : tr <= 3 ? 2.8 : tr === 4 ? 2.2 : 1.6;
+    const win = G_CODE.stake > 0 ? Math.round(G_CODE.stake * mult) : Math.round(120 * mult * gLicMult());
+    G_CODE.active = false; G_CODE.ended = true; G_CODE.won = true; G_CODE.lastWin = win;
+    G_SAVE.coins += win;
+    G_SAVE.codeWins = (G_SAVE.codeWins || 0) + 1;
+    G_SAVE.rankXp++;
+    gPersist(); gCheckAchs();
+    snack(`код взломан за ${tr} ход.! +${win} 🪙`);
+    refreshGameDom(false);
+    return;
+  }
+  if (G_CODE.history.length >= 6) {
+    G_CODE.active = false; G_CODE.ended = true; G_CODE.won = false;
+    snack('попытки кончились! правильный код показан');
+    refreshGameDom(false);
+    return;
+  }
+  G_CODE.guess = [0, 1, 2, 3].map(i => G_CODE.locked[i] || null);
+  refreshGameDom(false);
+}
+
+/* ---------- МИНИ-ИГРА 8: ПАРЫ СОВМЕСТИМОСТИ (MEMORY 4×4) ---------- */
+const G_MEM_PAIRS = [
+  ['голова болит', 'парацетамол'],
+  ['хочу кофе', 'цикорий'],
+  ['потливость', 'ромашковый чай'],
+  ['нурофен', 'после еды'],
+  ['антидепрессант', 'только сиозс'],
+  ['цель -4 кг', 'turbo ozempic'],
+  ['давнее плато', 'molecule plus 30'],
+  ['праздник', 'только морс']
+];
+const G_MEM = {
+  active: false, ended: false, won: false, lastWin: 0, stake: 0,
+  timeLeft: 50, maxTime: 50, moves: 0, matched: 0, open: [], lock: false,
+  timerId: null, flipId: null, cards: []
+};
+function gSetMemStake(s) { if (!G_MEM.active) { G_MEM.stake = s; refreshGameDom(false); } }
+function gStopMem(silent = false) {
+  if (G_MEM.timerId) { clearInterval(G_MEM.timerId); G_MEM.timerId = null; }
+  if (G_MEM.flipId) { clearTimeout(G_MEM.flipId); G_MEM.flipId = null; }
+  G_MEM.active = false; G_MEM.lock = false;
+  if (!silent && G_STATE.sub === 'arcade' && G_STATE.arcSub === 'memory') refreshGameDom(false);
+}
+function gPatchMemCells(idxs) {
+  const grid = $('g-mem-grid');
+  if (!grid) return;
+  idxs.forEach(i => {
+    const el = grid.children[i], c = G_MEM.cards[i];
+    if (!el || !c) return;
+    const isOpen = c.done || G_MEM.open.includes(i);
+    el.className = 'g-mem-card' + (c.done ? ' done' : (isOpen ? ' open' : ''));
+    el.innerHTML = isOpen ? `<md-ripple></md-ripple><b>${esc(c.txt)}</b>` : '<md-ripple></md-ripple><md-icon>help</md-icon>';
+  });
+}
+function gStartMem() {
+  if (G_SAVE.coins < G_MEM.stake) { snack('недостаточно монет'); return; }
+  if (G_MEM.stake > 0) { G_SAVE.coins -= G_MEM.stake; gPersist(); }
+  gStopAllTimers(true);
+  const deck = [];
+  G_MEM_PAIRS.forEach(([a, b], pid) => { deck.push({ pid, txt: a, done: false }); deck.push({ pid, txt: b, done: false }); });
+  for (let i = deck.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [deck[i], deck[j]] = [deck[j], deck[i]]; }
+  G_MEM.cards = deck; G_MEM.active = true; G_MEM.ended = false; G_MEM.won = false; G_MEM.lastWin = 0;
+  G_MEM.timeLeft = 50; G_MEM.maxTime = 50; G_MEM.moves = 0; G_MEM.matched = 0; G_MEM.open = []; G_MEM.lock = false;
+  refreshGameDom(false);
+
+  G_MEM.timerId = setInterval(() => {
+    if (!G_MEM.active) return;
+    G_MEM.timeLeft = Math.max(0, +(G_MEM.timeLeft - 0.2).toFixed(1));
+    const tEl = $('g-mem-time'), bEl = $('g-mem-bar');
+    if (tEl) tEl.textContent = G_MEM.timeLeft.toFixed(1) + ' с';
+    if (bEl) bEl.style.width = Math.min(100, (G_MEM.timeLeft / G_MEM.maxTime) * 100) + '%';
+    if (G_MEM.timeLeft <= 0) {
+      gStopMem(true);
+      G_MEM.ended = true; G_MEM.won = false;
+      hap('impact');
+      snack('время вышло!');
+      refreshGameDom(false);
+    }
+  }, 200);
+}
+function gTapMem(i) {
+  if (!G_MEM.active || G_MEM.lock) return;
+  const c = G_MEM.cards[i];
+  if (!c || c.done || G_MEM.open.includes(i)) return;
+  G_MEM.open.push(i);
+  gPatchMemCells([i]);
+  if (G_MEM.open.length < 2) { hap(); return; }
+
+  G_MEM.moves++;
+  const mvEl = $('g-mem-info');
+  const [a, b] = G_MEM.open;
+  if (G_MEM.cards[a].pid === G_MEM.cards[b].pid) {
+    G_MEM.cards[a].done = G_MEM.cards[b].done = true;
+    G_MEM.matched++;
+    G_MEM.open = [];
+    gPatchMemCells([a, b]);
+    if (mvEl) mvEl.textContent = `пар: ${G_MEM.matched}/8 · ходов: ${G_MEM.moves}`;
+    hap();
+    if (G_MEM.matched === 8) {
+      const elapsed = Math.max(1, Math.round(G_MEM.maxTime - G_MEM.timeLeft));
+      gStopMem(true);
+      const mult = G_MEM.stake === 300 ? 3.2 : (G_MEM.stake === 100 ? 2.1 : 1);
+      const win = G_MEM.stake > 0 ? Math.round(G_MEM.stake * mult) : Math.round((120 + G_MEM.timeLeft * 3.5) * gLicMult());
+      G_MEM.ended = true; G_MEM.won = true; G_MEM.lastWin = win;
+      G_SAVE.coins += win;
+      if (!G_SAVE.memBestSec || elapsed < G_SAVE.memBestSec) G_SAVE.memBestSec = elapsed;
+      gPersist(); gCheckAchs();
+      snack(`все пары собраны за ${elapsed} с! +${win} 🪙`);
+      refreshGameDom(false);
+    }
+    return;
+  }
+  if (mvEl) mvEl.textContent = `пар: ${G_MEM.matched}/8 · ходов: ${G_MEM.moves}`;
+  G_MEM.lock = true;
+  hap('impact');
+  G_MEM.flipId = setTimeout(() => {
+    G_MEM.flipId = null;
+    G_MEM.open = [];
+    G_MEM.lock = false;
+    gPatchMemCells([a, b]);
+  }, 620);
+}
+
+(() => {
+  let sw = null;
+  $('pages').addEventListener('touchstart', e => {
+    if (!e.target.closest('#g-merge-grid')) return;
+    const t = e.touches[0]; sw = { x: t.clientX, y: t.clientY };
+  }, { passive: true });
+  $('pages').addEventListener('touchend', e => {
+    if (!sw) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - sw.x, dy = t.clientY - sw.y;
+    sw = null;
+    if (Math.hypot(dx, dy) < 24) return;
+    if (Math.abs(dx) > Math.abs(dy)) gMoveMerge(dx > 0 ? 'right' : 'left');
+    else gMoveMerge(dy > 0 ? 'down' : 'up');
+  }, { passive: true });
+  document.addEventListener('keydown', e => {
+    if (G_STATE.sub !== 'arcade' || G_STATE.arcSub !== 'merge') return;
+    const map = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right' };
+    if (map[e.key]) { e.preventDefault(); gMoveMerge(map[e.key]); }
+  });
+})();
+
+/* ---------- ПОЛНОЦЕННАЯ ИГРА 2: ИМПЕРИЯ КЛИНИКИ «ЕШКА» ---------- */
+const G_TY_PRODS = [
+  { id: 0, name: 'turbo ozempic', baseCost: 65, sell: 118 },
+  { id: 1, name: 'molecule plus 40', baseCost: 90, sell: 168 },
+  { id: 2, name: 'molecule premium', baseCost: 115, sell: 220 },
+  { id: 3, name: 'molecule plus 30', baseCost: 135, sell: 270 }
+];
+const G_TY_BRANCHES = [
+  { id: 'b0', name: 'кабинет у дома', desc: 'базовый поток +5 клиентов/день · аренда 60 🪙', cost: 0, flow: 5, rent: 60, priceMult: 1, vip: 0 },
+  { id: 'b1', name: 'филиал в центре', desc: '+8 клиентов/день · аренда 240 🪙', cost: 2000, flow: 8, rent: 240, priceMult: 1.05, vip: 0.05 },
+  { id: 'b2', name: 'спа-бутик «премиум»', desc: '+14 клиентов · чаще берут premium и 30 · аренда 580 🪙', cost: 6500, flow: 14, rent: 580, priceMult: 1.1, vip: 0.25 },
+  { id: 'b3', name: 'флагман мегаполиса', desc: '+24 клиента и +15% к чеку · аренда 1350 🪙', cost: 18000, flow: 24, rent: 1350, priceMult: 1.18, vip: 0.35 },
+  { id: 'b4', name: 'федеральная сеть', desc: '+40 клиентов и +25% к чеку · аренда 3200 🪙', cost: 45000, flow: 40, rent: 3200, priceMult: 1.28, vip: 0.45 }
+];
+const G_TY_STAFF = [
+  { id: 's0', name: 'нутрициолог алина', desc: 'усиливает рейтинг (+2/ур.) и спасает от штрафов минздрава', costs: [350, 900, 2000, 4500, 9500] },
+  { id: 's1', name: 'аналитик закупок', desc: 'снижает оптовые цены закупки (-5% за уровень)', costs: [400, 1000, 2200, 5000, 11000] },
+  { id: 's2', name: 'куратор ольга', desc: 'повышает средний чек и чаевые (+10% к выручке/ур.)', costs: [300, 800, 1800, 4200, 9000] },
+  { id: 's3', name: 'таргетолог макс', desc: 'приводит +2 постоянных клиента/день/ур. без доп. затрат', costs: [450, 1100, 2500, 5500, 12000] }
+];
+const G_TY_ADS = [
+  { id: 'none', name: 'без рекламы', cost: 0, mult: 1.0, rep: 0, desc: 'только текущие клиенты' },
+  { id: 'target', name: 'таргет похудения', cost: 350, mult: 1.45, rep: 1, desc: '+45% потока завтра' },
+  { id: 'bloggers', name: 'обзоры у блогеров', cost: 1400, mult: 2.15, rep: 3, desc: '×2.15 потока +3 рейтинга' },
+  { id: 'federal', name: 'федеральная акция', cost: 4000, mult: 3.1, rep: 5, desc: '×3.1 трафика и +5 рейтинга' }
+];
+
+function gSetTySec(sec) { G_STATE.tycoonSec = sec; refreshGameDom(false); }
+function gTyTotalStock() { return (G_SAVE.tycoon.stock || []).reduce((s, x) => s + x, 0); }
+function gTyRollPrices() {
+  const ty = G_SAVE.tycoon;
+  G_TY_PRODS.forEach((p, i) => {
+    const f = 0.68 + Math.random() * 0.72;
+    ty.prices[i] = Math.round(p.baseCost * f);
+    ty.trends[i] = f < 0.88 ? -1 : (f > 1.15 ? 1 : 0);
+  });
+}
+function gTyUnitPrice(pi) {
+  const ty = G_SAVE.tycoon;
+  const disc = Math.max(0.65, 1 - (ty.staff.s1 || 0) * 0.05);
+  return Math.max(20, Math.round((ty.prices[pi] || G_TY_PRODS[pi].baseCost) * disc));
+}
+function gTyBuyStock(pi, qty) {
+  const ty = G_SAVE.tycoon;
+  const free = Math.max(0, ty.stockCap - gTyTotalStock());
+  if (free <= 0) { snack('склад переполнен! продайте товар или расширьте склад'); return; }
+  const take = Math.min(qty, free);
+  const cost = gTyUnitPrice(pi) * take;
+  if (G_SAVE.coins < cost) { snack(`нужно ${cost} 🪙 для закупки ${take} шт.`); return; }
+  G_SAVE.coins -= cost;
+  ty.stock[pi] = (ty.stock[pi] || 0) + take;
+  gPersist();
+  refreshGameDom(false);
+  snack(`закуплено ${take} уп. ${G_TY_PRODS[pi].name} (-${cost} 🪙)`);
+}
+function gTySetAd(id) {
+  G_SAVE.tycoon.ad = id;
+  gPersist();
+  refreshGameDom(false);
+}
+function gTyBuyBranch(id) {
+  const b = G_TY_BRANCHES.find(x => x.id === id);
+  const ty = G_SAVE.tycoon;
+  if (!b || ty.branches[id]) return;
+  if (G_SAVE.coins < b.cost) { snack(`нужно ${b.cost} 🪙`); return; }
+  G_SAVE.coins -= b.cost;
+  ty.branches[id] = true;
+  gPersist(); gCheckAchs();
+  refreshGameDom(false);
+  snack(`открыт «${b.name}»!`);
+}
+function gTyBuyStaff(id) {
+  const s = G_TY_STAFF.find(x => x.id === id);
+  const ty = G_SAVE.tycoon;
+  if (!s) return;
+  const lv = ty.staff[id] || 0;
+  if (lv >= s.costs.length) return;
+  const cost = s.costs[lv];
+  if (G_SAVE.coins < cost) { snack(`нужно ${cost} 🪙`); return; }
+  G_SAVE.coins -= cost;
+  ty.staff[id] = lv + 1;
+  gPersist();
+  refreshGameDom(false);
+  snack(`${s.name}: уровень ${lv + 1}!`);
+}
+function gTyBuyCap() {
+  const ty = G_SAVE.tycoon;
+  const lv = Math.max(0, Math.round((ty.stockCap - 36) / 30));
+  const cost = 250 + lv * 350;
+  if (G_SAVE.coins < cost) { snack(`нужно ${cost} 🪙`); return; }
+  G_SAVE.coins -= cost;
+  ty.stockCap += 30;
+  gPersist();
+  refreshGameDom(false);
+  snack(`склад расширен до ${ty.stockCap} уп.!`);
+}
+function gTyOpenEvent(summaryTxt) {
+  const ty = G_SAVE.tycoon;
+  const r = Math.random();
+  let tag, title, text, aTxt, bTxt, runA, runB;
+  if (r < 0.4) {
+    tag = 'ревизия дня'; title = 'внезапная проверка качества';
+    text = 'инспектор проверяет соблюдение правил кофеина и лицензию кабинета.';
+    const alinaLv = ty.staff.s0 || 0;
+    aTxt = alinaLv >= 2 ? 'показать отчёт алины (бесплатно, +4★)' : 'заказать экспресс-аудит (-350 🪙, +4★)';
+    bTxt = 'пройти на удачу (риск штрафа)';
+    runA = () => {
+      if (alinaLv < 2) {
+        if (G_SAVE.coins < 350) return 'не хватило 350 🪙 — обошлись устным предупреждением (-2★).';
+        G_SAVE.coins -= 350;
+      }
+      ty.rep = Math.min(100, ty.rep + 4);
+      return alinaLv >= 2 ? 'алина блестяще защитила отчёт! рейтинг +4★.' : 'аудит пройден без замечаний (+4★).';
+    };
+    runB = () => {
+      if (Math.random() < 0.55) { ty.rep = Math.min(100, ty.rep + 2); return 'нарушений не нашли! рейтинг +2★.'; }
+      const fine = Math.min(G_SAVE.coins, 450); G_SAVE.coins -= fine; ty.rep = Math.max(10, ty.rep - 5);
+      return `выписан штраф -${fine} 🪙 и -5★ к рейтингу!`;
+    };
+  } else if (r < 0.72) {
+    tag = 'горячее предложение'; title = 'ночная распродажа у поставщика';
+    text = 'склад готов отгрузить +12 упаковок хитовых комплексов прямо сейчас со скидкой 45% (нужно место на складе).';
+    aTxt = 'выкупить партию (-480 🪙 → +6 mol40, +6 prem)';
+    bTxt = 'пропустить поставку';
+    runA = () => {
+      if (G_SAVE.coins < 480) return 'недостаточно монет для выкупа.';
+      const free = Math.max(0, ty.stockCap - gTyTotalStock());
+      if (free < 4) return 'склад забит — поставка не поместилась!';
+      G_SAVE.coins -= 480;
+      const a1 = Math.min(6, free), a2 = Math.min(6, free - a1);
+      ty.stock[1] += a1; ty.stock[2] += a2;
+      return `партия на складе: +${a1} mol40 и +${a2} premium!`;
+    };
+    runB = () => 'решили не тратить резерв.';
+  } else {
+    tag = 'лояльность'; title = 'у клиента лёгкая жажда от капсулы';
+    text = 'покупатель беспокоится из-за потливости на адаптации. подарим ему ромашковый набор с памяткой по воде?';
+    aTxt = 'подарить ромашку (-120 🪙 → +5★ рейтинга)';
+    bTxt = 'отправить стандартную памятку (+1★)';
+    runA = () => {
+      if (G_SAVE.coins < 120) { ty.rep = Math.min(100, ty.rep + 1); return 'монет не хватило, выдали памятку (+1★).'; }
+      G_SAVE.coins -= 120; ty.rep = Math.min(100, ty.rep + 5);
+      return 'клиент в восторге и привёл друзей! рейтинг +5★.';
+    };
+    runB = () => { ty.rep = Math.min(100, ty.rep + 1); return 'клиент выпил воды и успокоился (+1★).'; };
+  }
+  sheet.innerHTML = `<div class="handle"></div>
+    <span class="tag st" style="--i:0">${esc(tag)}</span>
+    <h2 class="st" style="--i:1">${esc(title)}</h2>
+    <div class="info st" style="--i:2">
+      <div><small>итоги дня</small><p>${esc(summaryTxt)}</p></div>
+      <div><small>событие в сети</small><p>${esc(text)}</p></div>
+    </div>
+    <button type="button" class="buy st" style="--i:3" id="g-ty-ev-a"><md-ripple></md-ripple>${esc(aTxt)}</button>
+    <button type="button" class="buy st" style="--i:3.5;margin-top:10px;background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container)" id="g-ty-ev-b"><md-ripple></md-ripple>${esc(bTxt)}</button>`;
+  const doneEv = msg => {
+    ty.lastLog = summaryTxt + ' · ' + msg;
+    gPersist(); gCheckAchs(); closeSheet(); refreshGameDom(false); snack(msg);
+  };
+  $('g-ty-ev-a').addEventListener('click', () => { hap('impact'); doneEv(runA()); });
+  $('g-ty-ev-b').addEventListener('click', () => { hap(); doneEv(runB()); });
+  present();
+}
+function gTyRunDay() {
+  const ty = G_SAVE.tycoon;
+  let ad = G_TY_ADS.find(x => x.id === ty.ad) || G_TY_ADS[0];
+  if (G_SAVE.coins < ad.cost) { ad = G_TY_ADS[0]; ty.ad = 'none'; snack('на рекламу не хватило монет — смена без рекламы'); }
+  if (ad.cost > 0) G_SAVE.coins -= ad.cost;
+
+  let baseFlow = ty.staff.s3 * 2, totalRent = 0, priceMult = 1, vipShift = 0;
+  G_TY_BRANCHES.forEach(b => {
+    if (ty.branches[b.id]) {
+      baseFlow += b.flow; totalRent += b.rent;
+      priceMult = Math.max(priceMult, b.priceMult);
+      vipShift = Math.max(vipShift, b.vip);
+    }
+  });
+  const totalClients = Math.max(2, Math.round(baseFlow * ad.mult * (0.75 + ty.rep / 220) * (0.9 + Math.random() * 0.2)));
+  const shares = [0.35 - vipShift * 0.3, 0.28, 0.22 + vipShift * 0.15, 0.15 + vipShift * 0.15];
+  let rev = 0, soldTot = 0, missedTot = 0;
+  const soldDet = [];
+  for (let i = 0; i < 4; i++) {
+    const want = Math.max(0, Math.round(totalClients * shares[i]));
+    const have = ty.stock[i] || 0;
+    const sold = Math.min(want, have);
+    ty.stock[i] = have - sold;
+    soldTot += sold;
+    missedTot += Math.max(0, want - sold);
+    rev += sold * G_TY_PRODS[i].sell;
+    if (sold > 0) soldDet.push(`${G_TY_PRODS[i].name.split(' ')[0]}:${sold}`);
+  }
+  const staffBonus = 1 + (ty.staff.s2 || 0) * 0.10;
+  const gross = Math.round(rev * priceMult * staffBonus);
+  const net = gross - totalRent;
+  G_SAVE.coins = Math.max(0, G_SAVE.coins + net);
+  if (net > 0) ty.totalEarned = (ty.totalEarned || 0) + net;
+
+  const repDelta = ad.rep + (ty.staff.s0 || 0) * 0.5 - Math.max(0, missedTot * 0.8 - (ty.staff.s0 || 0) * 0.5) + (missedTot === 0 && soldTot > 0 ? 2 : 0);
+  ty.rep = Math.max(10, Math.min(100, Math.round(ty.rep + repDelta)));
+  const doneDay = ty.day;
+  ty.day++;
+  gTyRollPrices();
+
+  const summary = `день #${doneDay}: продано ${soldTot} уп. (ушло из-за дефицита: ${missedTot}), выручка ${gross} 🪙 − аренда ${totalRent} 🪙 = ${net >= 0 ? '+' : ''}${net} 🪙`;
+  ty.lastLog = summary;
+  gPersist(); gCheckAchs();
+
+  if (doneDay % 3 === 0 || Math.random() < 0.32) {
+    refreshGameDom(false);
+    gTyOpenEvent(summary);
+  } else {
+    refreshGameDom(false);
+    snack(`день #${doneDay}: ${net >= 0 ? '+' : ''}${net} 🪙 чистыми`);
+  }
+}
+
+/* ---------- ПОЛНОЦЕННАЯ ИГРА 3: ДЕЖУРСТВО В ОТДЕЛЕНИИ ---------- */
+const G_WARD_SHIFTS = [
+  { id: 'day', name: 'дневной приём', dur: 45, cost: 0, spawnMs: 2500, decay: 5.5, mult: 1.0, desc: '45 сек · спокойный темп' },
+  { id: 'lunch', name: 'обеденный час пик', dur: 55, cost: 0, spawnMs: 1950, decay: 7.4, mult: 1.6, desc: '55 сек · быстрее спаун · ×1.6' },
+  { id: 'friday', name: 'пятница вечер ★', dur: 65, cost: 150, spawnMs: 1500, decay: 9.2, mult: 2.8, desc: '65 сек · сложные vip · вход 150 🪙 · ×2.8' }
+];
+const G_WARD_NEEDS = [
+  { id: 'water', lbl: 'дать воду', sub: 'жидкость для курса', ic: 'water_drop', msg: 'нужна чистая вода!' },
+  { id: 'chamo', lbl: 'тёплая ромашка', sub: 'снять адаптацию', ic: 'spa', msg: 'участился пульс и жар!' },
+  { id: 'pain', lbl: 'обычный панадол', sub: 'без кофеина', ic: 'vaccines', msg: 'разболелась голова!' },
+  { id: 'ban', lbl: 'забрать кофеин', sub: 'кофе / цитрамон', ic: 'block', msg: 'достал кофе или цитрамон!' }
+];
+const G_WARD_NAMES = ['олег', 'катя', 'игорь', 'алина', 'денис', 'марина', 'тимур', 'анна', 'артур', 'лена'];
+const G_WARD = {
+  active: false, ended: false, won: false, lastWin: 0, shiftId: 'day',
+  timeLeft: 45, maxTime: 45, healed: 0, complaints: 0, selBed: 0,
+  spawnAcc: 0, nurseAcc: 0, timerId: null, beds: []
+};
+function gSetWardShift(id) { if (!G_WARD.active) { G_WARD.shiftId = id; refreshGameDom(false); } }
+function gBuyWardUpg(key) {
+  const specs = { station: [250, 700, 1600], nurse: [600, 1800, 4200], bed4: [1200] };
+  const sp = specs[key], lv = G_SAVE.ward.upg[key] || 0;
+  if (!sp || lv >= sp.length) return;
+  const cost = sp[lv];
+  if (G_SAVE.coins < cost) { snack(`нужно ${cost} 🪙`); return; }
+  G_SAVE.coins -= cost;
+  G_SAVE.ward.upg[key] = lv + 1;
+  gPersist();
+  refreshGameDom(false);
+  snack('отделение улучшено!');
+}
+function gStopWard(silent = false) {
+  if (G_WARD.timerId) { clearInterval(G_WARD.timerId); G_WARD.timerId = null; }
+  G_WARD.active = false;
+  if (!silent && G_STATE.sub === 'ward') refreshGameDom(false);
+}
+function gSpawnWardPatient(i) {
+  const isVip = Math.random() < (G_WARD.shiftId === 'friday' ? 0.38 : 0.18);
+  const n1 = G_WARD_NEEDS[Math.floor(Math.random() * G_WARD_NEEDS.length)];
+  const n2 = G_WARD_NEEDS[Math.floor(Math.random() * G_WARD_NEEDS.length)];
+  G_WARD.beds[i] = {
+    name: G_WARD_NAMES[Math.floor(Math.random() * G_WARD_NAMES.length)],
+    vip: isVip, pat: 100, pulse: n1.id === 'chamo' || n1.id === 'ban' ? 78 : 42, thirst: n1.id === 'water' ? 80 : 35,
+    reqs: isVip ? [n1.id, n2.id] : [n1.id]
+  };
+}
+function gPatchWardDom() {
+  const tEl = $('g-wd-time'), sEl = $('g-wd-stat'), bEl = $('g-wd-bar');
+  if (tEl) tEl.textContent = G_WARD.timeLeft.toFixed(1) + ' с';
+  if (sEl) sEl.textContent = `помощь: ${G_WARD.healed} · жалобы: ${G_WARD.complaints}/3`;
+  if (bEl) bEl.style.width = Math.min(100, (G_WARD.timeLeft / G_WARD.maxTime) * 100) + '%';
+  const maxBeds = 3 + (G_SAVE.ward.upg.bed4 ? 1 : 0);
+  for (let i = 0; i < maxBeds; i++) {
+    const el = $('g-wb-' + i);
+    if (!el) continue;
+    const b = G_WARD.beds[i];
+    if (!b) {
+      el.className = 'g-bed empty' + (G_WARD.selBed === i ? ' sel' : '');
+      const nEl = $('g-wb-name-' + i), tgEl = $('g-wb-tag-' + i), ndEl = $('g-wb-need-' + i), pf = $('g-wb-pf-' + i);
+      if (nEl) nEl.textContent = `койка ${i + 1}`;
+      if (tgEl) tgEl.textContent = 'свободна';
+      if (ndEl) ndEl.textContent = 'ожидаем пациента...';
+      if (pf) pf.style.width = '0%';
+      continue;
+    }
+    const urg = b.pat < 32;
+    el.className = 'g-bed' + (G_WARD.selBed === i ? ' sel' : '') + (urg ? ' urg' : '');
+    const needObj = G_WARD_NEEDS.find(n => n.id === b.reqs[0]) || G_WARD_NEEDS[0];
+    const nEl = $('g-wb-name-' + i), tgEl = $('g-wb-tag-' + i), ndEl = $('g-wb-need-' + i), pf = $('g-wb-pf-' + i);
+    if (nEl) nEl.textContent = b.name + (b.vip ? ' ★' : '');
+    if (tgEl) tgEl.textContent = `${Math.ceil(b.pat)}%` + (b.reqs.length > 1 ? ' · 2 шаг' : '');
+    if (ndEl) ndEl.textContent = needObj.msg;
+    if (pf) pf.style.width = Math.max(0, Math.min(100, b.pat)) + '%';
+  }
+}
+function gSelWardBed(i) {
+  if (!G_WARD.active) return;
+  G_WARD.selBed = i;
+  gPatchWardDom();
+}
+function gDoWardAct(actId) {
+  if (!G_WARD.active) return;
+  const b = G_WARD.beds[G_WARD.selBed];
+  if (!b) { snack('выберите занятую койку'); return; }
+  if (b.reqs[0] === actId) {
+    b.reqs.shift();
+    b.pat = Math.min(100, b.pat + 22);
+    hap();
+    if (!b.reqs.length) {
+      G_WARD.healed += (b.vip ? 2 : 1);
+      G_WARD.beds[G_WARD.selBed] = null;
+      // Auto-select next urgent bed for rapid play
+      const next = G_WARD.beds.findIndex(Boolean);
+      if (next >= 0) G_WARD.selBed = next;
+    }
+    gPatchWardDom();
+    return;
+  }
+  b.pat = Math.max(0, b.pat - 18);
+  hap('impact');
+  const exp = G_WARD_NEEDS.find(n => n.id === b.reqs[0]);
+  snack(`не то действие! сейчас нужно: ${exp ? exp.lbl : ''}`);
+  gPatchWardDom();
+}
+function gFinishWard(manualAbort = false) {
+  const sh = G_WARD_SHIFTS.find(s => s.id === G_WARD.shiftId) || G_WARD_SHIFTS[0];
+  const wasActive = G_WARD.active;
+  gStopWard(true);
+  if (!wasActive) return;
+  const failed = manualAbort || G_WARD.complaints >= 3;
+  const stMult = 1 + (G_SAVE.ward.upg.station || 0) * 0.15;
+  const win = failed ? Math.round(G_WARD.healed * 8 * gLicMult()) : Math.round(G_WARD.healed * 28 * sh.mult * stMult * gLicMult());
+  G_WARD.ended = true; G_WARD.won = !failed; G_WARD.lastWin = win;
+  G_SAVE.coins += win;
+  G_SAVE.ward.totalHealed = (G_SAVE.ward.totalHealed || 0) + G_WARD.healed;
+  if (!failed) {
+    G_SAVE.ward.bestScore = Math.max(G_SAVE.ward.bestScore || 0, G_WARD.healed);
+    if (sh.id === 'friday') G_SAVE.ward.bestFri = Math.max(G_SAVE.ward.bestFri || 0, G_WARD.healed);
+    G_SAVE.rankXp++;
+  }
+  gPersist(); gCheckAchs();
+  hap('impact');
+  snack(failed ? `смена сорвана (жалобы: ${G_WARD.complaints}/3). утешительные +${win} 🪙` : `дежурство завершено! помощь: ${G_WARD.healed} · +${win} 🪙`);
+  refreshGameDom(false);
+}
+function gStartWard() {
+  const sh = G_WARD_SHIFTS.find(s => s.id === G_WARD.shiftId) || G_WARD_SHIFTS[0];
+  if (G_SAVE.coins < sh.cost) { snack(`нужно ${sh.cost} 🪙 на запуск смены`); return; }
+  if (sh.cost > 0) { G_SAVE.coins -= sh.cost; gPersist(); }
+  gStopAllTimers(true);
+  const maxBeds = 3 + (G_SAVE.ward.upg.bed4 ? 1 : 0);
+  G_WARD.active = true; G_WARD.ended = false; G_WARD.won = false; G_WARD.lastWin = 0;
+  G_WARD.timeLeft = sh.dur; G_WARD.maxTime = sh.dur;
+  G_WARD.healed = 0; G_WARD.complaints = 0; G_WARD.selBed = 0;
+  G_WARD.spawnAcc = 0; G_WARD.nurseAcc = 0;
+  G_WARD.beds = Array(maxBeds).fill(null);
+  gSpawnWardPatient(0);
+  gSpawnWardPatient(1);
+  refreshGameDom(false);
+
+  const decayPerTick = (sh.decay * Math.pow(0.84, G_SAVE.ward.upg.station || 0)) * 0.1;
+  const nurseLv = G_SAVE.ward.upg.nurse || 0;
+  const nursePeriod = nurseLv === 1 ? 7000 : nurseLv === 2 ? 5000 : 3500;
+
+  G_WARD.timerId = setInterval(() => {
+    if (!G_WARD.active) return;
+    G_WARD.timeLeft = Math.max(0, +(G_WARD.timeLeft - 0.1).toFixed(1));
+    G_WARD.spawnAcc += 100;
+    if (G_WARD.spawnAcc >= sh.spawnMs) {
+      G_WARD.spawnAcc = 0;
+      const emp = [];
+      for (let i = 0; i < maxBeds; i++) if (!G_WARD.beds[i]) emp.push(i);
+      if (emp.length) gSpawnWardPatient(emp[Math.floor(Math.random() * emp.length)]);
+    }
+    if (nurseLv > 0) {
+      G_WARD.nurseAcc += 100;
+      if (G_WARD.nurseAcc >= nursePeriod) {
+        G_WARD.nurseAcc = 0;
+        let worstIdx = -1, worstPat = 999;
+        for (let i = 0; i < maxBeds; i++) {
+          if (G_WARD.beds[i] && G_WARD.beds[i].pat < worstPat) { worstPat = G_WARD.beds[i].pat; worstIdx = i; }
+        }
+        if (worstIdx >= 0) {
+          const wb = G_WARD.beds[worstIdx];
+          wb.reqs.shift();
+          wb.pat = Math.min(100, wb.pat + 25);
+          if (!wb.reqs.length) {
+            G_WARD.healed += (wb.vip ? 2 : 1);
+            G_WARD.beds[worstIdx] = null;
+          }
+          snack(`медсестра помогла: койка ${worstIdx + 1}`);
+        }
+      }
+    }
+    for (let i = 0; i < maxBeds; i++) {
+      const b = G_WARD.beds[i];
+      if (!b) continue;
+      b.pat -= decayPerTick * (b.vip ? 1.15 : 1);
+      if (b.pat <= 0) {
+        G_WARD.beds[i] = null;
+        G_WARD.complaints++;
+        hap('impact');
+        snack(`жалоба пациента! (${G_WARD.complaints}/3)`);
+        if (G_WARD.complaints >= 3) { gFinishWard(false); return; }
+      }
+    }
+    gPatchWardDom();
+    if (G_WARD.timeLeft <= 0) gFinishWard(false);
+  }, 100);
 }
 
 function gOpenVerdict() {
@@ -1431,6 +3314,39 @@ function gRenderVerdictSheet() {
   $('g-submit').addEventListener('click', gSubmitVerdict);
 }
 
+function gLoseLife() {
+  if (G_STATE.buffs.shield) {
+    G_STATE.buffs.shield = false;
+    snack('страховой щит спас жизнь!');
+    return;
+  }
+  G_STATE.lives--;
+}
+
+function gShowDilemma() {
+  const d = G_DILEMMAS[Math.floor(Math.random() * G_DILEMMAS.length)];
+  sheet.innerHTML = `<div class="handle"></div>
+    <span class="tag st" style="--i:0">${esc(d.tag)}</span>
+    <h2 class="st" style="--i:1">${esc(d.title)}</h2>
+    <div class="info st" style="--i:2">
+      <div><small>ситуация в кабинете</small><p>${esc(d.text)}</p></div>
+    </div>
+    <button type="button" class="buy st" style="--i:3" id="g-dil-a"><md-ripple></md-ripple>${esc(d.aLabel)}</button>
+    <button type="button" class="buy st" style="--i:3.5;margin-top:10px;background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container)" id="g-dil-b"><md-ripple></md-ripple>${esc(d.bLabel)}</button>`;
+  const finish = msg => {
+    gPersist();
+    gCheckAchs();
+    snack(msg);
+    closeSheet();
+    G_STATE.mode = 'career';
+    gLoadCase(true);
+    refreshGameDom(true);
+  };
+  $('g-dil-a').addEventListener('click', () => { hap('impact'); finish(d.runA()); });
+  $('g-dil-b').addEventListener('click', () => { hap('impact'); finish(d.runB()); });
+  present();
+}
+
 function gSubmitVerdict() {
   if (G_STATE.vMode === 'approve' && G_STATE.selProd === null) { hap('impact'); snack('выберите препарат из списка'); return; }
   if (G_STATE.vMode === 'reject' && !Object.values(G_STATE.selRej).some(Boolean)) { hap('impact'); snack('укажите причину отказа'); return; }
@@ -1440,7 +3356,7 @@ function gSubmitVerdict() {
 
   if (c.decision === 'reject') {
     if (G_STATE.vMode !== 'reject') {
-      G_STATE.lives--;
+      gLoseLife();
       tag = 'штраф минздрава'; tagBg = 'var(--md-sys-color-error-container)'; tagFg = 'var(--md-sys-color-on-error-container)';
       title = 'опасная ошибка!';
       desc = `пациенту ${c.name} категорически противопоказан курс (${c.facts.filter(f => f.status === 'ban').map(f => f.val).join('; ')})!`;
@@ -1459,7 +3375,7 @@ function gSubmitVerdict() {
     }
   } else {
     if (G_STATE.vMode === 'reject') {
-      G_STATE.lives--;
+      gLoseLife();
       tag = 'ложный отказ'; tagBg = 'var(--md-sys-color-error-container)'; tagFg = 'var(--md-sys-color-on-error-container)';
       title = 'клиент ушёл без курса';
       desc = `у ${c.name} нет абсолютных противопоказаний! ошибки рациона корректируются, а не банятся.`;
@@ -1490,7 +3406,7 @@ function gSubmitVerdict() {
         title = 'сработал, но не идеально';
         desc = 'вес снизился, но часть нюансов из анкеты осталась без внимания.';
       } else {
-        G_STATE.lives--;
+        gLoseLife();
         tag = 'жалоба клиента'; tagBg = 'var(--md-sys-color-error-container)'; tagFg = 'var(--md-sys-color-on-error-container)';
         title = 'слишком много упущений';
         desc = 'клиент смешал курс с запрещёнными продуктами или лекарствами!';
@@ -1498,17 +3414,25 @@ function gSubmitVerdict() {
     }
   }
 
-  const mult = (G_STATE.mode === 'daily' ? 2 : 1) * (1 + (G_SAVE.upg.bonus || 0) * 0.3);
+  const modMult = G_STATE.mode === 'daily' ? 2 : (G_STATE.mode === 'vip' ? (c.rewardMult || 2) : (G_STATE.shiftMod?.mult || 1));
+  const buffMult = G_STATE.buffs.double ? 2 : 1;
+  const upgMult = 1 + (G_SAVE.upg.bonus || 0) * 0.15;
+  const mult = modMult * buffMult * upgMult * gLicMult();
+
   const spotted = c.facts.filter(f => f.status !== 'safe' && Object.keys(G_STATE.flags).some(k => k.startsWith(f.sec + '_') && c.facts.filter(x => x.sec === f.sec)[+k.split('_')[1]] === f)).length;
   const earn = Math.max(0, Math.round((score * 0.5 + spotted * 8) * mult));
   G_SAVE.coins += earn;
   if (score >= 80) G_SAVE.rankXp++;
   if (G_STATE.mode === 'career') G_SAVE.caseIdx++;
+  if (G_STATE.mode === 'vip' && score >= 60 && c.vipId != null) G_SAVE.vipSolved[c.vipId] = true;
   gPersist();
+  gCheckAchs();
   hap('impact');
 
+  const isVipRun = G_STATE.mode === 'vip';
+  const btnTxt = isVipRun ? 'вернуться в архив' : (G_STATE.lives <= 0 ? 'новая смена' : (G_STATE.num >= G_STATE.total ? 'итоги смены' : 'следующий пациент'));
   const epilogue = score >= 80 ? (c.winStory || desc) : (score < 55 ? (c.loseStory || desc) : desc);
-  const btnTxt = G_STATE.lives <= 0 ? 'новая смена' : (G_STATE.num >= G_STATE.total ? 'завершить смену' : 'следующий пациент');
+
   sheet.innerHTML = `<div class="handle"></div>
     <span class="tag st" style="--i:0;background:${tagBg};color:${tagFg}">${tag}</span>
     <h2 class="st" style="--i:1">${esc(title)}</h2>
@@ -1522,24 +3446,42 @@ function gSubmitVerdict() {
 
   $('g-next').addEventListener('click', () => {
     hap();
-    closeSheet();
+    if (isVipRun) {
+      closeSheet();
+      G_STATE.mode = 'career';
+      G_STATE.sub = 'clinic';
+      G_STATE.clinicSec = 'archive';
+      gLoadCase(true);
+      refreshGameDom(true);
+      return;
+    }
     if (G_STATE.lives <= 0) {
+      closeSheet();
       G_STATE.mode = 'career';
       gLoadCase(true);
-    } else if (G_STATE.num >= G_STATE.total) {
+      refreshGameDom(true);
+      return;
+    }
+    if (G_STATE.num >= G_STATE.total) {
       if (G_STATE.mode === 'daily') {
+        closeSheet();
         G_SAVE.lastDaily = new Date().toISOString().slice(0, 10);
         G_SAVE.streak++;
-        G_SAVE.coins += 80;
+        G_SAVE.coins += 120;
         gPersist();
-        snack(`дейли завершён: +80 монет • стрик ${G_SAVE.streak}д`);
+        snack(`дейли завершён: +120 монет • стрик ${G_SAVE.streak}д`);
+        G_STATE.mode = 'career';
+        gLoadCase(true);
+        refreshGameDom(true);
+      } else {
+        // Show End-of-Shift Dilemma!
+        gShowDilemma();
       }
-      G_STATE.mode = 'career';
-      gLoadCase(true);
-    } else {
-      G_STATE.num++;
-      gLoadCase(false);
+      return;
     }
+    closeSheet();
+    G_STATE.num++;
+    gLoadCase(false);
     refreshGameDom(true);
   });
 }
@@ -1576,10 +3518,11 @@ function renderGameInner(animateWrap = false) {
   const animCls = animateWrap ? ' g-anim' : '';
   const subChips = `
     <div class="chips">
+      <button class="chip${G_STATE.sub === 'hub' ? ' on' : ''}" data-gsub="hub"><md-ripple></md-ripple><md-icon>${G_STATE.sub === 'hub' ? 'grid_view' : 'arrow_back'}</md-icon><span>${G_STATE.sub === 'hub' ? 'все игры' : 'к списку'}</span></button>
       <button class="chip${G_STATE.sub === 'desk' ? ' on' : ''}" data-gsub="desk"><md-ripple></md-ripple>${G_STATE.sub === 'desk' ? '<md-icon>check</md-icon>' : ''}<span>приём</span></button>
-      <button class="chip${G_STATE.sub === 'ref' ? ' on' : ''}" data-gsub="ref"><md-ripple></md-ripple>${G_STATE.sub === 'ref' ? '<md-icon>check</md-icon>' : ''}<span>справочник</span></button>
+      <button class="chip${G_STATE.mode === 'daily' && G_STATE.sub === 'desk' ? ' on' : ''}" data-gdaily="1"><md-ripple></md-ripple><md-icon>${dailyDone ? 'task_alt' : 'event'}</md-icon><span>${dailyDone ? 'дейли ок' : 'дейли ×2'}</span></button>
       <button class="chip${G_STATE.sub === 'clinic' ? ' on' : ''}" data-gsub="clinic"><md-ripple></md-ripple>${G_STATE.sub === 'clinic' ? '<md-icon>check</md-icon>' : ''}<span>клиника</span></button>
-      <button class="chip${G_STATE.mode === 'daily' ? ' on' : ''}" data-gdaily="1"><md-ripple></md-ripple><md-icon>${dailyDone ? 'task_alt' : 'event'}</md-icon><span>${dailyDone ? 'дейли ок' : 'дейли ×2'}</span></button>
+      <button class="chip${G_STATE.sub === 'ref' ? ' on' : ''}" data-gsub="ref"><md-ripple></md-ripple>${G_STATE.sub === 'ref' ? '<md-icon>check</md-icon>' : ''}<span>правила</span></button>
     </div>`;
 
   if (G_STATE.sub === 'intro') {
@@ -1595,20 +3538,651 @@ function renderGameInner(animateWrap = false) {
           <div class="g-hname">служба контроля веса</div>
           <span class="g-hwt">гид</span>
         </div>
-        <div class="g-hsub">ты — главный нутрициолог · смена по 3 пациента</div>
-        <p class="g-quote">проверяй анкеты клиентов, находи скрытый кофеин, алкоголь и опасные болезни, а затем назначай правильный комплекс из 4 препаратов.</p>
+        <div class="g-hsub">3 полноценные игры + 9 мини-игр</div>
+        <p class="g-quote">подбирай курсы пациентам, развивай империю клиник «ешка», дежурь в отделении в реальном времени и отдыхай в аркаде мини-игр!</p>
       </div>
       <div class="info" style="margin:0 16px">
-        <div><small>шаг 1 · изучи досье</small><p>переключай «профиль», «медкарта» и «чек и чат» — клиенты часто скрывают улун, цитрамон, витамин c или проблемы со здоровьем.</p></div>
-        <div><small>шаг 2 · нажимай на улики</small><p>тапни по подозрительной строчке: игра подскажет, запрещено ли это по инструкции, и даст бонус монет.</p></div>
-        <div><small>шаг 3 · вынеси вердикт</small><p>выбери препарат по силе под цель клиента и убери нарушения — либо откажи, если есть противопоказание.</p></div>
+        <div><small>1 · служба контроля веса</small><p>детективный приём: проверяй «профиль», «медкарту», «чек и чат» и подбирай точный курс.</p></div>
+        <div><small>2 · империя клиники «ешка»</small><p>экономический тайкун по дням: закупка партий по плавающим ценам, филиалы, персонал, реклама и проверки.</p></div>
+        <div><small>3 · дежурство в отделении</small><p>тайм-менеджмент на 3–4 койки одновременно: подавай воду, ромашку, панадол и конфискуй кофеин быстрее жалоб.</p></div>
+        <div><small>4 · 9 мини-игр и клиника</small><p>блиц, охотник, детектор 4×4, 2048, дозатор, тайный код, пары, алхимия, без передоза и общий прогресс в клинике.</p></div>
       </div>
       <div style="padding:0 16px">
         <div class="g-sec-lbl" style="margin-top:4px">линейка от слабого к сильному</div>
         <div class="g-prod-grid">${prodsPreview}</div>
       </div>
       <div class="g-action">
-        <button class="buy" data-gstart="1"><md-ripple></md-ripple>${G_SAVE.seenIntro ? 'вернуться к приёму' : 'начать приём'}<md-icon>arrow_forward</md-icon></button>
+        <button class="buy" data-gstart="1"><md-ripple></md-ripple>${G_SAVE.seenIntro ? 'к списку игр' : 'открыть игры'}<md-icon>arrow_forward</md-icon></button>
+      </div>
+    </div>`;
+  }
+
+  if (G_STATE.sub === 'hub') {
+    const ranks = ['стажёр','младший нутрициолог','инспектор метаболизма','главврач стройности','легенда клиники'];
+    const rName = G_SAVE.lic.legend ? 'легенда «ешка»' : G_SAVE.lic.chief ? 'главврач минздрава' : ranks[Math.min(ranks.length - 1, Math.floor(G_SAVE.rankXp / 5))];
+    const recCnt = Object.values(G_SAVE.recipes || {}).filter(Boolean).length;
+    const brCnt = Object.values(G_SAVE.tycoon?.branches || {}).filter(Boolean).length;
+    const minis = [
+      { to: 'blitz', ic: 'bolt', name: 'блиц-консилиум', desc: '60 сек на быстрые вердикты · комбо до ×5', badge: `рекорд ${G_SAVE.blitzBest || 0}` },
+      { to: 'arcade:whack', ic: 'touch_app', name: 'охотник за срывами', desc: 'реакция 3×3: убирай кофеин и алко, не трогай воду', badge: `рекорд ${G_SAVE.whackBest || 0}` },
+      { to: 'arcade:mine', ic: 'grid_on', name: 'детектор доставки', desc: 'сапёр 4×4 со ставками: обходи запрещёнки по цифрам', badge: `×${(G_SAVE.mineBestMult || 1).toFixed(2)}` },
+      { to: 'arcade:merge', ic: 'apps', name: 'эволюция курса (2048)', desc: 'соединяй воду и капсулы до идеального веса', badge: `${G_SAVE.mergeBest || 0} очк.` },
+      { to: 'arcade:gauge', ic: 'speed', name: 'точный дозатор', desc: 'скилл-тайминг: поймай идеальную дозу за 5 раундов', badge: `×${(G_SAVE.gaugeBest || 1).toFixed(2)}` },
+      { to: 'arcade:code', ic: 'lock_open', name: 'тайный код курса', desc: 'дедукция: взломай схему дня из 4 шагов за 6 ходов', badge: `${G_SAVE.codeWins || 0} поб.` },
+      { to: 'arcade:memory', ic: 'extension', name: 'пары совместимости', desc: 'найди 8 связок «симптом ↔ решение» за 50 секунд', badge: G_SAVE.memBestSec ? `${G_SAVE.memBestSec} с` : '50 с' },
+      { to: 'arcade:alchemy', ic: 'science', name: 'лаборатория формул', desc: 'алхимия 3 слотов: собирай капсулы под заказ', badge: `${recCnt}/8 рец.` },
+      { to: 'arcade:risk', ic: 'casino', name: 'курс без передоза', desc: 'риск-карты до ×5 · можно купить страховку ромашкой', badge: `×${(G_SAVE.riskBestMult || 1).toFixed(2)}` }
+    ];
+    return `<div class="g-wrap${animCls}">
+      ${subChips}
+      <div class="g-sec-lbl" style="padding:0 20px;margin-top:0">главные игры · 3 режима</div>
+      <div class="g-hero">
+        <div class="g-hero-top">
+          <div class="g-hname">служба контроля веса</div>
+          <span class="g-hwt">-${G_SAVE.totalKg} кг</span>
+        </div>
+        <div class="g-hsub">${esc(rName)} · ${esc(G_STATE.shiftMod.name)} (×${G_STATE.shiftMod.mult}) · дел: ${G_SAVE.rankXp}</div>
+        <p class="g-quote">детектив-приём: проверяй профили, медкарты и ночные чеки, подбирай нужный препарат и проходи дилеммы!</p>
+        <div style="display:flex;gap:8px;margin-top:14px">
+          <button class="buy" style="margin-top:0;height:50px;background:var(--md-sys-color-on-primary-container);color:var(--md-sys-color-primary-container)" data-ghubgo="desk">
+            <md-ripple></md-ripple>играть приём (${G_STATE.num}/${G_STATE.total})<md-icon>play_arrow</md-icon>
+          </button>
+        </div>
+      </div>
+      <div class="g-hub-list">
+        <button class="g-hub-card" data-t="1" data-ghubgo="tycoon">
+          <md-ripple></md-ripple>
+          <span class="g-hub-ico"><md-icon>domain</md-icon></span>
+          <span class="g-hub-txt"><b>империя клиники «ешка»</b><small>тайкун: закупка партий, филиалы, персонал, реклама и проверки</small></span>
+          <span class="g-hub-badge">день ${G_SAVE.tycoon.day} · ${brCnt}/5</span>
+        </button>
+        <button class="g-hub-card" data-t="0" data-ghubgo="ward">
+          <md-ripple></md-ripple>
+          <span class="g-hub-ico"><md-icon>emergency</md-icon></span>
+          <span class="g-hub-txt"><b>дежурство в отделении</b><small>тайм-менеджмент 3–4 коек: вода, ромашка, панадол и контроль</small></span>
+          <span class="g-hub-badge">рекорд ${G_SAVE.ward.bestScore || 0}</span>
+        </button>
+        <button class="g-hub-card" data-t="2" data-ghubgo="clinic">
+          <md-ripple></md-ripple>
+          <span class="g-hub-ico"><md-icon>local_hospital</md-icon></span>
+          <span class="g-hub-txt"><b>клиника, лицензии и vip-архив</b><small>постоянные улучшения, расходники и особые дела</small></span>
+          <span class="g-hub-badge">×${gLicMult().toFixed(2)}</span>
+        </button>
+      </div>
+      <div class="g-sec-lbl" style="padding:0 20px;margin-top:6px">мини-игры · ${minis.length} режимов</div>
+      <div class="g-hub-list">
+        ${minis.map((m, i) => `
+          <button class="g-hub-card" data-t="${i % 3}" data-ghubgo="${m.to}">
+            <md-ripple></md-ripple>
+            <span class="g-hub-ico"><md-icon>${m.ic}</md-icon></span>
+            <span class="g-hub-txt"><b>${esc(m.name)}</b><small>${esc(m.desc)}</small></span>
+            <span class="g-hub-badge">${esc(m.badge)}</span>
+          </button>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  if (G_STATE.sub === 'tycoon') {
+    const ty = G_SAVE.tycoon;
+    const brOpen = G_TY_BRANCHES.filter(b => ty.branches[b.id]);
+    const dayFlow = brOpen.reduce((s, b) => s + b.flow, 0) + (ty.staff.s3 || 0) * 2;
+    const dayRent = brOpen.reduce((s, b) => s + b.rent, 0);
+    const tSeg = `
+      <div class="g-seg">
+        <button class="g-seg-btn${G_STATE.tycoonSec === 'day' ? ' on' : ''}" data-gtysec="day"><md-ripple></md-ripple><span>сводка</span></button>
+        <button class="g-seg-btn${G_STATE.tycoonSec === 'stock' ? ' on' : ''}" data-gtysec="stock"><md-ripple></md-ripple><span>склад (${gTyTotalStock()}/${ty.stockCap})</span></button>
+        <button class="g-seg-btn${G_STATE.tycoonSec === 'staff' ? ' on' : ''}" data-gtysec="staff"><md-ripple></md-ripple><span>сеть (${brOpen.length}/5)</span></button>
+      </div>`;
+
+    let innerTy = '';
+    if (G_STATE.tycoonSec === 'stock') {
+      const capLv = Math.max(0, Math.round((ty.stockCap - 36) / 30));
+      const capCost = 250 + capLv * 350;
+      innerTy = `<div class="g-ty-grid">
+        ${G_TY_PRODS.map((p, i) => {
+          const uPrice = gTyUnitPrice(i);
+          const tr = ty.trends[i];
+          const badge = tr < 0 ? 'выгодно ↓' : (tr > 0 ? 'дорого ↑' : 'обычная');
+          return `<div class="g-ty-card">
+            <div class="g-ty-head"><b>${esc(p.name)} · в наличии ${ty.stock[i] || 0}</b><span class="g-mod-pill">${badge} · ${uPrice} 🪙</span></div>
+            <div class="g-ty-sub">розница в клинике: ${p.sell} 🪙/уп. · маржа +${p.sell - uPrice} 🪙</div>
+            <div class="g-ty-btns">
+              <button class="chip on" data-gtybuy="${i}:5"><md-ripple></md-ripple><span>+5 (${uPrice * 5} 🪙)</span></button>
+              <button class="chip" data-gtybuy="${i}:15"><md-ripple></md-ripple><span>+15 (${uPrice * 15} 🪙)</span></button>
+            </div>
+          </div>`;
+        }).join('')}
+        <button class="buy" data-gtyupg="cap"><md-ripple></md-ripple>расширить склад +30 уп. (${capCost} 🪙)<md-icon>inventory_2</md-icon></button>
+      </div>`;
+    } else if (G_STATE.tycoonSec === 'staff') {
+      innerTy = `<div class="g-sec-lbl" style="padding:0 20px;margin-top:0">филиалы сети</div>
+        <div class="g-ty-grid">${G_TY_BRANCHES.map(b => {
+          const own = !!ty.branches[b.id];
+          return `<div class="g-ty-card">
+            <div class="g-ty-head"><b>${esc(b.name)}${own ? ' ✓' : ''}</b>${!own ? `<span class="g-mod-pill">${b.cost} 🪙</span>` : ''}</div>
+            <div class="g-ty-sub">${esc(b.desc)}</div>
+            ${own ? '' : `<button class="buy" style="height:46px;margin-top:4px;font-size:14px" data-gtybranch="${b.id}"><md-ripple></md-ripple>открыть за ${b.cost} 🪙</button>`}
+          </div>`;
+        }).join('')}</div>
+        <div class="g-sec-lbl" style="padding:0 20px">команда и кураторы</div>
+        <div class="g-ty-grid">${G_TY_STAFF.map(s => {
+          const lv = ty.staff[s.id] || 0, maxd = lv >= s.costs.length, cost = maxd ? 0 : s.costs[lv];
+          return `<div class="g-ty-card">
+            <div class="g-ty-head"><b>${esc(s.name)} (${lv}/${s.costs.length})</b></div>
+            <div class="g-ty-sub">${esc(s.desc)}</div>
+            <button class="buy${maxd ? ' off' : ''}" style="height:46px;margin-top:4px;font-size:14px" data-gtystaff="${s.id}" ${maxd ? 'disabled' : ''}>
+              <md-ripple></md-ripple>${maxd ? 'макс. уровень ✓' : `нанять / качать (${cost} 🪙)`}
+            </button>
+          </div>`;
+        }).join('')}</div>`;
+    } else {
+      innerTy = `<div class="g-sec-lbl" style="padding:0 20px;margin-top:0">рекламная кампания на день</div>
+        <div class="chips">${G_TY_ADS.map(a => `
+          <button class="chip${ty.ad === a.id ? ' on' : ''}" data-gtyad="${a.id}">
+            <md-ripple></md-ripple>${ty.ad === a.id ? '<md-icon>check</md-icon>' : ''}<span>${esc(a.name)}${a.cost ? ` (${a.cost} 🪙)` : ''}</span>
+          </button>`).join('')}</div>
+        <div class="info" style="margin:0 16px">
+          <div><small>прогноз на день #${ty.day}</small><p>филиалов: ${brOpen.length} · базовый поток: ~${dayFlow} чел. · аренда: ${dayRent} 🪙 · на складе: ${gTyTotalStock()}/${ty.stockCap} уп.</p></div>
+          <div><small>отчёт прошлого дня</small><p>${esc(ty.lastLog || 'сеть готова к старту! проверь склад и запускай первый рабочий день.')}</p></div>
+        </div>
+        <div class="g-action">
+          <button class="buy" data-gtyday="1"><md-ripple></md-ripple>провести рабочий день #${ty.day}<md-icon>store</md-icon></button>
+        </div>`;
+    }
+
+    return `<div class="g-wrap${animCls}">
+      ${subChips}
+      <div class="g-hero">
+        <div class="g-hero-top">
+          <div class="g-hname">империя «ешка»</div>
+          <span class="g-hwt">${ty.rep} ★</span>
+        </div>
+        <div class="g-hsub">день #${ty.day} · заработано всего: ${ty.totalEarned || 0} 🪙</div>
+        <p class="g-quote">закупай партии выгодно, расширяй филиалы и удерживай высокий рейтинг сети.</p>
+      </div>
+      ${tSeg}
+      ${innerTy}
+    </div>`;
+  }
+
+  if (G_STATE.sub === 'ward') {
+    const wu = G_SAVE.ward.upg || {};
+    const maxBeds = 3 + (wu.bed4 ? 1 : 0);
+    if (!G_WARD.active) {
+      const wUpgList = [
+        { k: 'station', n: 'стойка напитков', d: 'терпение тает на 16%/ур. медленнее и +15%/ур. к награде', costs: [250, 700, 1600] },
+        { k: 'nurse', n: 'авто-медсестра', d: 'автоматически снимает срочный запрос каждые 7 / 5 / 3.5 сек', costs: [600, 1800, 4200] },
+        { k: 'bed4', n: '4-я койка отделения', d: 'дополнительная койка для большего потока и рекордов', costs: [1200] }
+      ];
+      return `<div class="g-wrap${animCls}">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">дежурство в отделении</div>
+            <span class="g-hwt">рекорд ${G_SAVE.ward.bestScore || 0}</span>
+          </div>
+          <div class="g-hsub">коек: ${maxBeds} · медсестра ур.${wu.nurse || 0} · всего вылечено: ${G_SAVE.ward.totalHealed || 0}</div>
+          <p class="g-quote">${G_WARD.ended ? (G_WARD.won ? `смена блестяще закрыта! получено +${G_WARD.lastWin} 🪙.` : `смена остановлена (${G_WARD.complaints}/3 жалоб). утешительные +${G_WARD.lastWin} 🪙.`) : 'переключайся между койками в реальном времени и вовремя выдавай воду, ромашку, панадол или забирай запрещёнку!'}</p>
+        </div>
+        <div class="chips">${G_WARD_SHIFTS.map(s => `
+          <button class="chip${G_WARD.shiftId === s.id ? ' on' : ''}" data-gwardshift="${s.id}">
+            <md-ripple></md-ripple>${G_WARD.shiftId === s.id ? '<md-icon>check</md-icon>' : ''}<span>${esc(s.name)}</span>
+          </button>`).join('')}</div>
+        <div class="g-action">
+          <button class="buy" data-gwardstart="1"><md-ripple></md-ripple>выйти на смену (${esc((G_WARD_SHIFTS.find(x => x.id === G_WARD.shiftId) || G_WARD_SHIFTS[0]).desc)})<md-icon>emergency</md-icon></button>
+        </div>
+        <div class="g-sec-lbl" style="padding:0 20px">апгрейд отделения</div>
+        <div class="g-ty-grid">${wUpgList.map(u => {
+          const lv = wu[u.k] || 0, maxd = lv >= u.costs.length, cost = maxd ? 0 : u.costs[lv];
+          return `<div class="g-ty-card">
+            <div class="g-ty-head"><b>${esc(u.n)} (${lv}/${u.costs.length})</b></div>
+            <div class="g-ty-sub">${esc(u.d)}</div>
+            <button class="buy${maxd ? ' off' : ''}" style="height:46px;margin-top:4px;font-size:14px" data-gwardupg="${u.k}" ${maxd ? 'disabled' : ''}>
+              <md-ripple></md-ripple>${maxd ? 'максимум ✓' : `улучшить за ${cost} 🪙`}
+            </button>
+          </div>`;
+        }).join('')}</div>
+      </div>`;
+    }
+
+    return `<div class="g-wrap">
+      ${subChips}
+      <div class="g-hero">
+        <div class="g-hero-top">
+          <div class="g-hname" id="g-wd-time">${G_WARD.timeLeft.toFixed(1)} с</div>
+          <span class="g-hwt" id="g-wd-stat">помощь: ${G_WARD.healed} · жалобы: ${G_WARD.complaints}/3</span>
+        </div>
+        <div class="g-blitz-track"><div class="g-blitz-fill" id="g-wd-bar" style="width:${Math.min(100, (G_WARD.timeLeft/G_WARD.maxTime)*100)}%"></div></div>
+      </div>
+      <div class="g-ward-beds" id="g-ward-beds">${Array.from({ length: maxBeds }, (_, i) => {
+        const b = G_WARD.beds[i];
+        const needObj = b ? (G_WARD_NEEDS.find(n => n.id === b.reqs[0]) || G_WARD_NEEDS[0]) : null;
+        return `<button class="g-bed${!b ? ' empty' : ''}${G_WARD.selBed === i ? ' sel' : ''}" id="g-wb-${i}" data-gwardbed="${i}">
+          <md-ripple></md-ripple>
+          <div class="g-bed-top"><b id="g-wb-name-${i}">${b ? esc(b.name + (b.vip ? ' ★' : '')) : `койка ${i + 1}`}</b><span class="g-bed-tag" id="g-wb-tag-${i}">${b ? Math.ceil(b.pat) + '%' : 'свободна'}</span></div>
+          <div class="g-bed-need" id="g-wb-need-${i}">${b ? esc(needObj.msg) : 'ожидаем пациента...'}</div>
+          <div class="g-mini-track"><div class="g-mini-fill" id="g-wb-pf-${i}" style="width:${b ? Math.max(0, b.pat) : 0}%"></div></div>
+        </button>`;
+      }).join('')}</div>
+      <div class="g-ward-acts">${G_WARD_NEEDS.map(n => `
+        <button class="g-wact" data-gwardact="${n.id}">
+          <md-ripple></md-ripple><md-icon>${n.ic}</md-icon><span><b>${esc(n.lbl)}</b><small>${esc(n.sub)}</small></span>
+        </button>`).join('')}</div>
+      <div class="g-action">
+        <button class="buy" style="height:48px;background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface)" data-gwardstop="1"><md-ripple></md-ripple>завершить досрочно</button>
+      </div>
+    </div>`;
+  }
+
+  if (G_STATE.sub === 'arcade') {
+    if (G_STATE.arcSub === 'whack') {
+      if (!G_WHACK.active) {
+        const stakes = [[0, 'бесплатно ×1'], [100, 'вход 100 🪙 ×2.2'], [350, 'вход 350 🪙 ×3.5']];
+        return `<div class="g-wrap${animCls}">
+          ${subChips}
+          <div class="g-hero">
+            <div class="g-hero-top">
+              <div class="g-hname">охотник за срывами</div>
+              <span class="g-hwt">рекорд: ${G_SAVE.whackBest || 0}</span>
+            </div>
+            <div class="g-hsub">30 секунд реакции · комбо до ×4</div>
+            <p class="g-quote">быстро тапай по запрещёнке в холодильнике, пока не исчезла — и не трогай полезные продукты!</p>
+          </div>
+          <div class="chips">${stakes.map(([v, lbl]) => `
+            <button class="chip${G_WHACK.stake === v ? ' on' : ''}" data-gwhstake="${v}">
+              <md-ripple></md-ripple>${G_WHACK.stake === v ? '<md-icon>check</md-icon>' : ''}<span>${lbl}</span>
+            </button>`).join('')}</div>
+          <div class="info" style="margin:0 16px">
+            <div><small>убирать (красные и золотые)</small><p>кола, эспрессо, энергетик, цитрамон, бокал вина и бонусный тирамису (+45 очков).</p></div>
+            <div><small>оставлять (зелёные)</small><p>вода, ромашковый чай, морс и панадол — нажатие на них снимает 20 очков и сбрасывает комбо.</p></div>
+          </div>
+          <div class="g-action">
+            <button class="buy" data-gwhstart="1"><md-ripple></md-ripple>начать зачистку<md-icon>play_arrow</md-icon></button>
+          </div>
+        </div>`;
+      }
+      const m = Math.min(4, 1 + Math.floor(G_WHACK.combo / 4));
+      const cells = Array.from({ length: 9 }, (_, i) => {
+        const s = G_WHACK.slots[i];
+        const cls = s ? (s.gold ? 'gold' : (s.bad ? 'bad' : 'safe')) : 'empty';
+        return `<button class="g-cell ${cls}" data-gwhcell="${i}" data-tok="${s ? s.tok : 'e'}">${gBuildWhackCellContent(s)}</button>`;
+      }).join('');
+      return `<div class="g-wrap">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname" id="g-wh-time">${G_WHACK.timeLeft.toFixed(1)} с</div>
+            <span class="g-hwt" id="g-wh-score">${G_WHACK.score}</span>
+          </div>
+          <div class="g-hsub" id="g-wh-combo">убрано: ${G_WHACK.hits} · комбо ×${m}</div>
+          <div class="g-blitz-track"><div class="g-blitz-fill" id="g-wh-bar" style="width:${Math.min(100, (G_WHACK.timeLeft/G_WHACK.maxTime)*100)}%"></div></div>
+        </div>
+        <div class="g-grid9" id="g-wh-grid">${cells}</div>
+      </div>`;
+    }
+
+    if (G_STATE.arcSub === 'alchemy') {
+      const ord = G_ALCH_ORDERS[G_ALCH.orderIdx];
+      const st = gCalcAlch();
+      const maxCaf = ord.maxCaf + (G_ALCH.catalyst ? 1 : 0);
+      const slotsHtml = [0, 1, 2].map(i => {
+        const id = G_ALCH.picked[i];
+        const ing = id ? G_ALCH_INGS.find(x => x.id === id) : null;
+        return `<div class="g-alch-slot${ing ? (ing.trap ? ' bad' : ' on') : ''}">${ing ? `<span>${esc(ing.name)}</span>` : `<span>слот ${i + 1}</span>`}</div>`;
+      }).join('');
+      const ingsHtml = G_ALCH_INGS.map(ing => {
+        const on = G_ALCH.picked.includes(ing.id);
+        return `<button class="g-ing${on ? ' on' : ''}${ing.trap ? ' trap' : ''}" data-galch="${ing.id}">
+          <md-ripple></md-ripple><b>${esc(ing.name)}</b><small>${esc(ing.note)}</small>
+        </button>`;
+      }).join('');
+      const unlockedRec = Object.entries(G_ALCH_RECIPES).filter(([k]) => G_SAVE.recipes[k]).map(([, n]) => n);
+      const okReady = G_ALCH.picked.length === 3 && !st.hasTrap && st.caf <= maxCaf && st.burn >= ord.reqBurn && st.app >= ord.reqApp && st.calm >= ord.reqCalm;
+      return `<div class="g-wrap${animCls}">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">${esc(ord.title)}</div>
+            <span class="g-hwt">+${Math.round(ord.reward * (G_ALCH.catalyst ? 1.6 : 1) * gLicMult())} 🪙</span>
+          </div>
+          <div class="g-hsub">цель: сжиг ${st.burn}/${ord.reqBurn} · сытость ${st.app}/${ord.reqApp} · жкт ${st.calm}/${ord.reqCalm} · кофеин ${st.caf}/${maxCaf}</div>
+          <p class="g-quote">${esc(G_ALCH.lastMsg || ord.desc)}</p>
+        </div>
+        <div class="g-alch-slots">${slotsHtml}</div>
+        <div class="chips">
+          <button class="chip${G_ALCH.catalyst ? ' on' : ''}" data-galchcat="1"><md-ripple></md-ripple>${G_ALCH.catalyst ? '<md-icon>check</md-icon>' : '<md-icon>science</md-icon>'}<span>катализатор 80 🪙 (+60% и -1 кофе)</span></button>
+          <button class="chip" data-galchnew="1"><md-ripple></md-ripple><md-icon>refresh</md-icon><span>другой заказ</span></button>
+        </div>
+        <div class="g-ing-grid">${ingsHtml}</div>
+        <div class="g-action">
+          <button class="buy" data-galchcraft="1"><md-ripple></md-ripple>${okReady ? 'синтезировать формулу ✓' : 'синтезировать капсулу'}<md-icon>biotech</md-icon></button>
+        </div>
+        <div class="info" style="margin:0 16px">
+          <div><small>книга секретных формул (${unlockedRec.length}/8 · бонус +150 🪙 за новую)</small><p>${unlockedRec.length ? esc(unlockedRec.join(', ')) : 'подбирайте редкие тройки из натуральных компонентов и отыщите все 8 формул!'}</p></div>
+        </div>
+      </div>`;
+    }
+
+    if (G_STATE.arcSub === 'risk') {
+      const shCost = G_RISK.stake > 0 ? Math.round(G_RISK.stake * 0.35) : 30;
+      const potWin = G_RISK.stake > 0 ? Math.round(G_RISK.stake * G_RISK.mult) : Math.round(G_RISK.mult * 30 * gLicMult());
+      if (!G_RISK.active) {
+        const rStakes = [0, 50, 200, 500, 1500];
+        return `<div class="g-wrap${animCls}">
+          ${subChips}
+          <div class="g-hero">
+            <div class="g-hero-top">
+              <div class="g-hname">курс без передоза</div>
+              <span class="g-hwt">рекорд ×${(G_SAVE.riskBestMult || 1).toFixed(2)}</span>
+            </div>
+            <div class="g-hsub">риск-игра со ставкой · 12 дней курса</div>
+            <p class="g-quote">${G_RISK.ended ? (G_RISK.busted ? `передозировка на ${G_RISK.day}-м дне! ставка сгорела — в следующий раз фиксируйте раньше.` : `отличный финиш на ${G_RISK.day}-м дне: вы забрали +${G_RISK.lastWin} 🪙 (×${G_RISK.mult.toFixed(2)})!`) : 'открывайте карты дня, растите множитель ставки и вовремя жмите «забрать», пока нагрузка не дошла до 100%!'}</p>
+          </div>
+          <div class="chips">${rStakes.map(s => `
+            <button class="chip${G_RISK.stake === s ? ' on' : ''}" data-griskstake="${s}">
+              <md-ripple></md-ripple>${G_RISK.stake === s ? '<md-icon>check</md-icon>' : ''}<span>${s ? s + ' 🪙' : 'бесплатно'}</span>
+            </button>`).join('')}</div>
+          <div class="chips" style="padding-top:0">
+            <button class="chip${G_RISK.buyShield ? ' on' : ''}" data-grisksh="1"><md-ripple></md-ripple>${G_RISK.buyShield ? '<md-icon>check</md-icon>' : '<md-icon>spa</md-icon>'}<span>страховка ромашкой (+${shCost} 🪙)</span></button>
+          </div>
+          ${G_RISK.log.length ? `<div class="g-risk-log">${G_RISK.log.slice(0, 6).map(l => `<span class="g-risk-tag ${l.cls}">${esc(l.txt)}</span>`).join('')}</div>` : ''}
+          <div class="g-action">
+            <button class="buy" data-griskstart="1"><md-ripple></md-ripple>${G_RISK.ended ? 'сыграть ещё' : 'начать курс'}<md-icon>casino</md-icon></button>
+          </div>
+        </div>`;
+      }
+      return `<div class="g-wrap">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">×${G_RISK.mult.toFixed(2)}</div>
+            <span class="g-hwt">${potWin} 🪙</span>
+          </div>
+          <div class="g-hsub">день ${G_RISK.day}/12 · нагрузка: ${G_RISK.stress}% / 100%${G_RISK.chamo ? ' · ромашка защищает ✓' : ''}</div>
+          <div class="g-blitz-track"><div class="g-blitz-fill" style="width:${Math.min(100, G_RISK.stress)}%;background:${G_RISK.stress >= 75 ? 'var(--md-sys-color-error)' : 'var(--md-sys-color-on-primary-container)'}"></div></div>
+        </div>
+        <div class="g-risk-log">${G_RISK.log.map(l => `<span class="g-risk-tag ${l.cls}">${esc(l.txt)}</span>`).join('')}</div>
+        <div class="g-action">
+          <button class="buy" data-griskact="draw"><md-ripple></md-ripple>следующий день (${G_RISK.deck.length} карт)<md-icon>style</md-icon></button>
+          <button class="buy" style="margin-top:10px;background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container)" data-griskact="cash"><md-ripple></md-ripple>забрать ${potWin} 🪙 сейчас<md-icon>savings</md-icon></button>
+        </div>
+      </div>`;
+    }
+
+    if (G_STATE.arcSub === 'mine') {
+      const scCost = G_MINE.stake > 0 ? Math.max(40, Math.round(G_MINE.stake * 0.4)) : 40;
+      const potWin = G_MINE.stake > 0 ? Math.round(G_MINE.stake * G_MINE.mult) : Math.round(G_MINE.mult * 35 * gLicMult());
+      if (!G_MINE.active) {
+        const mStakes = [0, 50, 200, 500, 1500];
+        return `<div class="g-wrap${animCls}">
+          ${subChips}
+          <div class="g-hero">
+            <div class="g-hero-top">
+              <div class="g-hname">детектор доставки</div>
+              <span class="g-hwt">рекорд ×${(G_SAVE.mineBestMult || 1).toFixed(2)}</span>
+            </div>
+            <div class="g-hsub">сапёр 4×4 · число = запрещёнки рядом</div>
+            <p class="g-quote">${G_MINE.ended ? (G_MINE.busted ? `в коробке оказалась запрещёнка (${esc(G_MINE.hitName)})! ставка сгорела.` : `чистая проверка! вы забрали +${G_MINE.lastWin} 🪙 (×${G_MINE.mult.toFixed(2)}).`) : 'открывай чистые коробки и смотри на подсказки-цифры вокруг. в любой момент забирай банк!'}</p>
+          </div>
+          ${G_MINE.ended ? `<div class="g-grid16">${G_MINE.board.map(c => `<div class="g-box ${c.isMine ? 'bad' : 'safe'}">${c.isMine ? `<md-icon>warning</md-icon><small>${esc(c.badName)}</small>` : `<b>${c.adj}</b><small>рядом</small>`}</div>`).join('')}</div>` : ''}
+          <div class="chips">${[3, 4, 5].map(n => `
+            <button class="chip${G_MINE.minesCnt === n ? ' on' : ''}" data-gminecnt="${n}">
+              <md-ripple></md-ripple>${G_MINE.minesCnt === n ? '<md-icon>check</md-icon>' : ''}<span>${n} мины</span>
+            </button>`).join('')}</div>
+          <div class="chips" style="padding-top:0">${mStakes.map(s => `
+            <button class="chip${G_MINE.stake === s ? ' on' : ''}" data-gminestake="${s}">
+              <md-ripple></md-ripple>${G_MINE.stake === s ? '<md-icon>check</md-icon>' : ''}<span>${s ? s + ' 🪙' : 'бесплатно'}</span>
+            </button>`).join('')}</div>
+          <div class="chips" style="padding-top:0">
+            <button class="chip${G_MINE.useScan ? ' on' : ''}" data-gminescan="1"><md-ripple></md-ripple>${G_MINE.useScan ? '<md-icon>check</md-icon>' : '<md-icon>radar</md-icon>'}<span>рентген 1 мины (+${scCost} 🪙)</span></button>
+          </div>
+          <div class="g-action">
+            <button class="buy" data-gminestart="1"><md-ripple></md-ripple>${G_MINE.ended ? 'новая посылка' : 'начать проверку'}<md-icon>grid_on</md-icon></button>
+          </div>
+        </div>`;
+      }
+      return `<div class="g-wrap">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">×${G_MINE.mult.toFixed(2)}</div>
+            <span class="g-hwt">${potWin} 🪙</span>
+          </div>
+          <div class="g-hsub">открыто чистых: ${G_MINE.safeOpened}/${16 - G_MINE.minesCnt} · спрятано мин: ${G_MINE.minesCnt}</div>
+        </div>
+        <div class="g-grid16">${G_MINE.board.map((c, i) => `
+          <button class="g-box${c.flagged ? ' warn' : (c.open ? (c.isMine ? ' bad' : ' safe') : '')}" data-gminecell="${i}">
+            <md-ripple></md-ripple>${c.flagged ? '<md-icon>warning</md-icon><small>мина</small>' : (c.open ? `<b>${c.adj}</b><small>рядом</small>` : '<md-icon>inventory_2</md-icon>')}
+          </button>`).join('')}</div>
+        <div class="g-action">
+          <button class="buy${G_MINE.safeOpened === 0 ? ' off' : ''}" data-gminecash="1" ${G_MINE.safeOpened === 0 ? 'disabled' : ''}>
+            <md-ripple></md-ripple>${G_MINE.safeOpened ? `забрать ${potWin} 🪙` : 'откройте первую коробку'}<md-icon>savings</md-icon>
+          </button>
+        </div>
+      </div>`;
+    }
+
+    if (G_STATE.arcSub === 'merge') {
+      const potEarn = G_MERGE.score >= 40 ? Math.round((G_MERGE.score / 18) * gLicMult()) : 0;
+      return `<div class="g-wrap${animCls}">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">${G_MERGE.score} очк.</div>
+            <span class="g-hwt">рекорд ${G_SAVE.mergeBest || 0}</span>
+          </div>
+          <div class="g-hsub">эволюция курса (2048) · свайпай поле или жми стрелки</div>
+          <p class="g-quote">${G_MERGE.over ? 'ходы закончились! сдай партию за монеты или убери лишнюю плитку.' : 'вода → ромашка → цикорий → гречка → turbo → plus 40 → premium → plus 30 → идеал!'}</p>
+        </div>
+        <div class="g-grid16 g-mgrid" id="g-merge-grid">${G_MERGE.board.map(lv => `
+          <div class="g-mtile${lv ? ' lv' + lv : ''}">
+            ${lv ? `<b>${esc(G_MERGE_NAMES[lv] || '')}</b><small>${Math.pow(2, lv)}</small>` : ''}
+          </div>`).join('')}</div>
+        <div class="g-mctrl">
+          <button data-gmergedir="left"><md-ripple></md-ripple><md-icon>arrow_back</md-icon></button>
+          <button data-gmergedir="up"><md-ripple></md-ripple><md-icon>arrow_upward</md-icon></button>
+          <button data-gmergedir="down"><md-ripple></md-ripple><md-icon>arrow_downward</md-icon></button>
+          <button data-gmergedir="right"><md-ripple></md-ripple><md-icon>arrow_forward</md-icon></button>
+        </div>
+        <div class="chips">
+          <button class="chip" data-gmergeclean="1"><md-ripple></md-ripple><md-icon>cleaning_services</md-icon><span>убрать мелкую (80 🪙)</span></button>
+        </div>
+        <div class="g-action">
+          <button class="buy" data-gmergenew="1"><md-ripple></md-ripple>${potEarn ? `сдать курс (+${potEarn} 🪙) и заново` : 'начать новую партию'}<md-icon>refresh</md-icon></button>
+        </div>
+      </div>`;
+    }
+
+    if (G_STATE.arcSub === 'gauge') {
+      const potWin = G_GAUGE.stake > 0 ? Math.round(G_GAUGE.stake * G_GAUGE.mult) : Math.round(G_GAUGE.mult * 45 * gLicMult());
+      if (!G_GAUGE.active) {
+        const gStakes = [0, 50, 200, 500];
+        return `<div class="g-wrap${animCls}">
+          ${subChips}
+          <div class="g-hero">
+            <div class="g-hero-top">
+              <div class="g-hname">точный дозатор</div>
+              <span class="g-hwt">рекорд ×${(G_SAVE.gaugeBest || 1).toFixed(2)}</span>
+            </div>
+            <div class="g-hsub">5 раундов тайминга · 2 жизни на ошибку</div>
+            <p class="g-quote">${G_GAUGE.ended ? (G_GAUGE.won ? `серия отмеряна! выигрыш +${G_GAUGE.lastWin} 🪙 (×${G_GAUGE.mult.toFixed(2)}).` : 'ошибка дозировки! все 2 жизни потеряны — попробуй поймать центр зоны.') : 'нажми ровно в тот момент, когда красный бегунок проезжает по зелёной зоне нормы! центр даёт +0.55×.'}</p>
+          </div>
+          <div class="chips">${gStakes.map(s => `
+            <button class="chip${G_GAUGE.stake === s ? ' on' : ''}" data-ggastake="${s}">
+              <md-ripple></md-ripple>${G_GAUGE.stake === s ? '<md-icon>check</md-icon>' : ''}<span>${s ? s + ' 🪙' : 'бесплатно'}</span>
+            </button>`).join('')}</div>
+          <div class="g-action">
+            <button class="buy" data-ggastart="1"><md-ripple></md-ripple>${G_GAUGE.ended ? 'повторить серию' : 'запустить дозатор'}<md-icon>speed</md-icon></button>
+          </div>
+        </div>`;
+      }
+      const coreLeft = G_GAUGE.tStart + G_GAUGE.tWidth * 0.28;
+      const coreWidth = G_GAUGE.tWidth * 0.44;
+      return `<div class="g-wrap">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">раунд ${G_GAUGE.round}/5 · ×${G_GAUGE.mult.toFixed(2)}</div>
+            <span class="g-hwt">${potWin} 🪙</span>
+          </div>
+          <div class="g-hsub">осталось жизней: ${G_GAUGE.lives}/2${G_GAUGE.note ? ' · ' + esc(G_GAUGE.note) : ''}</div>
+        </div>
+        <div class="g-gauge-box">
+          <div class="g-gauge-track">
+            <div class="g-gauge-zone" style="left:${G_GAUGE.tStart}%;width:${G_GAUGE.tWidth}%"></div>
+            <div class="g-gauge-core" style="left:${coreLeft.toFixed(1)}%;width:${coreWidth.toFixed(1)}%"></div>
+            <div class="g-gauge-pin" id="g-ga-pin" style="left:${G_GAUGE.pos.toFixed(2)}%"></div>
+          </div>
+        </div>
+        <div class="g-action">
+          <button class="buy" data-ggahit="1"><md-ripple></md-ripple>отмерить дозу!<md-icon>adjust</md-icon></button>
+          ${G_GAUGE.round >= 2 ? `<button class="buy" style="margin-top:10px;background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container)" data-ggacash="1"><md-ripple></md-ripple>забрать ${potWin} 🪙 сейчас<md-icon>savings</md-icon></button>` : ''}
+        </div>
+      </div>`;
+    }
+
+    if (G_STATE.arcSub === 'code') {
+      const elById = id => G_CODE_ELS.find(x => x.id === id);
+      if (!G_CODE.active) {
+        const cStakes = [0, 50, 150, 400];
+        return `<div class="g-wrap${animCls}">
+          ${subChips}
+          <div class="g-hero">
+            <div class="g-hero-top">
+              <div class="g-hname">тайный код курса</div>
+              <span class="g-hwt">${G_SAVE.codeWins || 0} поб.</span>
+            </div>
+            <div class="g-hsub">дедукция · 4 разных элемента из 6 за 6 попыток</div>
+            <p class="g-quote">${G_CODE.ended ? (G_CODE.won ? `код взломан! получено +${G_CODE.lastWin} 🪙.` : `попытки кончились! верная схема: ${G_CODE.secret.map(id => elById(id).name).join(' · ')}.`) : 'составь схему дня из 4 элементов. «точно» = угадал место, «рядом» = элемент есть, но на другой позиции.'}</p>
+          </div>
+          <div class="chips">${cStakes.map(s => `
+            <button class="chip${G_CODE.stake === s ? ' on' : ''}" data-gcodestake="${s}">
+              <md-ripple></md-ripple>${G_CODE.stake === s ? '<md-icon>check</md-icon>' : ''}<span>${s ? s + ' 🪙' : 'бесплатно'}</span>
+            </button>`).join('')}</div>
+          <div class="g-action">
+            <button class="buy" data-gcodestart="1"><md-ripple></md-ripple>${G_CODE.ended ? 'новый код' : 'начать взлом'}<md-icon>lock_open</md-icon></button>
+          </div>
+        </div>`;
+      }
+      return `<div class="g-wrap">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">попытка ${G_CODE.history.length + 1}/6</div>
+            <span class="g-hwt">${G_CODE.stake ? G_CODE.stake + ' 🪙' : '×1'}</span>
+          </div>
+          <div class="g-hsub">все 4 элемента в коде разные · тап по слоту очищает</div>
+        </div>
+        ${G_CODE.history.length ? `<div class="g-code-hist">${G_CODE.history.map(h => `
+          <div class="g-code-row">
+            <div class="g-code-pegs">${h.guess.map(id => `<div class="g-code-peg on"><md-icon style="--md-icon-size:18px">${elById(id).ic}</md-icon></div>`).join('')}</div>
+            <div class="g-code-res"><span><b class="ok">точно: ${h.exact}</b></span><span>рядом: ${h.near}</span></div>
+          </div>`).join('')}</div>` : ''}
+        <div class="g-code-slots">${G_CODE.guess.map((id, i) => {
+          const el = id ? elById(id) : null;
+          return `<button class="g-code-slot${el ? ' on' : ''}${G_CODE.locked[i] ? ' locked' : ''}" data-gcodeslot="${i}">
+            <md-ripple></md-ripple>${el ? `<md-icon style="--md-icon-size:20px">${el.ic}</md-icon><span>${esc(el.name)}</span>` : `<span>слот ${i + 1}</span>`}
+          </button>`;
+        }).join('')}</div>
+        <div class="chips">${G_CODE_ELS.map(el => `
+          <button class="chip${G_CODE.guess.includes(el.id) ? ' on' : ''}" data-gcodepick="${el.id}">
+            <md-ripple></md-ripple><md-icon>${el.ic}</md-icon><span>${esc(el.name)}</span>
+          </button>`).join('')}</div>
+        <div class="chips" style="padding-top:0">
+          <button class="chip" data-gcodehint="1"><md-ripple></md-ripple><md-icon>lightbulb</md-icon><span>подсказка слота (120 🪙)</span></button>
+        </div>
+        <div class="g-action">
+          <button class="buy" data-gcodecheck="1"><md-ripple></md-ripple>проверить схему<md-icon>check_circle</md-icon></button>
+        </div>
+      </div>`;
+    }
+
+    // arcSub === 'memory'
+    if (!G_MEM.active) {
+      const memStakes = [[0, 'бесплатно'], [100, 'вход 100 🪙 ×2.1'], [300, 'вход 300 🪙 ×3.2']];
+      return `<div class="g-wrap${animCls}">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">пары совместимости</div>
+            <span class="g-hwt">${G_SAVE.memBestSec ? 'рекорд ' + G_SAVE.memBestSec + ' с' : '50 сек'}</span>
+          </div>
+          <div class="g-hsub">8 смысловых пар по правилам курса · сетка 4×4</div>
+          <p class="g-quote">${G_MEM.ended ? (G_MEM.won ? `блестящая память! все 8 пар собраны — награда +${G_MEM.lastWin} 🪙.` : 'время вышло! попробуй ещё раз и запоминай пары.') : 'открывай карточки по две и соединяй проблему с верным решением (например: «хочу кофе» ↔ «цикорий» и «голова болит» ↔ «парацетамол»).'}</p>
+        </div>
+        <div class="chips">${memStakes.map(([v, lbl]) => `
+          <button class="chip${G_MEM.stake === v ? ' on' : ''}" data-gmemstake="${v}">
+            <md-ripple></md-ripple>${G_MEM.stake === v ? '<md-icon>check</md-icon>' : ''}<span>${lbl}</span>
+          </button>`).join('')}</div>
+        <div class="g-action">
+          <button class="buy" data-gmemstart="1"><md-ripple></md-ripple>${G_MEM.ended ? 'сыграть снова' : 'перемешать карты'}<md-icon>extension</md-icon></button>
+        </div>
+      </div>`;
+    }
+    return `<div class="g-wrap">
+      ${subChips}
+      <div class="g-hero">
+        <div class="g-hero-top">
+          <div class="g-hname" id="g-mem-time">${G_MEM.timeLeft.toFixed(1)} с</div>
+          <span class="g-hwt" id="g-mem-info">пар: ${G_MEM.matched}/8 · ходов: ${G_MEM.moves}</span>
+        </div>
+        <div class="g-blitz-track"><div class="g-blitz-fill" id="g-mem-bar" style="width:${Math.min(100, (G_MEM.timeLeft/G_MEM.maxTime)*100)}%"></div></div>
+      </div>
+      <div class="g-grid16" id="g-mem-grid">${G_MEM.cards.map((c, i) => {
+        const isOpen = c.done || G_MEM.open.includes(i);
+        return `<button class="g-mem-card${c.done ? ' done' : (isOpen ? ' open' : '')}" data-gmemcard="${i}">
+          <md-ripple></md-ripple>${isOpen ? `<b>${esc(c.txt)}</b>` : '<md-icon>help</md-icon>'}
+        </button>`;
+      }).join('')}</div>
+    </div>`;
+  }
+
+  if (G_STATE.sub === 'blitz') {
+    if (!G_BLITZ.active) {
+      const hasMix = (G_SAVE.bag.cocktail || 0) > 0;
+      return `<div class="g-wrap${animCls}">
+        ${subChips}
+        <div class="g-hero">
+          <div class="g-hero-top">
+            <div class="g-hname">блиц-консилиум</div>
+            <span class="g-hwt">рекорд: ${G_SAVE.blitzBest || 0}</span>
+          </div>
+          <div class="g-hsub">быстрые решения на 60 секунд · комбо до ×5</div>
+          <p class="g-quote">верный ответ даёт +1.8 сек и растит множитель. ошибка сбрасывает комбо и отнимает 4 секунды!${hasMix ? ' (турбо-микс готов к запуску!)' : ''}</p>
+        </div>
+        <div class="info" style="margin:0 16px">
+          <div><small>можно без правок</small><p>если всё в порядке (цикорий, морс, сиозс, парацетамол, омега-3).</p></div>
+          <div><small>правка: рацион / доза</small><p>скрытый кофеин (чай, кола, матча, какао, тирамису), алкоголь или >2 капсул.</p></div>
+          <div><small>правка: аптечка / ромашка</small><p>цитрамон, шипучки, нурофен натощак, fe/zn/c/b или лёгкая потливость.</p></div>
+          <div><small>строгий отказ</small><p>до 18 лет, беременность/гв, сердце/давление, жкт/печень/почки, не-сиозс.</p></div>
+        </div>
+        <div class="g-action">
+          <button class="buy" data-gblitzstart="1"><md-ripple></md-ripple>поехали!<md-icon>bolt</md-icon></button>
+        </div>
+      </div>`;
+    }
+    const mult = Math.min(5, 1 + Math.floor(G_BLITZ.combo / 3));
+    return `<div class="g-wrap">
+      ${subChips}
+      <div class="g-hero">
+        <div class="g-hero-top">
+          <div class="g-hname" id="g-bl-time">${G_BLITZ.timeLeft.toFixed(1)} с</div>
+          <span class="g-hwt" id="g-bl-score">${G_BLITZ.score}</span>
+        </div>
+        <div class="g-hsub" id="g-bl-combo">комбо ×${mult} (${G_BLITZ.right})</div>
+        <div class="g-blitz-track"><div class="g-blitz-fill" id="g-bl-bar" style="width:${Math.min(100, (G_BLITZ.timeLeft/G_BLITZ.maxTime)*100)}%"></div></div>
+      </div>
+      <div class="g-facts">
+        <div class="g-fact" style="cursor:default">
+          <span class="g-flbl">экспресс-ситуация</span>
+          <span class="g-fval" id="g-bl-q">${esc(G_BLITZ.cur.q)}</span>
+        </div>
+      </div>
+      <div class="g-blitz-btns">
+        <button class="g-b-btn ok" data-gblitzans="ok"><md-ripple></md-ripple><b>можно</b><small>всё по правилам</small></button>
+        <button class="g-b-btn" data-gblitzans="diet"><md-ripple></md-ripple><b>рацион / доза</b><small>кофеин, алко, >2 капс</small></button>
+        <button class="g-b-btn" data-gblitzans="meds"><md-ripple></md-ripple><b>аптечка / ромашка</b><small>таблетки, витамины, адаптация</small></button>
+        <button class="g-b-btn ban" data-gblitzans="ban"><md-ripple></md-ripple><b>строгий отказ</b><small>противопоказание</small></button>
       </div>
     </div>`;
   }
@@ -1637,12 +4211,74 @@ function renderGameInner(animateWrap = false) {
 
   if (G_STATE.sub === 'clinic') {
     const ranks = ['стажёр','младший нутрициолог','инспектор метаболизма','главврач стройности','легенда клиники'];
-    const rName = ranks[Math.min(ranks.length - 1, Math.floor(G_SAVE.rankXp / 4))];
-    const ups = [
-      { key: 'scanner', name: 'умный чек-сканер', desc: 'подсвечивает вкладки с нарушениями', base: 70, max: 1 },
-      { key: 'bonus', name: 'премиум гонорар (+30%)', desc: 'повышает монеты за каждое дело', base: 60, max: 4 },
-      { key: 'lives', name: 'страховка минздрава (+1 жизнь)', desc: 'дополнительное право на ошибку в смену', base: 90, max: 2 }
-    ];
+    const rName = G_SAVE.lic.legend ? 'легенда «ешка»' : G_SAVE.lic.chief ? 'главврач минздрава' : ranks[Math.min(ranks.length - 1, Math.floor(G_SAVE.rankXp / 5))];
+    const cSeg = `
+      <div class="g-seg">
+        <button class="g-seg-btn${G_STATE.clinicSec === 'office' ? ' on' : ''}" data-gcsec="office"><md-ripple></md-ripple><span>кабинет</span></button>
+        <button class="g-seg-btn${G_STATE.clinicSec === 'bag' ? ' on' : ''}" data-gcsec="bag"><md-ripple></md-ripple><span>расходники</span></button>
+        <button class="g-seg-btn${G_STATE.clinicSec === 'archive' ? ' on' : ''}" data-gcsec="archive"><md-ripple></md-ripple><span>архив и цели</span></button>
+      </div>`;
+
+    let innerClinic = '';
+    if (G_STATE.clinicSec === 'bag') {
+      const disc = G_SAVE.lic.chief ? 0.8 : 1;
+      innerClinic = `<div class="blocks">${G_CONSUMABLES.map((item, i) => {
+        const cnt = G_SAVE.bag[item.id] || 0;
+        const price = Math.round(item.cost * disc);
+        return `<div class="blk" style="--i:${i}">
+          <div class="blk-head"><h3>${esc(item.name)} · в запасе: ${cnt}</h3></div>
+          <p>${esc(item.desc)}</p>
+          <button class="buy${G_SAVE.coins < price ? ' off' : ''}" data-gbagbuy="${item.id}" ${G_SAVE.coins < price ? 'disabled' : ''}>
+            <md-ripple></md-ripple>купить за ${price} 🪙
+          </button>
+        </div>`;
+      }).join('')}</div>`;
+    } else if (G_STATE.clinicSec === 'archive') {
+      const vipsHtml = G_ARCHIVE_CASES.map((v, i) => {
+        const unl = !!G_SAVE.vipUnlocked[i], sol = !!G_SAVE.vipSolved[i];
+        return `<div class="blk" style="--i:${i}">
+          <div class="blk-head"><h3>${esc(v.title)}${sol ? ' ✓' : ''}</h3></div>
+          <p>${esc(v.quote)} · награда ×${v.rewardMult}</p>
+          <button class="buy${!unl && G_SAVE.coins < v.cost ? ' off' : ''}" data-gvip="${i}" ${!unl && G_SAVE.coins < v.cost ? 'disabled' : ''}>
+            <md-ripple></md-ripple>${unl ? (sol ? 'переиграть дело' : 'разобрать дело') : `открыть за ${v.cost} 🪙`}
+          </button>
+        </div>`;
+      }).join('');
+      const achsHtml = `<div class="info" style="margin:6px 16px 0">${G_ACHS.map(a => {
+        const done = !!G_SAVE.ach[a.id];
+        return `<div><small>${esc(a.name)} · ${done ? 'получено ✓' : `+${a.bonus} 🪙`}</small><p>${esc(a.desc)}</p></div>`;
+      }).join('')}</div>`;
+      innerClinic = `<div class="blocks">${vipsHtml}</div><div class="g-sec-lbl" style="padding:0 20px">достижения</div>${achsHtml}`;
+    } else {
+      const specs = [
+        { key: 'scanner', name: 'анализатор чеков', desc: 'подсвечивает вкладки и строчки с нарушениями', costs: [80, 220] },
+        { key: 'bonus', name: 'премиум прайс (+15%/ур.)', desc: 'растит гонорар за каждое верное дело', costs: [60, 130, 240, 400, 650, 1000, 1500, 2200] },
+        { key: 'lives', name: 'резерв минздрава (+1 жизнь)', desc: 'больше прав на ошибку внутри смены', costs: [150, 450, 1100] },
+        { key: 'blitzTime', name: 'таймер блица (+5 сек/ур.)', desc: 'добавляет время на старте блиц-режима', costs: [90, 220, 480, 900] }
+      ];
+      const licsHtml = G_LICENSES.map((l, i) => {
+        const own = !!G_SAVE.lic[l.id];
+        return `<div class="blk" style="--i:${i}">
+          <div class="blk-head"><h3>${esc(l.name)}${own ? ' ✓' : ''}</h3></div>
+          <p>${esc(l.desc)}</p>
+          <button class="buy${own || G_SAVE.coins < l.cost ? ' off' : ''}" data-glic="${l.id}" ${own || G_SAVE.coins < l.cost ? 'disabled' : ''}>
+            <md-ripple></md-ripple>${own ? 'лицензия активна' : `получить за ${l.cost} 🪙`}
+          </button>
+        </div>`;
+      }).join('');
+      const upgsHtml = specs.map((u, i) => {
+        const lv = G_SAVE.upg[u.key] || 0, maxd = lv >= u.costs.length, cost = maxd ? 0 : u.costs[lv];
+        return `<div class="blk" style="--i:${i}">
+          <div class="blk-head"><h3>${esc(u.name)} (${lv}/${u.costs.length})</h3></div>
+          <p>${esc(u.desc)}</p>
+          <button class="buy${maxd || G_SAVE.coins < cost ? ' off' : ''}" data-gupg="${u.key}" ${maxd || G_SAVE.coins < cost ? 'disabled' : ''}>
+            <md-ripple></md-ripple>${maxd ? 'максимум' : `улучшить за ${cost} 🪙`}
+          </button>
+        </div>`;
+      }).join('');
+      innerClinic = `<div class="g-sec-lbl" style="padding:0 20px">лицензии и статусы</div><div class="blocks">${licsHtml}</div><div class="g-sec-lbl" style="padding:0 20px">оборудование</div><div class="blocks">${upgsHtml}</div>`;
+    }
+
     return `<div class="g-wrap${animCls}">
       ${subChips}
       <div class="g-hero">
@@ -1650,31 +4286,33 @@ function renderGameInner(animateWrap = false) {
           <div class="g-hname">${esc(rName)}</div>
           <div class="g-hwt">-${G_SAVE.totalKg} кг</div>
         </div>
-        <div class="g-hsub">стрик дейли: ${G_SAVE.streak} дн. · монет: ${G_SAVE.coins}</div>
-        ${G_SAVE.rankXp >= 6 ? `<p class="g-quote">промокод профи открыт: <b>gigachad30</b> (скидка 15%)</p>` : `<p class="g-quote">до отметки профи и промокода осталось верных дел: ${Math.max(0, 6 - G_SAVE.rankXp)}</p>`}
+        <div class="g-hsub">доход ×${gLicMult().toFixed(2)} · стрик ${G_SAVE.streak} дн. · рекорд блица ${G_SAVE.blitzBest || 0}</div>
+        ${G_SAVE.rankXp >= 6 ? `<p class="g-quote">промокод профи открыт: <b>gigachad30</b> (скидка 15%)</p>` : `<p class="g-quote">до промокода осталось верных дел: ${Math.max(0, 6 - G_SAVE.rankXp)}</p>`}
       </div>
-      <div class="blocks">${ups.map((u, i) => {
-        const lv = G_SAVE.upg[u.key] || 0, maxd = lv >= u.max, cost = u.base + lv * 65;
-        return `<div class="blk" style="--i:${i}">
-          <div class="blk-head"><h3>${esc(u.name)} (${lv}/${u.max})</h3></div>
-          <p>${esc(u.desc)}</p>
-          <button class="buy${maxd || G_SAVE.coins < cost ? ' off' : ''}" data-gupg="${u.key}" ${maxd || G_SAVE.coins < cost ? 'disabled' : ''}>
-            <md-ripple></md-ripple>${maxd ? 'максимум' : `улучшить за ${cost}`}
-          </button>
-        </div>`;
-      }).join('')}</div>
+      ${cSeg}
+      ${innerClinic}
     </div>`;
   }
 
   const c = G_STATE.curCase;
   const dots = Array.from({ length: G_STATE.maxLives }, (_, i) => `<span class="g-dot${i >= G_STATE.lives ? ' off' : ''}"></span>`).join('');
+  const modLabel = G_STATE.mode === 'daily' ? 'дейли ×2' : G_STATE.mode === 'vip' ? `vip ×${c.rewardMult}` : `${G_STATE.shiftMod.name} ×${G_STATE.shiftMod.mult}`;
+
+  const bagBtns = [];
+  if ((G_SAVE.bag.audit || 0) > 0) bagBtns.push(`<button class="g-bag-btn" data-guse="audit"><md-ripple></md-ripple><md-icon>manage_search</md-icon><span>аудит (${G_SAVE.bag.audit})</span></button>`);
+  if ((G_SAVE.bag.shield || 0) > 0 || G_STATE.buffs.shield) bagBtns.push(`<button class="g-bag-btn${G_STATE.buffs.shield ? ' on' : ''}" data-guse="shield"><md-ripple></md-ripple><md-icon>shield</md-icon><span>${G_STATE.buffs.shield ? 'щит активен' : `щит (${G_SAVE.bag.shield})`}</span></button>`);
+  if ((G_SAVE.bag.double || 0) > 0 || G_STATE.buffs.double) bagBtns.push(`<button class="g-bag-btn${G_STATE.buffs.double ? ' on' : ''}" data-guse="double"><md-ripple></md-ripple><md-icon>bolt</md-icon><span>${G_STATE.buffs.double ? '×2 активно' : `×2 смена (${G_SAVE.bag.double})`}</span></button>`);
+  const bagHtml = bagBtns.length ? `<div class="g-bag-row">${bagBtns.join('')}</div>` : '';
+
+  const threatsHint = (G_SAVE.upg.scanner >= 2) ? ` · скрыто угроз: ${c.facts.filter(f => f.status !== 'safe').length}` : '';
 
   return `<div class="g-wrap${animCls}">
     ${subChips}
     <div class="g-bar">
-      <span>${G_STATE.mode === 'daily' ? 'дейли ×2' : `дело #${G_SAVE.caseIdx + 1}`} · пациент ${G_STATE.num} из ${G_STATE.total}</span>
+      <span class="g-mod-pill">${esc(modLabel)} · ${G_STATE.mode === 'vip' ? 'архив' : `${G_STATE.num}/${G_STATE.total}`}</span>
       <span class="g-dots" title="оставшиеся жизни">${dots}</span>
     </div>
+    ${bagHtml}
     <div class="g-hero">
       <div class="g-hero-top">
         <div class="g-hname">${esc(c.name)}, ${c.age}</div>
@@ -1684,7 +4322,7 @@ function renderGameInner(animateWrap = false) {
       <p class="g-quote">${esc(c.quote)}</p>
     </div>
     <div class="g-seg" id="g-sec-chips">${gBuildSecChipsHtml(c)}</div>
-    <div class="g-hint">нажимай на пункты ниже, чтобы проверить нарушения или совместимость:</div>
+    <div class="g-hint">нажимай на пункты ниже для проверки${threatsHint}:</div>
     <div class="g-facts" id="g-facts-box">${gBuildFactsHtml(c)}</div>
     <div class="g-action">
       <button class="buy" id="g-verdict"><md-ripple></md-ripple>вынести вердикт<md-icon>fact_check</md-icon></button>

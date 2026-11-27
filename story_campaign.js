@@ -1430,11 +1430,9 @@
         persist(); repaint(); return true;
       }
 
+      if (c.reqItem && (S.bag[c.reqItem] || 0) < 1) { B().snack('нужного предмета нет в сумке'); return true; }
       if (c.cost && !spend(c.cost)) return true;
-      if (c.reqItem) {
-        if ((S.bag[c.reqItem] || 0) < 1) return true;
-        S.bag[c.reqItem] -= 1;
-      }
+      if (c.reqItem) S.bag[c.reqItem] -= 1;
 
       if (c.ending || c.autoEnding) {
         let endId = c.ending;
@@ -1506,11 +1504,9 @@
       const o = sq && sq.opts[+sqOpt.dataset.scSqopt];
       if (!o) return true;
       B().hap('impact');
+      if (o.reqItem && (S.bag[o.reqItem] || 0) < 1) { B().snack('нужного предмета нет в сумке'); return true; }
       if (o.cost && !spend(o.cost)) return true;
-      if (o.reqItem) {
-        if ((S.bag[o.reqItem] || 0) < 1) return true;
-        S.bag[o.reqItem] -= 1;
-      }
+      if (o.reqItem) S.bag[o.reqItem] -= 1;
       S.sideDone[sq.id] = true;
       S.activeSide = null;
       const rew = Math.round(sq.rewardCoins * coinMult());
@@ -1582,10 +1578,14 @@
     // RPG Бой
     if (e.target.closest('[data-sc-heal]')) {
       B().hap('impact');
-      if ((S.bag.medkit || 0) > 0) {
+      if ((S.bag.medkit || 0) > 0 && S.hp >= getMaxHp()) {
+        B().snack('здоровье и так полное');
+      } else if ((S.bag.medkit || 0) > 0) {
         S.bag.medkit -= 1;
         S.hp = Math.min(getMaxHp(), S.hp + 70);
         B().snack('использована аптечка (+70 hp)');
+      } else if (S.hp >= getMaxHp()) {
+        B().snack('здоровье и так полное');
       } else if (spend(40)) {
         S.hp = getMaxHp();
         B().snack('здоровье полностью восстановлено!');

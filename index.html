@@ -875,6 +875,7 @@ $('pages').addEventListener('click', e => {
   const tBtn = e.target.closest('[data-tabs]'); if (tBtn) { hap(); manageTabs(); return; }
   const sBtn = e.target.closest('[data-set]'); if (sBtn) { hap(); editShop(); return; }
   if (window.STORY_CAMPAIGN && window.STORY_CAMPAIGN.handleClick(e)) return;
+  if (window.SPIRE_GAME && window.SPIRE_GAME.handleClick(e)) return;
   const clr = e.target.closest('#clear');
   if (clr) { hap(); const inp = clr.closest('.search').querySelector('#q'); inp.value = ''; query = ''; clr.closest('.search').classList.remove('has'); updateCatalogOnly(); inp.focus(); return; }
   const chip = e.target.closest('.chip[data-c]');
@@ -1859,6 +1860,7 @@ function gStopAllTimers(silent = false) {
   if (typeof gStopMem === 'function') gStopMem(silent);
   if (typeof gStopWard === 'function') gStopWard(silent);
   if (window.STORY_CAMPAIGN) window.STORY_CAMPAIGN.stopTimers();
+  if (window.SPIRE_GAME) window.SPIRE_GAME.stopTimers();
 }
 
 function gSetSub(sub) {
@@ -3644,11 +3646,12 @@ function renderGameInner(animateWrap = false) {
           <div class="g-hname">служба контроля веса</div>
           <span class="g-hwt">гид</span>
         </div>
-        <div class="g-hsub">4 полноценные игры + 9 мини-игр</div>
+        <div class="g-hsub">5 полноценных игр + 9 мини-игр</div>
         <p class="g-quote">проходи большую сюжетную rpg «протокол ешка», принимай пациентов, строй империю клиник, дежурь в отделении и отдыхай в аркаде мини-игр!</p>
       </div>
       <div class="info" style="margin:0 16px">
         <div><small>0 · протокол «ешка» (сюжетная rpg)</small><p>7 глав, 5 концовок, вылазки по районам, бои, взлом, штаб, отряд и трата общих монет 🪙.</p></div>
+        <div><small>★ · шпиль «ешки» (рогалик)</small><p>60 этажей, 6 боссов, 20 реликвий, 21 навык, 3 героя, вознесения и постоянная прокачка эссенцией.</p></div>
         <div><small>1 · служба контроля веса</small><p>детективный приём: проверяй «профиль», «медкарту», «чек и чат» и подбирай точный курс.</p></div>
         <div><small>2 · империя клиники «ешка»</small><p>экономический тайкун по дням: закупка партий по плавающим ценам, филиалы, персонал, реклама и проверки.</p></div>
         <div><small>3 · дежурство в отделении</small><p>тайм-менеджмент на 3–4 койки одновременно: подавай воду, ромашку, панадол и конфискуй кофеин быстрее жалоб.</p></div>
@@ -3666,6 +3669,10 @@ function renderGameInner(animateWrap = false) {
 
   if (G_STATE.sub === 'story' && window.STORY_CAMPAIGN) {
     return window.STORY_CAMPAIGN.render(subChips, animCls);
+  }
+
+  if (G_STATE.sub === 'spire' && window.SPIRE_GAME) {
+    return window.SPIRE_GAME.render(subChips, animCls);
   }
 
   if (G_STATE.sub === 'hub') {
@@ -3686,13 +3693,19 @@ function renderGameInner(animateWrap = false) {
     ];
     return `<div class="g-wrap${animCls}">
       ${subChips}
-      <div class="g-sec-lbl" style="padding:0 20px;margin-top:0">главные игры · 4 режима</div>
+      <div class="g-sec-lbl" style="padding:0 20px;margin-top:0">главные игры · 5 режимов</div>
       <div class="g-hub-list">
         <button class="g-hub-card" data-t="2" data-ghubgo="story">
           <md-ripple></md-ripple>
           <span class="g-hub-ico"><md-icon>auto_stories</md-icon></span>
           <span class="g-hub-txt"><b>протокол «ешка» · сюжетная rpg</b><small>7 глав, 5 концовок, вылазки, бои, взлом, штаб, отряд и трата монет</small></span>
           <span class="g-hub-badge">${window.STORY_CAMPAIGN ? window.STORY_CAMPAIGN.getHubBadge() : 'глава 1/7'}</span>
+        </button>
+        <button class="g-hub-card" data-t="0" data-ghubgo="spire">
+          <md-ripple></md-ripple>
+          <span class="g-hub-ico"><md-icon>stairs</md-icon></span>
+          <span class="g-hub-txt"><b>шпиль «ешки» · рогалик на 60 этажей</b><small>6 актов, 6 боссов, 20 реликвий, 21 навык, 3 героя и вознесения</small></span>
+          <span class="g-hub-badge">${window.SPIRE_GAME ? window.SPIRE_GAME.getHubBadge() : 'рекорд 0'}</span>
         </button>
       </div>
       <div class="g-hero">
@@ -4487,5 +4500,6 @@ window.ESHKA_BRIDGE = {
 })();
 </script>
 <script src="story_campaign.js"></script>
+<script src="spire_game.js"></script>
 </body>
 </html>

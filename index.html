@@ -172,6 +172,18 @@ body.admin .fabs{display:flex}
 .g-top-pill md-icon{--md-icon-size:18px}
 .g-help-btn{position:relative;width:40px;height:40px;border-radius:20px;display:grid;place-items:center;background:var(--md-sys-color-surface-container-high);color:var(--md-sys-color-on-surface-variant);cursor:pointer;overflow:hidden}
 .g-help-btn md-icon{--md-icon-size:20px}
+.u-theme-btn{position:relative;flex:none;width:40px;height:40px;border-radius:20px;display:grid;place-items:center;background:var(--md-sys-color-surface-container-high);color:var(--md-sys-color-on-surface-variant);cursor:pointer;overflow:hidden;transition:transform .25s var(--spring),background-color .2s}
+.u-theme-btn:active{transform:scale(.92)}
+.u-theme-btn md-icon{--md-icon-size:20px}
+.ut-swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:10px}
+.ut-sw{position:relative;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:2px solid transparent;transition:transform .25s var(--spring),border-color .2s;overflow:hidden}
+.ut-sw:active{transform:scale(.9)}
+.ut-sw.on{border-color:var(--md-sys-color-on-surface);transform:scale(1.08)}
+.ut-sw md-icon{--md-icon-size:20px;color:#fff;filter:drop-shadow(0 1px 2px rgb(0 0 0/.55))}
+.ut-seg{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:10px;padding:4px;border-radius:22px;background:var(--md-sys-color-surface-container-highest)}
+.ut-seg.s3{grid-template-columns:repeat(3,1fr)}
+.ut-seg button{position:relative;height:38px;border-radius:18px;font:700 12px/16px var(--font);color:var(--md-sys-color-on-surface-variant);overflow:hidden;transition:background-color .2s,color .2s}
+.ut-seg button.on{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
 
 .g-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:2px 20px 0;font:700 13px/18px var(--font);color:var(--md-sys-color-on-surface-variant)}
 .g-dots{display:inline-flex;gap:6px;align-items:center}
@@ -636,15 +648,104 @@ const RM = matchMedia('(prefers-reduced-motion:reduce)').matches;
 const dur = ms => RM ? 0 : ms;
 const hap = (t = 'select') => { try { tg && (t === 'select' ? tg.HapticFeedback.selectionChanged() : tg.HapticFeedback.impactOccurred('light')); } catch (e) {} };
 
-/* ---------- material you ---------- */
+/* ---------- material you (с персональными цветами для каждого пользователя) ---------- */
+const USER_THEME_KEY = 'eshka_user_theme_v1';
+const USER_SWATCHES = [
+  ['#ff00ff', 'маджента'], ['#6750a4', 'фиолет'], ['#e91e63', 'малина'], ['#e53935', 'рубин'],
+  ['#ff6f00', 'янтарь'], ['#f9a825', 'золото'], ['#00a86b', 'изумруд'], ['#0097a7', 'бирюза'],
+  ['#1e88e5', 'кобальт'], ['#3949ab', 'индиго'], ['#7cb342', 'лайм'], ['#607d8b', 'графит']
+];
+function getUserTheme() {
+  try {
+    const raw = ls.get(USER_THEME_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return null;
+}
+function saveUserTheme(ut) {
+  if (!ut) ls.del(USER_THEME_KEY);
+  else ls.set(USER_THEME_KEY, JSON.stringify(ut));
+  applyColors();
+}
 function applyColors() {
-  const dark = tg ? tg.colorScheme === 'dark' : matchMedia('(prefers-color-scheme:dark)').matches;
-  const s = DATA.shop; let seed = /^#[0-9a-f]{6}$/i.test(s.seed) ? s.seed : '#6750A4';
-  const c = applyM3(seed, dark, document.documentElement, s.scheme);
+  const ut = getUserTheme();
+  const sysDark = tg ? tg.colorScheme === 'dark' : matchMedia('(prefers-color-scheme:dark)').matches;
+  const mode = (ut && ut.mode) || 'auto';
+  const dark = mode === 'dark' || mode === 'oled' ? true : mode === 'light' ? false : sysDark;
+  const s = DATA.shop;
+  const rawSeed = (ut && ut.seed) || s.seed;
+  const seed = /^#[0-9a-f]{6}$/i.test(rawSeed) ? rawSeed : '#6750A4';
+  const scheme = (ut && ut.scheme) || s.scheme || 'vibrant';
+  const c = applyM3(seed, dark, document.documentElement, scheme);
+  if (mode === 'oled') {
+    const root = document.documentElement.style;
+    root.setProperty('--md-sys-color-surface', '#000000');
+    root.setProperty('--md-sys-color-background', '#000000');
+    root.setProperty('--md-sys-color-surface-dim', '#000000');
+    root.setProperty('--md-sys-color-surface-container-lowest', '#000000');
+    root.setProperty('--md-sys-color-surface-container-low', '#0c0c0c');
+    root.setProperty('--md-sys-color-surface-container', '#121212');
+    root.setProperty('--md-sys-color-surface-container-high', '#1a1a1a');
+    root.setProperty('--md-sys-color-surface-container-highest', '#242424');
+    c.surface = '#000000';
+  }
   document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
   try { if (tg) { tg.setHeaderColor(c.surface); tg.setBackgroundColor(c.surface); if (tg.setBottomBarColor) tg.setBottomBarColor(c.surface); } } catch (e) {}
 }
 if (tg) tg.onEvent('themeChanged', applyColors);
+try { matchMedia('(prefers-color-scheme:dark)').addEventListener('change', applyColors); } catch (e) {}
+
+function openUserTheme() {
+  const renderThemeSheet = () => {
+    const ut = getUserTheme() || {};
+    const curMode = ut.mode || 'auto';
+    const curScheme = ut.scheme || DATA.shop.scheme || 'vibrant';
+    const curSeed = (ut.seed || DATA.shop.seed || '#6750a4').toLowerCase();
+    const modes = [['auto', 'авто'], ['light', 'светлая'], ['dark', 'тёмная'], ['oled', 'oled']];
+    const schemes = [['vibrant', 'яркая'], ['tonal', 'спокойная'], ['expressive', 'необычная']];
+    sheet.innerHTML = `<div class="handle"></div>
+      <h2 class="st" style="--i:0">цвета и тема</h2>
+      <p class="hint">настройка сохраняется только на твоём устройстве и не меняет цвета у других.</p>
+      <div class="g-sec-lbl">режим экрана</div>
+      <div class="ut-seg">
+        ${modes.map(([k, l]) => `<button type="button" class="${curMode === k ? 'on' : ''}" data-ut-mode="${k}"><md-ripple></md-ripple>${l}</button>`).join('')}
+      </div>
+      <div class="g-sec-lbl">стиль палитры</div>
+      <div class="ut-seg s3">
+        ${schemes.map(([k, l]) => `<button type="button" class="${curScheme === k ? 'on' : ''}" data-ut-scheme="${k}"><md-ripple></md-ripple>${l}</button>`).join('')}
+      </div>
+      <div class="g-sec-lbl">цвет акцента</div>
+      <div class="ut-swatches">
+        ${USER_SWATCHES.map(([hex, name]) => `<button type="button" class="ut-sw${curSeed === hex ? ' on' : ''}" style="background:${hex}" title="${name}" data-ut-seed="${hex}"><md-ripple></md-ripple>${curSeed === hex ? '<md-icon>check</md-icon>' : ''}</button>`).join('')}
+      </div>
+      <label class="fld"><span>свой любой цвет</span><input type="color" id="utCustomColor" class="color" value="${/^#[0-9a-f]{6}$/i.test(curSeed) ? curSeed : '#6750a4'}"></label>
+      <div class="row">
+        <button type="button" class="btn tonal" id="utReset"><md-ripple></md-ripple><md-icon>restart_alt</md-icon>сброс</button>
+        <button type="button" class="btn fill" id="utDone"><md-ripple></md-ripple>готово</button>
+      </div>`;
+
+    const patch = part => {
+      const cur = getUserTheme() || { mode: curMode, scheme: curScheme, seed: curSeed };
+      saveUserTheme({ ...cur, ...part });
+      renderThemeSheet();
+    };
+    sheet.querySelectorAll('[data-ut-mode]').forEach(b => b.addEventListener('click', () => { hap(); patch({ mode: b.dataset.utMode }); }));
+    sheet.querySelectorAll('[data-ut-scheme]').forEach(b => b.addEventListener('click', () => { hap(); patch({ scheme: b.dataset.utScheme }); }));
+    sheet.querySelectorAll('[data-ut-seed]').forEach(b => b.addEventListener('click', () => { hap(); patch({ seed: b.dataset.utSeed }); }));
+    const col = $('utCustomColor');
+    if (col) {
+      col.addEventListener('input', () => {
+        const cur = getUserTheme() || { mode: curMode, scheme: curScheme, seed: curSeed };
+        saveUserTheme({ ...cur, seed: col.value.toLowerCase() });
+      });
+      col.addEventListener('change', () => renderThemeSheet());
+    }
+    $('utReset').addEventListener('click', () => { hap('impact'); saveUserTheme(null); renderThemeSheet(); snack('возвращены цвета магазина'); });
+    $('utDone').addEventListener('click', () => { hap(); closeSheet(); });
+  };
+  renderThemeSheet();
+  present();
+}
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -724,6 +825,7 @@ function renderAll() {
         <h1>${esc(title)}</h1>
         <div class="appbar-btns g-app-right">
           ${gameRight}
+          <button class="u-theme-btn" data-utheme="1" aria-label="цвета и тема"><md-ripple></md-ripple><md-icon>palette</md-icon></button>
           <button class="ed" data-tabs="1" aria-label="вкладки"><md-ripple></md-ripple><md-icon>view_carousel</md-icon></button>
           <button class="ed" data-set="1" aria-label="настройки"><md-ripple></md-ripple><md-icon>tune</md-icon></button>
         </div>
@@ -769,8 +871,10 @@ $('pages').addEventListener('keydown', e => {
 });
 
 $('pages').addEventListener('click', e => {
+  const utBtn = e.target.closest('[data-utheme]'); if (utBtn) { hap(); openUserTheme(); return; }
   const tBtn = e.target.closest('[data-tabs]'); if (tBtn) { hap(); manageTabs(); return; }
   const sBtn = e.target.closest('[data-set]'); if (sBtn) { hap(); editShop(); return; }
+  if (window.STORY_CAMPAIGN && window.STORY_CAMPAIGN.handleClick(e)) return;
   const clr = e.target.closest('#clear');
   if (clr) { hap(); const inp = clr.closest('.search').querySelector('#q'); inp.value = ''; query = ''; clr.closest('.search').classList.remove('has'); updateCatalogOnly(); inp.focus(); return; }
   const chip = e.target.closest('.chip[data-c]');
@@ -1754,6 +1858,7 @@ function gStopAllTimers(silent = false) {
   if (typeof gStopGauge === 'function') gStopGauge(silent);
   if (typeof gStopMem === 'function') gStopMem(silent);
   if (typeof gStopWard === 'function') gStopWard(silent);
+  if (window.STORY_CAMPAIGN) window.STORY_CAMPAIGN.stopTimers();
 }
 
 function gSetSub(sub) {
@@ -3519,6 +3624,7 @@ function renderGameInner(animateWrap = false) {
   const subChips = `
     <div class="chips">
       <button class="chip${G_STATE.sub === 'hub' ? ' on' : ''}" data-gsub="hub"><md-ripple></md-ripple><md-icon>${G_STATE.sub === 'hub' ? 'grid_view' : 'arrow_back'}</md-icon><span>${G_STATE.sub === 'hub' ? 'все игры' : 'к списку'}</span></button>
+      <button class="chip${G_STATE.sub === 'story' ? ' on' : ''}" data-gsub="story"><md-ripple></md-ripple>${G_STATE.sub === 'story' ? '<md-icon>check</md-icon>' : ''}<span>сюжет</span></button>
       <button class="chip${G_STATE.sub === 'desk' ? ' on' : ''}" data-gsub="desk"><md-ripple></md-ripple>${G_STATE.sub === 'desk' ? '<md-icon>check</md-icon>' : ''}<span>приём</span></button>
       <button class="chip${G_STATE.mode === 'daily' && G_STATE.sub === 'desk' ? ' on' : ''}" data-gdaily="1"><md-ripple></md-ripple><md-icon>${dailyDone ? 'task_alt' : 'event'}</md-icon><span>${dailyDone ? 'дейли ок' : 'дейли ×2'}</span></button>
       <button class="chip${G_STATE.sub === 'clinic' ? ' on' : ''}" data-gsub="clinic"><md-ripple></md-ripple>${G_STATE.sub === 'clinic' ? '<md-icon>check</md-icon>' : ''}<span>клиника</span></button>
@@ -3538,10 +3644,11 @@ function renderGameInner(animateWrap = false) {
           <div class="g-hname">служба контроля веса</div>
           <span class="g-hwt">гид</span>
         </div>
-        <div class="g-hsub">3 полноценные игры + 9 мини-игр</div>
-        <p class="g-quote">подбирай курсы пациентам, развивай империю клиник «ешка», дежурь в отделении в реальном времени и отдыхай в аркаде мини-игр!</p>
+        <div class="g-hsub">4 полноценные игры + 9 мини-игр</div>
+        <p class="g-quote">проходи большую сюжетную rpg «протокол ешка», принимай пациентов, строй империю клиник, дежурь в отделении и отдыхай в аркаде мини-игр!</p>
       </div>
       <div class="info" style="margin:0 16px">
+        <div><small>0 · протокол «ешка» (сюжетная rpg)</small><p>7 глав, 5 концовок, вылазки по районам, бои, взлом, штаб, отряд и трата общих монет 🪙.</p></div>
         <div><small>1 · служба контроля веса</small><p>детективный приём: проверяй «профиль», «медкарту», «чек и чат» и подбирай точный курс.</p></div>
         <div><small>2 · империя клиники «ешка»</small><p>экономический тайкун по дням: закупка партий по плавающим ценам, филиалы, персонал, реклама и проверки.</p></div>
         <div><small>3 · дежурство в отделении</small><p>тайм-менеджмент на 3–4 койки одновременно: подавай воду, ромашку, панадол и конфискуй кофеин быстрее жалоб.</p></div>
@@ -3555,6 +3662,10 @@ function renderGameInner(animateWrap = false) {
         <button class="buy" data-gstart="1"><md-ripple></md-ripple>${G_SAVE.seenIntro ? 'к списку игр' : 'открыть игры'}<md-icon>arrow_forward</md-icon></button>
       </div>
     </div>`;
+  }
+
+  if (G_STATE.sub === 'story' && window.STORY_CAMPAIGN) {
+    return window.STORY_CAMPAIGN.render(subChips, animCls);
   }
 
   if (G_STATE.sub === 'hub') {
@@ -3575,7 +3686,15 @@ function renderGameInner(animateWrap = false) {
     ];
     return `<div class="g-wrap${animCls}">
       ${subChips}
-      <div class="g-sec-lbl" style="padding:0 20px;margin-top:0">главные игры · 3 режима</div>
+      <div class="g-sec-lbl" style="padding:0 20px;margin-top:0">главные игры · 4 режима</div>
+      <div class="g-hub-list">
+        <button class="g-hub-card" data-t="2" data-ghubgo="story">
+          <md-ripple></md-ripple>
+          <span class="g-hub-ico"><md-icon>auto_stories</md-icon></span>
+          <span class="g-hub-txt"><b>протокол «ешка» · сюжетная rpg</b><small>7 глав, 5 концовок, вылазки, бои, взлом, штаб, отряд и трата монет</small></span>
+          <span class="g-hub-badge">${window.STORY_CAMPAIGN ? window.STORY_CAMPAIGN.getHubBadge() : 'глава 1/7'}</span>
+        </button>
+      </div>
       <div class="g-hero">
         <div class="g-hero-top">
           <div class="g-hname">служба контроля веса</div>
@@ -4340,10 +4459,33 @@ function refreshGameDom(animate = false) {
   }
 }
 
+window.ESHKA_BRIDGE = {
+  getCoins: () => G_SAVE.coins,
+  addCoins: n => {
+    G_SAVE.coins = Math.max(0, (G_SAVE.coins || 0) + Math.round(Number(n) || 0));
+    gPersist();
+    const sp = $('g-top-coins') && $('g-top-coins').querySelector('span');
+    if (sp) sp.textContent = G_SAVE.coins;
+    return G_SAVE.coins;
+  },
+  spendCoins: n => {
+    const cost = Math.round(Number(n) || 0);
+    if (cost < 0 || (G_SAVE.coins || 0) < cost) return false;
+    G_SAVE.coins -= cost;
+    gPersist();
+    const sp = $('g-top-coins') && $('g-top-coins').querySelector('span');
+    if (sp) sp.textContent = G_SAVE.coins;
+    return true;
+  },
+  snack, hap, esc,
+  refreshHub: () => refreshGameDom(false)
+};
+
 (async () => {
   await loadData(); applyColors(); renderAll();
   if (ls.get('ga_on') === '1' && ls.get('ga_token') && allowed()) setAdmin(true);
 })();
 </script>
+<script src="story_campaign.js"></script>
 </body>
 </html>
